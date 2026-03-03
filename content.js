@@ -86,7 +86,6 @@
     return style.display !== "none" && style.visibility !== "hidden";
   };
 
-  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
   const updateScheduleModeClasses = () => {
     const explicitWeek = Boolean(document.querySelector(".swipeSchedulePage.showWeek, .showWeek"));
@@ -110,30 +109,6 @@
     });
   };
 
-  const fitWeekScheduleToViewport = () => {
-    const schedules = document.querySelectorAll(".weekSchedule");
-
-    schedules.forEach((schedule) => {
-      const scrollContainer = schedule.querySelector(".scroll");
-      const list = schedule.querySelector(".scroll .appointmentlist");
-      if (!scrollContainer || !list || !isVisible(scrollContainer)) return;
-
-      const slotCount =
-        schedule.querySelectorAll(".timeSlot").length ||
-        schedule.querySelectorAll(".time").length ||
-        9;
-
-      const gap = 10;
-      const availableHeight = Math.max(0, scrollContainer.clientHeight - 6);
-      const computedHeight = Math.floor((availableHeight - gap * (slotCount - 1)) / slotCount);
-      const slotHeight = clamp(computedHeight, 62, 108);
-
-      schedule.style.setProperty("--zlg-week-slot-h", `${slotHeight}px`);
-      schedule.style.setProperty("--zlg-week-slot-gap", `${gap}px`);
-      list.style.zoom = "1";
-    });
-  };
-
   let scheduleFitRaf = 0;
   const scheduleFitTick = () => {
     scheduleFitRaf = 0;
@@ -143,16 +118,8 @@
       return;
     }
 
-    const { hasWeek, hasDay } = updateScheduleModeClasses();
-
-    if (hasWeek) {
-      fitWeekScheduleToViewport();
-      return;
-    }
-
-    if (hasDay || (!hasWeek && !hasDay)) {
-      clearScheduleZoom();
-    }
+    updateScheduleModeClasses();
+    clearScheduleZoom();
   };
 
   const requestScheduleFit = () => {
