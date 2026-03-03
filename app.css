@@ -1,0 +1,6982 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), url(/static/fonts/MaterialSymbolsOutlined.woff2) format("woff2"), url(/static/fonts/MaterialSymbolsOutlined.ttf) format("truetype");
+}
+.material-icons, .material-icons-no-fill {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+.material-icons-no-fill {
+  font-variation-settings: "FILL" 0;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18, .md-18.material-icons-no-fill {
+  font-size: 18px;
+}
+
+.material-icons.md-24, .md-24.material-icons-no-fill {
+  font-size: 24px;
+}
+
+.material-icons.md-36, .md-36.material-icons-no-fill {
+  font-size: 36px;
+}
+
+.material-icons.md-48, .md-48.material-icons-no-fill {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark, .md-dark.material-icons-no-fill {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive, .md-dark.md-inactive.material-icons-no-fill {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light, .md-light.material-icons-no-fill {
+  color: rgb(255, 255, 255);
+}
+
+.material-icons.md-light.md-inactive, .md-light.md-inactive.material-icons-no-fill {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), local("sans-serif-light"), url(/static/fonts/roboto-light.woff2) format("woff2"), url(/static/fonts/roboto-light.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), local("sans-serif"), url(/static/fonts/roboto-regular.woff2) format("woff2"), url(/static/fonts/roboto-regular.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), local("sans-serif-medium"), url(/static/fonts/roboto-medium.woff2) format("woff2"), url(/static/fonts/roboto-medium.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.hidden {
+  display: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  touch-action: manipulation; /* Prevent touch delay (for double tap zoom). */
+  position: fixed; /* Prevent vertical scrolling on iOS. */
+  display: flex;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  font-family: "Roboto", sans-serif;
+  color: #2C3E50;
+  flex: 1;
+  display: flex;
+}
+
+#app {
+  padding: 0px;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+}
+
+input[type=text],
+input[type=password],
+button {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-size: 100%;
+  padding: 15px;
+}
+
+input[type=text],
+input[type=password] {
+  border: none;
+}
+
+.errorMessage, .succeededMessage {
+  padding: 8px;
+  margin: 8px;
+  margin-top: 16px;
+  white-space: pre-wrap;
+}
+
+.menuPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  color: #2C3E50;
+}
+.menuPage .title {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.menuPage .subTitle {
+  margin-left: 16px;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: grey;
+}
+.menuPage .subTitle div {
+  display: inline-block;
+}
+.menuPage .menuHeader {
+  flex: 1;
+  background-color: #c32626;
+  text-align: center;
+  box-sizing: border-box;
+  visibility: hidden;
+  height: 0px;
+}
+.menuPage .menuContent {
+  max-width: 300px;
+}
+.menuPage .footer {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+.menuPage .footer .logoFooter {
+  opacity: 0.08;
+}
+.menuPage .footer .lastModified {
+  opacity: 0.15;
+}
+.menuPage .item {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 8px;
+  border-radius: 8px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.menuPage .item .icon {
+  font-size: 24px;
+  width: 24px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 4px;
+  color: #5b5b5b;
+}
+.menuPage .item .label {
+  margin: 0px;
+  display: inline-block;
+  margin-left: 28px;
+  font-size: 14px;
+}
+.menuPage .item .announcementsUnread {
+  display: none;
+}
+.menuPage .item .subjectSelectionWithWarningIcon {
+  display: none;
+}
+.menuPage .item:hover, .menuPage .item:hover .icon {
+  color: #412e9b;
+}
+.menuPage .item:hover {
+  background-color: #e0e0e0;
+}
+.menuPage .item:hover .noHover,
+.menuPage .item .onHover {
+  display: none;
+}
+.menuPage .item:hover .onHover {
+  display: inline;
+}
+.menuPage .item.disabled, .menuPage .item.disabled .icon {
+  color: #b0b0b0;
+}
+.menuPage .item.disabled:hover, .menuPage .item.disabled:hover .icon {
+  color: #b0b0b0;
+}
+.menuPage .item.disabled:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.menuPage.unreads .announcementsUnread {
+  display: inline-block;
+}
+.menuPage.unreads .announcementsRead {
+  display: none;
+}
+.menuPage.subjectSelectionNewPublicCommentWarning .item:hover .noHover,
+.menuPage.subjectSelectionNewPublicCommentWarning .item .onHover, .menuPage.subjectSelectionActionRequiredWarning .item:hover .noHover,
+.menuPage.subjectSelectionActionRequiredWarning .item .onHover {
+  display: none;
+}
+.menuPage.subjectSelectionNewPublicCommentWarning .item:hover .onHover, .menuPage.subjectSelectionActionRequiredWarning .item:hover .onHover {
+  display: inline;
+}
+.menuPage.subjectSelectionNewPublicCommentWarning .subjectSelectionWithWarningIcon, .menuPage.subjectSelectionActionRequiredWarning .subjectSelectionWithWarningIcon {
+  display: inline-block;
+}
+.menuPage.subjectSelectionNewPublicCommentWarning .subjectSelection, .menuPage.subjectSelectionActionRequiredWarning .subjectSelection {
+  display: none;
+}
+
+.settingsPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: white;
+  color: #2C3E50;
+}
+.settingsPage .menuContent {
+  max-width: 350px;
+}
+.settingsPage .item {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 8px;
+  border-radius: 8px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.settingsPage .item .icon {
+  font-size: 24px;
+  width: 24px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 4px;
+  color: #5b5b5b;
+}
+.settingsPage .item .label {
+  margin: 0px;
+  display: inline-block;
+  margin-left: 28px;
+  font-size: 14px;
+}
+.settingsPage .item:hover, .settingsPage .item:hover .icon {
+  color: #412e9b;
+}
+.settingsPage .item:hover {
+  background-color: #e0e0e0;
+}
+.settingsPage .item.disabled, .settingsPage .item.disabled .icon {
+  color: #b0b0b0;
+}
+.settingsPage .item.disabled:hover, .settingsPage .item.disabled:hover .icon {
+  color: #b0b0b0;
+}
+.settingsPage .item.disabled:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.settingsPage .item:hover .noHover,
+.settingsPage .item .onHover {
+  display: none;
+}
+.settingsPage .item:hover .onHover {
+  display: inline;
+}
+
+.swipeSchedulePage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+.swipeSchedulePage .scheduleTitle {
+  min-height: 40px;
+  background-color: #2C3E50;
+  color: white;
+  padding-left: 16px;
+  position: relative;
+}
+.swipeSchedulePage .scheduleTitle i {
+  margin-top: 8px;
+}
+.swipeSchedulePage .scheduleTitle .todayButton {
+  display: inline-block;
+  width: 100px;
+}
+.swipeSchedulePage .scheduleTitle .todayText {
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+.swipeSchedulePage .scheduleTitle .dayWeek {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font-size: 14px;
+  background-color: #25323f;
+  height: 24px;
+  border-radius: 12px;
+}
+.swipeSchedulePage .scheduleTitle .dayWeek .day, .swipeSchedulePage .scheduleTitle .dayWeek .week {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 12px;
+  width: 40px;
+  text-align: center;
+  transition: color 0.3s, background-color 0.3s;
+}
+.swipeSchedulePage .scheduleTitle .dayWeek .day {
+  margin-right: -10px;
+}
+.swipeSchedulePage.showDay .day {
+  color: #2C3E50;
+  background-color: white;
+}
+.swipeSchedulePage.showWeek .week {
+  color: #2C3E50;
+  background-color: white;
+}
+.swipeSchedulePage .content {
+  flex: 1;
+  display: flex;
+  height: calc(100% - 40px);
+}
+
+.choiceDetail {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+}
+.choiceDetail .view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.choiceDetail .view .viewDetail {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.choiceDetail .view.notEnrolledDisallowed .changeChoice {
+  display: none;
+}
+.choiceDetail .view .changeChoice {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.choiceDetail .view .changeChoice div {
+  flex: 0 1 50%;
+  min-height: 24px;
+  background-color: #4CAF50;
+  display: inline-block;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  min-width: 0;
+}
+.choiceDetail .view .changeChoice .removeParticipation {
+  background-color: #c0392b;
+}
+.choiceDetail .view .changeChoice .viewParticipation {
+  background-color: #9E9E9E;
+}
+
+.choicePage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.choicePage .titleBar {
+  height: 40px;
+  background-color: #4f945f;
+  color: white;
+  padding-left: 16px;
+  position: relative;
+  display: none;
+}
+.choicePage .titleBar .title {
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+.choicePage .choiceContent {
+  padding-top: 8px;
+  flex: 1;
+  overflow-y: auto;
+}
+.choicePage .changeChoice {
+  display: flex;
+  justify-content: space-evenly;
+}
+.choicePage .removeParticipation, .choicePage .changeParticipation, .choicePage .cancelMeeting {
+  flex: 1;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  display: none;
+  background-color: grey;
+}
+.choicePage.userMayEditSchedule .noChangeAllowedMessage {
+  display: none;
+}
+.choicePage.canUnenroll .removeParticipation {
+  display: inline-block;
+  background-color: #c0392b;
+}
+.choicePage.changeParticipationAvailable .changeParticipation, .choicePage.notEnrolledCanEnroll .changeParticipation, .choicePage.enrolledCanSwitch .changeParticipation {
+  /* Note that this button changes text and is both "Inschrijven" and "Wijzigen" */
+  display: inline-block;
+}
+.choicePage.canChangeParticipationToSelected .changeParticipation, .choicePage.canEnrollSelected .changeParticipation {
+  background-color: #4CAF50;
+}
+.choicePage.canUnenroll.canChangeParticipationToSelected .removeParticipation {
+  background-color: grey;
+}
+.choicePage.cancelActionAvailable .cancelMeeting {
+  display: inline-block;
+  background-color: grey;
+}
+.choicePage.cancelActionSelected .cancelMeeting {
+  display: inline-block;
+  background-color: #c0392b;
+}
+
+.announcementPage {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  background-color: #eaeeef;
+}
+.announcementPage .announcementList {
+  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 160px;
+  width: 100%;
+}
+.announcementPage .updated {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.231372549);
+  font-size: 76%;
+  margin-right: 8px;
+  padding: 4px;
+  padding-left: 8px;
+  border-radius: 8px;
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  padding-right: 8px;
+  z-index: 1;
+}
+.announcementPage.outdated .updated {
+  background-color: #e60000;
+}
+.announcementPage.outdated .announcementList {
+  opacity: 0.7;
+}
+.announcementPage .announcementList:empty {
+  display: none;
+}
+
+.myCoursesPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.myCoursesPage .weekHeaderPanel {
+  display: flex;
+  flex: 0 0 auto;
+}
+.myCoursesPage .scroll {
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 0 1 auto;
+}
+.myCoursesPage .scroll .updated {
+  display: none;
+}
+.myCoursesPage .myCourseListCurrentWeek, .myCoursesPage .myCourseListNextWeek {
+  padding: 0px;
+  min-width: 100%;
+}
+.myCoursesPage.hidden {
+  visibility: hidden;
+}
+.myCoursesPage.loading .scroll {
+  filter: grayscale(0.7);
+}
+
+.courseDetails {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.ptnListPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+}
+.ptnListPage .scroll {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+.ptnListPage .scroll .updated {
+  display: none;
+}
+
+.ptnListTitle {
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.ptnListHeader {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.ptnList {
+  padding: 20px;
+}
+
+.ptnListItem {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+}
+.ptnListItem .ptnItem {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  border-bottom: solid 1px lightgrey;
+}
+.ptnListItem .ptnItem .ptnItemIcon {
+  padding: 0 20px;
+}
+.ptnListItem .ptnItem .ptnItemIcon i {
+  font-size: 40px;
+}
+.ptnListItem .ptnItem .ptnListItemDescription {
+  padding-bottom: 20px;
+}
+.ptnListItem .ptnItem .ptnListItemDeadline .title, .ptnListItem .ptnItem .ptnListItemDates .title {
+  font-weight: normal;
+}
+.ptnListItem .ptnItem .ptnListItemDeadline .notice, .ptnListItem .ptnItem .ptnListItemDates .notice {
+  color: #a06800;
+}
+.ptnListItem .ptnItem .ptnListItemDeadline .expired, .ptnListItem .ptnItem .ptnListItemDates .expired {
+  color: #e20000;
+}
+
+.ptnMaster {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+.ptnMaster > .scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ptnMaster > div:not(.nospacing) {
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.ptnMaster .ptnDetailsTitle {
+  min-height: 40px;
+  background-color: #2C3E50;
+  color: white;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.ptnMaster .ptnDetailsTitle i {
+  margin-top: 8px;
+}
+.ptnMaster .ptnDetailsTitle .titleText {
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+.ptnMaster .ptnDetailsDescription {
+  margin-bottom: 20px;
+}
+.ptnMaster .ptnMaximumAmountDescription {
+  margin-bottom: 20px;
+}
+.ptnMaster .ptnTalkDaysDescription {
+  margin-bottom: 20px;
+}
+.ptnMaster .ptnRequestListHeader, .ptnMaster .ptnTimePreferencesHeader, .ptnMaster .ptnRequestLimitationsHeader {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.ptnMaster .proceedButton {
+  margin-top: 20px;
+  background-color: #27ae60;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+@media (min-width: 601px) {
+  .ptnMaster .proceedButton {
+    display: none;
+  }
+}
+.ptnMaster .disabledButton {
+  background-color: #969faa;
+}
+.ptnMaster thead {
+  font-weight: 500;
+}
+.ptnMaster thead td {
+  border-bottom: solid 1px grey;
+}
+.ptnMaster table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.ptnMaster td {
+  padding: 3px;
+}
+.ptnMaster tbody td {
+  color: grey;
+}
+
+.ptnTimePreferencesDayCommitmentWidget {
+  display: flex;
+  flex: 1;
+}
+
+.ptnTimePreferencesDayCommitmentWidget > div {
+  padding: 3px 10px;
+}
+
+.ptnDetails {
+  flex: 1;
+  display: flex;
+  background-color: white;
+}
+.ptnDetails .view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+}
+.ptnDetails .view .viewDetail {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+}
+.ptnDetails .view .talkRequestDetailInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.ptnDetails .view .talkRequestDetailInfo .scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  display: flex;
+}
+.ptnDetails .view .talkRequestDetailInfo .scroll .talkRequestDetailInfoContent {
+  flex: 1;
+}
+.ptnDetails .view .talkRequestDetailInfo .scroll .talkRequestDetailInfoContent .talkRequestStudentWidget .studentTitle {
+  padding: 10px;
+  background-color: #d5dbe2;
+  font-size: 20px;
+  color: #4b5c6a;
+}
+.ptnDetails .view .talkRequestDetailInfo .scroll .talkRequestDetailInfoContent .talkRequestStudentWidget .talkRequestList {
+  padding: 5px 10px 0px 0px;
+}
+
+.deadlineExpired {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffb74d;
+  font-size: 16px;
+  padding: 10px;
+}
+.deadlineExpired .deadlineIcon .material-icons, .deadlineExpired .deadlineIcon .material-icons-no-fill {
+  font-size: 38px;
+  color: white;
+}
+.deadlineExpired .deadlineText {
+  overflow-x: hidden;
+  padding-left: 10px;
+}
+.deadlineExpired .deadlineText * {
+  word-break: break-word;
+}
+.deadlineExpired .deadlineText .deadlineHeader {
+  font-weight: bold;
+  color: white;
+  word-break: break-word;
+}
+.deadlineExpired .deadlineText .deadlineComment {
+  color: white;
+}
+
+.deadlineExpiredHidden {
+  display: none;
+}
+
+.studentTalkRequestListItem {
+  font-size: 18px;
+  border-bottom: solid 1px #d0d0d0;
+  margin-bottom: 0px;
+  padding: 0px 0px;
+}
+.studentTalkRequestListItem .studentTalkRequestListItemHandle {
+  display: flex;
+}
+.studentTalkRequestListItem .studentTalkRequestListItemHandle .handleInfo {
+  flex: 1;
+  padding: 0px;
+}
+
+.checkBox {
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding: 10px 10px;
+}
+
+.checkBox i {
+  font-size: 30px;
+}
+
+.checkBoxSelected i {
+  color: green;
+}
+
+.talkDisabled .checkBox i {
+  color: grey;
+}
+
+div:not(.talkSelected) > .studentTalkRequestListItemHandle > .checkBoxSelected {
+  display: none;
+}
+
+.talkRequestAdditionalInfo {
+  padding-left: 50px !important;
+  display: none;
+  flex: 1;
+}
+
+.talkSelected .talkRequestAdditionalInfo {
+  display: block;
+}
+
+.talkRequestDetailInfo.locked .studentTalkRequestListItemHandle {
+  cursor: default;
+}
+.talkRequestDetailInfo.locked .talkRequestList {
+  background-color: #f0f0f0;
+  color: #505050;
+}
+
+.talkRequestSubject {
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.talkRequestEmployees {
+  font-size: 16px;
+  font-weight: 200;
+  word-break: break-word;
+}
+
+.talkSelected > .studentTalkRequestListItemHandle > .checkBoxSelectable {
+  display: none;
+}
+
+.extended {
+  font-size: 16px;
+  padding: 10px 0px;
+}
+
+.parentToTeacherRemarkContainer {
+  padding: 0 !important;
+}
+
+.parentToTeacherRemark {
+  flex: 1;
+  width: 95%;
+  min-height: 50px;
+  resize: none;
+  border: solid 1px grey;
+  padding: 5px;
+}
+
+.parentToTeacherRemark-readonly {
+  flex: 1;
+  background-color: transparent;
+  font-style: italic;
+}
+
+.talkDisabled {
+  color: #d0d0d0;
+  font-style: italic;
+}
+
+.talkLocked textarea {
+  background-color: #f8f8f8;
+}
+
+.talkLocked .checkBox i {
+  color: grey;
+}
+
+.talkHidden {
+  display: none;
+}
+
+.saveProceedButton {
+  background-color: #27ae60;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  word-break: break-word;
+  font-size: 20px;
+}
+
+.saveProceedButton.disabled {
+  background-color: grey;
+}
+
+.saveProceedButton.saving {
+  background-color: #63abf7;
+}
+
+.ptnTimePreferences {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 20px;
+}
+.ptnTimePreferences .scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  flex-direction: column;
+}
+.ptnTimePreferences .noPreferencesComment {
+  display: none;
+}
+
+.ptnTimePreferences.noRemark.noDefinitions .noPreferencesComment {
+  display: flex;
+  flex: 1;
+}
+
+.talkTimeBlockDefinitionWidget {
+  display: flex;
+}
+
+.talkTimeBlockDefinitionWidget.hidden {
+  display: none;
+}
+
+.talkTimeBlockDefinitionCommitments {
+  padding: 10px;
+  flex: 1;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDayHeader {
+  flex: 1;
+  flex-grow: 0;
+  word-break: break-word;
+  line-height: 50px;
+  font-weight: 500;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget {
+  flex: 1;
+  flex-grow: 0;
+  min-height: 60px; /* ugh  */
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .ptnTimePreferencesDayCommitmentHeader {
+  word-break: break-word;
+  line-height: 50px;
+  font-weight: 200;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .ptnTimePreferencesDayCommitmentUnavailableBlock {
+  max-width: 40px;
+  position: absolute;
+  right: 25px;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .ptnTimePreferencesDayCommitmentAvailableBlock {
+  max-width: 40px;
+  position: absolute;
+  right: 90px;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget i {
+  color: lightgrey;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockAvailable i {
+  font-size: 50px;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockUnavailable i {
+  font-size: 50px;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockAvailable.selected i {
+  color: #2e7d32;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockAvailable.selected.disabled i {
+  color: #577d57;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockUnavailable.selected i {
+  color: #dd2c00;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget .timeBlockUnavailable.selected.disabled i {
+  color: #dd856f;
+}
+.talkTimeBlockDefinitionCommitments .ptnTimePreferencesDayWidget .ptnTimePreferencesDaySelectionList .ptnTimePreferencesDayCommitmentWidget.changed {
+  background-color: lightyellow;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+}
+
+.parentToSchedulerRemarkWidget {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.parentToSchedulerRemarkWidget .parentToSchedulerRemarkHeader {
+  flex-grow: 1;
+  flex-shrink: 1;
+  word-break: break-word;
+}
+.parentToSchedulerRemarkWidget .parentToSchedulerRemark {
+  flex: 1;
+  word-break: break-word;
+  resize: none;
+  min-height: 50px;
+  font-size: 16px;
+}
+
+.parentToSchedulerRemarkWidget.changed {
+  background-color: lightyellow;
+}
+
+.studentTalkRequestListItem.changed {
+  background-color: lightyellow;
+}
+
+.parentToSchedulerRemarkWidget.hidden {
+  display: none;
+}
+
+.subjectSelectionFormResultPage {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmationPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+.confirmationPage .explanationContainer {
+  margin: 0.5rem;
+  margin-top: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.confirmationPage .explanation {
+  margin-bottom: 16px;
+}
+.confirmationPage .commentInput {
+  height: 200px;
+  background: #F1F3F4;
+  border-radius: 2px;
+  border: none;
+  padding: 8px;
+}
+.confirmationPage .commentInput::placeholder {
+  font-style: italic;
+  color: rgba(44, 62, 80, 0.3);
+}
+.confirmationPage .text {
+  margin: 8px;
+}
+.confirmationPage .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.confirmationPage .ok, .confirmationPage .cancel {
+  flex: 1;
+  height: 24px;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 50%;
+  background-color: white;
+  outline: 1px solid lightgrey;
+  border-radius: 2px;
+  color: #2c3e50;
+}
+.confirmationPage .ok {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.parentSplashPage {
+  width: 100%;
+  background-color: white;
+  display: flex;
+}
+.parentSplashPage .scroll {
+  flex: 1;
+  padding: 0 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.parentSplashPage .scroll .hidden {
+  display: none;
+}
+.parentSplashPage .myScheduleContainer {
+  padding: 20px;
+}
+.parentSplashPage .ptnContainer .openPtnHeader {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.parentSplashPage .ptnContainer .openPtnList {
+  padding: 0 20px;
+}
+.parentSplashPage .ptnContainer .openPtnList .ptnItem {
+  padding: 20px 0;
+}
+.parentSplashPage .subjectSelectionHeader {
+  display: none;
+  margin: 20px;
+}
+.parentSplashPage .subjectSelectionList {
+  display: none;
+  border-bottom: solid 1px lightgrey;
+  padding: 20px;
+  margin: 0 20px 0 20px;
+}
+.parentSplashPage.haveSubjectSelections .subjectSelectionHeader, .parentSplashPage.haveSubjectSelections .subjectSelectionList {
+  display: block;
+}
+
+.childListPage {
+  width: 100%;
+  background-color: white;
+  display: flex;
+}
+.childListPage .scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.childListPage .scroll .hidden {
+  display: none;
+}
+.childListPage .myScheduleContainer {
+  padding: 20px;
+}
+
+.childListHeader {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.childList {
+  padding: 0px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.childListItem {
+  border-bottom: solid 1px lightgrey;
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  min-height: 42px;
+  cursor: pointer;
+}
+.childListItem .childIcon {
+  flex: 0;
+  min-height: 42px;
+  min-width: 38px;
+}
+.childListItem .childIcon .material-icons, .childListItem .childIcon .material-icons-no-fill {
+  font-size: 38px;
+}
+.childListItem .childFirstName {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.viewExamPeriodSelectionPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #2C3E50;
+}
+.viewExamPeriodSelectionPage .titleBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+.viewExamPeriodSelectionPage .titleBar .header {
+  padding: 4px;
+  display: inline-block;
+}
+.viewExamPeriodSelectionPage .titleBar .examPeriodHeaderBlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  padding-left: 8px;
+  padding-top: 8px;
+  overflow: hidden;
+}
+.viewExamPeriodSelectionPage .titleBar .subject {
+  display: inline-block;
+  width: 40%;
+  font-size: 18px;
+}
+.viewExamPeriodSelectionPage .titleBar .examPeriod1, .viewExamPeriodSelectionPage .titleBar .examPeriod2, .viewExamPeriodSelectionPage .titleBar .examPeriod3 {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  max-width: 20%;
+  font-size: 18px;
+}
+.viewExamPeriodSelectionPage .examContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.changePasswordPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.changePasswordPage .text {
+  flex: 1;
+  margin: 8px;
+}
+.changePasswordPage .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.changePasswordPage .input {
+  padding-top: 8px;
+  flex: 1;
+  overflow-y: auto;
+}
+.changePasswordPage .userNameBox, .changePasswordPage .originalPasswordBox, .changePasswordPage .totpBox, .changePasswordPage .newPasswordBox, .changePasswordPage .newPasswordRepeatBox {
+  margin: 8px;
+  display: block;
+}
+.changePasswordPage .userNameLabel, .changePasswordPage .originalPasswordLabel, .changePasswordPage .totpLabel, .changePasswordPage .newPasswordLabel, .changePasswordPage .newPasswordRepeatLabel {
+  align-self: center;
+  font-size: 16px;
+  color: #35495E;
+  font-weight: 500;
+  padding-top: 8px;
+}
+.changePasswordPage .userName {
+  padding: 8px;
+  align-self: center;
+  font-size: 14px;
+  color: #35495E;
+  font-weight: 400;
+}
+.changePasswordPage .originalPassword, .changePasswordPage .totp, .changePasswordPage .newPassword, .changePasswordPage .newPasswordRepeat, .changePasswordPage .wrongPassword, .changePasswordPage .rightPassword {
+  display: flex;
+  width: -webkit-fill-available;
+  padding: 8px;
+  align-self: center;
+  font-size: 14px;
+  color: #35495E;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #909BA7;
+  border-radius: 2px;
+}
+.changePasswordPage .originalPassword:focus, .changePasswordPage .totp:focus, .changePasswordPage .newPassword:focus, .changePasswordPage .newPasswordRepeat:focus, .changePasswordPage .wrongPassword:focus, .changePasswordPage .rightPassword:focus {
+  border: 1px solid #35495E;
+  border-radius: 2px;
+}
+.changePasswordPage .ok, .changePasswordPage .cancel {
+  flex: 1;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 50%;
+  background-color: #8b8b8b;
+}
+.changePasswordPage .ok {
+  background-color: #4CAF50;
+}
+.changePasswordPage .passwordErrorMessage {
+  text-align: left;
+  padding: 8px;
+  color: #E22727;
+  font-size: 14px;
+  font-weight: 400;
+}
+.changePasswordPage .wrongPassword {
+  border: 1px solid #E22727;
+  border-radius: 2px;
+}
+
+.changeTotpPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.changeTotpPage .contentBox {
+  flex: 1;
+  overflow-y: auto;
+}
+.changeTotpPage .qrCanvasBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.changeTotpPage .text, .changeTotpPage .textCentered, .changeTotpPage .QRTitle, .changeTotpPage .redirect {
+  margin: 8px;
+}
+.changeTotpPage .textCentered, .changeTotpPage .QRTitle, .changeTotpPage .redirect {
+  text-align: center;
+}
+.changeTotpPage .QRTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+.changeTotpPage .redirect {
+  color: #4CAF50;
+  text-decoration: underline;
+}
+.changeTotpPage .redirect:hover {
+  color: rgb(56, 129, 60);
+}
+.changeTotpPage .userNameBox, .changeTotpPage .passwordBox, .changeTotpPage .totpBox {
+  margin: 8px;
+  display: block;
+}
+.changeTotpPage .userNameLabel, .changeTotpPage .passwordLabel, .changeTotpPage .totpLabel {
+  align-self: center;
+  font-size: 16px;
+  color: #35495E;
+  font-weight: 500;
+  padding-top: 8px;
+}
+.changeTotpPage .userName {
+  padding: 8px;
+  align-self: center;
+  font-size: 14px;
+  color: #35495E;
+  font-weight: 400;
+}
+.changeTotpPage .password, .changeTotpPage .totp {
+  display: flex;
+  width: -webkit-fill-available;
+  padding: 8px;
+  align-self: center;
+  font-size: 14px;
+  color: #35495E;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #909BA7;
+  border-radius: 2px;
+}
+.changeTotpPage .password:focus, .changeTotpPage .totp:focus {
+  border: 1px solid #35495E;
+  border-radius: 2px;
+}
+.changeTotpPage .passwordErrorMessage {
+  text-align: left;
+  padding: 8px;
+  color: #E22727;
+  font-size: 14px;
+  font-weight: 400;
+}
+.changeTotpPage .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.changeTotpPage .cancel, .changeTotpPage .ok {
+  flex: 1;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 50%;
+  background-color: #8b8b8b;
+}
+.changeTotpPage .ok {
+  background-color: #4CAF50;
+}
+
+.navBar {
+  background-color: #2C3E50;
+  color: white;
+  height: 56px;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  left: 300px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+.navBar a {
+  color: white;
+}
+.navBar .masterBar, .navBar .detailBar {
+  flex: 1;
+  display: flex;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.navBar .title, .navBar .secondaryTitle {
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 72px;
+}
+.navBar .detailBar .title, .navBar .detailBar .secondaryTitle {
+  left: 24px;
+}
+.navBar .secondaryTitle {
+  display: none;
+}
+.navBar .title:empty {
+  display: none;
+}
+.navBar .menuButton, .navBar .backButton {
+  position: absolute;
+  left: 4px;
+  font-size: 10%;
+  font-weight: bold;
+  padding: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+}
+.navBar .icon {
+  font-size: 24px;
+  width: 24px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 4px;
+  color: #5b5b5b;
+}
+.navBar .withNotifications {
+  display: none;
+}
+.navBar.showNotifications .withNotifications {
+  display: inline-block;
+}
+.navBar.showNotifications .noNotifications {
+  display: none;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+}
+.popup .popupTitleBar {
+  background-color: #9E9E9E;
+  color: white;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+.popup .popupTitleBar a {
+  color: white;
+}
+.popup .popupTitleBar .title {
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  left: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popup .popupTitleBar .closeButton {
+  position: absolute;
+  left: 4px;
+  font-size: 10%;
+  font-weight: bold;
+  padding: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popup.error .popupTitleBar {
+  background-color: #C0392B;
+}
+.popup.canChange .popupTitleBar {
+  background-color: #4CAF50;
+}
+.popup.navbarBlue .popupTitleBar {
+  background-color: #2C3E50;
+}
+.popup .content {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+}
+.popup .bottomBar {
+  display: none;
+  width: 100%;
+  height: 24px;
+  background-color: grey;
+  color: white;
+  line-height: 24px;
+  text-align: center;
+}
+.popup .bottomBar.visible {
+  display: block;
+}
+
+.swiper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.swiper .container {
+  flex: 1;
+  width: 300%;
+  min-width: 300%;
+  overflow: hidden;
+  display: flex;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.swiper .container .slide {
+  min-width: 33.33%;
+  /* needed so Firefox doesn't make img shrink to fit */
+  width: 33.33%; /* can't take this out either as it breaks Chrome */
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+.swiper .container.snap {
+  transition: transform 0.13s ease-out;
+}
+
+.responsive {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.responsive .menu {
+  max-width: 300px;
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  transform: translate(-300px);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 300px;
+  z-index: 3;
+  overflow: hidden;
+}
+.responsive .menuBacking {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3607843137);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.responsive .lowerContent {
+  flex-grow: 1;
+  position: relative;
+}
+.responsive .upperContent {
+  position: relative;
+  height: 56px;
+}
+.responsive .masterDetail {
+  position: absolute;
+  left: 300px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #eaeeef;
+  white-space: nowrap;
+  display: flex;
+}
+.responsive .masterDetail .masterHolder, .responsive .masterDetail .detailHolder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.responsive .masterDetail .master {
+  flex: 1;
+  display: flex;
+  vertical-align: top;
+  white-space: normal;
+  overflow: hidden;
+}
+.responsive .masterDetail .detail {
+  flex: 1;
+  display: flex;
+  vertical-align: top;
+  white-space: normal;
+  min-width: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+}
+.responsive .masterDetail .blueBar {
+  height: 40px;
+  width: 100%;
+  background-color: #2C3E50;
+  display: none;
+}
+.responsive .popup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  vertical-align: top;
+  white-space: normal;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  max-width: 480px;
+  max-height: 853px;
+  margin: auto;
+  visibility: hidden;
+}
+.responsive .miniPopup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  vertical-align: top;
+  white-space: normal;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  max-width: 370px;
+  height: fit-content;
+  border-radius: 5px;
+  margin: auto;
+  visibility: hidden;
+}
+.responsive .popupBacking {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.36);
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 9;
+}
+.responsive .toast {
+  display: none;
+  color: white;
+  background-color: #9E9E9E;
+  padding: 8px;
+  margin: 8px 24px 8px 24px;
+  height: 24px;
+  width: calc(50% - 72px);
+  animation: fadein 1s, fadeout 1s 3s;
+  position: absolute;
+  bottom: 8px;
+  border-radius: 4px;
+}
+.responsive .toast .closeIcon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  padding-left: 6px;
+}
+.responsive .toast .toastContent {
+  flex: 1;
+  line-height: 24px;
+}
+.responsive .toast .horizontalLine {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1882352941);
+  width: 1px;
+}
+@keyframes fadein {
+  from {
+    bottom: -10px;
+    opacity: 0;
+  }
+  to {
+    bottom: 8px;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 8px;
+    opacity: 1;
+  }
+  to {
+    bottom: -10px;
+    opacity: 0;
+  }
+}
+.responsive .toast.error {
+  background-color: #C0392B;
+}
+.responsive .toast.success {
+  background-color: #6BAA65;
+}
+.responsive .toast.navbarBlue {
+  background-color: #2C3E50;
+}
+.responsive.showToast .toast {
+  display: flex;
+}
+.responsive .flex {
+  display: flex;
+}
+.responsive .performUpdateHolder {
+  display: none;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 8px;
+  text-align: center;
+  z-index: 8;
+  box-sizing: border-box;
+}
+.responsive .performUpdateHolder .performUpdate {
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: white;
+}
+.responsive .performUpdateHolder .text {
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 4px;
+}
+.responsive.updateAvailable .performUpdateHolder {
+  display: block;
+}
+.responsive.showBackButtonOnMasterPage .navBar .masterBar .title {
+  left: 72px;
+}
+.responsive.showBackButtonOnMasterPage .navBar .masterBar .menuButton {
+  visibility: hidden;
+}
+.responsive.showBackButtonOnMasterPage .navBar .masterBar .backButton {
+  visibility: visible;
+}
+
+.responsive.showPopup .popup {
+  visibility: inherit;
+}
+.responsive.showPopup .popup .navBar .closeButton {
+  visibility: visible;
+}
+.responsive.showPopup .popupBacking {
+  visibility: visible;
+  opacity: 1;
+  /* Only animate it when it appears. */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.responsive.showMiniPopup .miniPopup {
+  visibility: inherit;
+}
+.responsive.showMiniPopup .popupBacking {
+  visibility: visible;
+  opacity: 1;
+  /* Only animate it when it appears. */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Full layout */
+@media (min-width: 1001px) {
+  .responsive .menu {
+    transform: translate(0px);
+  }
+  .responsive .menuShadow {
+    visibility: visible;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1254901961);
+    position: absolute;
+    top: 0px;
+    bottom: -20px;
+    left: 0px;
+    width: 300px;
+    z-index: 1;
+  }
+  .responsive .navBar {
+    left: 300px;
+  }
+  .responsive .navBar .title, .responsive .navBar .secondaryTitle {
+    left: 16px;
+  }
+  .responsive.showMasterExtra .navBar .title {
+    left: 72px;
+  }
+  .responsive .showMenu .menuBacking {
+    visibility: hidden;
+  }
+  .responsive.blueBarActiveMaster .masterHolder .blueBar {
+    display: flex;
+  }
+  .responsive.blueBarActiveDetail .detailHolder .blueBar {
+    display: flex;
+  }
+  .responsive.blueBarActiveMaster.blueBarActiveDetail .blueBar {
+    display: none;
+  }
+}
+/* Master detail */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .navBar .menuButton {
+    visibility: visible;
+  }
+  .responsive .navBar, .responsive .masterDetail {
+    left: 0px;
+  }
+  .responsive.blueBarActiveMaster .masterHolder .blueBar {
+    display: flex;
+  }
+  .responsive.blueBarActiveDetail .detailHolder .blueBar {
+    display: flex;
+  }
+  .responsive.blueBarActiveMaster.blueBarActiveDetail .blueBar {
+    display: none;
+  }
+}
+/* Menu hidden */
+@media (max-width: 1000px) {
+  .responsive .menu {
+    transform: translate(-100%);
+    transition: transform 0.3s;
+  }
+  .responsive .menu.nosnap {
+    transition: none;
+  }
+  .showMenu .menuBacking {
+    visibility: visible;
+    opacity: 1;
+  }
+  .showMenu .menu {
+    transform: translate(0px);
+  }
+}
+/* Single screen (phones in portrait mode) */
+@media (max-width: 600px) {
+  .responsive .menu {
+    width: calc(100% - 56px);
+  }
+  .responsive .navBar, .responsive .masterDetail {
+    left: 0px;
+    /* transition: transform 0.3s; */
+    width: 200%;
+  }
+  .responsive .navBar .masterHolder, .responsive .masterDetail .masterHolder {
+    width: 50%;
+  }
+  .responsive .navBar .master, .responsive .navBar .detail, .responsive .masterDetail .master, .responsive .masterDetail .detail {
+    width: 100%;
+  }
+  .responsive .navBar .secondaryTitle, .responsive .masterDetail .secondaryTitle {
+    left: 72px;
+  }
+  .responsive .navBar .detailBar .title {
+    left: 72px;
+  }
+  .navBar .menuButton {
+    visibility: visible;
+  }
+  /* Mode: Show only the detail view. */
+  .showDetail .navBar, .showDetail .masterDetail {
+    transform: translate(-50%);
+  }
+  .showDetail .navBar .backButton {
+    visibility: visible;
+  }
+  .showDetail .navBar .menuButton {
+    visibility: hidden;
+  }
+  .showDetail .navBar .title:empty + .secondaryTitle {
+    display: block;
+  }
+  .showDetail .toast {
+    right: 0px;
+  }
+}
+.daySchedule {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.daySchedule .appointmentlist {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.daySchedule .updated {
+  color: #aaaabb;
+  background: #f6f8fa;
+  font-size: 76%;
+  margin-right: 8px;
+  padding: 7px 0 8px 8px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.daySchedule.loading .updated {
+  visibility: hidden;
+}
+.daySchedule.loading .appointmentlist, .daySchedule.loading .dayTitle {
+  filter: grayscale(0.7);
+}
+.daySchedule .dayTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2C3E50;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #f6f8fa;
+}
+.daySchedule .dayTitle::first-letter {
+  text-transform: capitalize;
+}
+.daySchedule .scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.daySchedule .loadingIndicator {
+  margin-right: 6px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+.daySchedule.loading .loadingIndicator {
+  visibility: visible;
+}
+.daySchedule.emptyState .scroll {
+  flex: 0;
+}
+
+.scheduleForbiddenMessage {
+  font-size: 20px;
+  color: red;
+  flex: 1;
+  padding: 20px;
+}
+
+.daySchedule.outdated .updated {
+  color: #e60000;
+  visibility: visible;
+}
+.daySchedule.outdated .appointmentlist, .daySchedule.outdated .dayTitle {
+  filter: grayscale(0.7);
+}
+
+.weekSchedule {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.weekSchedule .appointmentlist {
+  flex: 1;
+  display: flex;
+  padding-bottom: 60px;
+  position: relative;
+}
+.weekSchedule .updated {
+  color: #aaaabb;
+  background: #f6f8fa;
+  font-size: 76%;
+  margin-right: 8px;
+  padding: 8px 0 8px 8px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.weekSchedule.loading .updated {
+  visibility: hidden;
+}
+.weekSchedule.loading .appointmentlist, .weekSchedule.loading .dayTitle {
+  filter: grayscale(0.7);
+}
+.weekSchedule .dayTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2C3E50;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #f6f8fa;
+}
+.weekSchedule .dayTitle::first-letter {
+  text-transform: capitalize;
+}
+.weekSchedule .scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+}
+.weekSchedule .loadingIndicator {
+  margin-right: 6px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+.weekSchedule.loading .loadingIndicator {
+  visibility: visible;
+}
+.weekSchedule.emptyState .scroll {
+  flex: 0;
+  min-height: 40px;
+}
+.weekSchedule.emptyState .appointmentlist {
+  padding-bottom: 0;
+}
+.weekSchedule .time, .weekSchedule .timeSlot {
+  color: #959baf;
+  margin-right: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  padding-left: 8px;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+.weekSchedule .timeSlot {
+  font-weight: 600;
+}
+.weekSchedule .day {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #959baf;
+}
+
+.weekSchedule.outdated .updated {
+  color: #e60000;
+  visibility: visible;
+}
+.weekSchedule.outdated .appointmentlist, .weekSchedule.outdated .dayTitle {
+  filter: grayscale(0.7);
+}
+
+.showWeek .daySchedule .appointmentlist {
+  max-width: none;
+}
+
+.appointmentItem, .appointmentItemWithOptionalSwitch {
+  display: flex;
+  min-height: 64px;
+  overflow: hidden;
+  margin: 0px 4px 6px;
+  color: #2C3E50;
+  position: relative;
+  max-width: 432px;
+}
+.appointmentItem .timeBlock, .appointmentItemWithOptionalSwitch .timeBlock {
+  width: 64px;
+  text-align: right;
+  padding-right: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
+.appointmentItem .timeslot, .appointmentItemWithOptionalSwitch .timeslot {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #78909C;
+}
+.appointmentItem .timeStart, .appointmentItemWithOptionalSwitch .timeStart {
+  color: #78909C;
+  font-weight: 500;
+  font-size: 16px;
+}
+.appointmentItem .timeEnd, .appointmentItemWithOptionalSwitch .timeEnd {
+  color: #78909C;
+  font-size: 12px;
+}
+.appointmentItem .isFreeText, .appointmentItemWithOptionalSwitch .isFreeText {
+  display: none;
+}
+.appointmentItem .notEnrolledCanEnrollIcon, .appointmentItem .enrolledCanSwitchIcon, .appointmentItemWithOptionalSwitch .notEnrolledCanEnrollIcon, .appointmentItemWithOptionalSwitch .enrolledCanSwitchIcon {
+  color: #4CAF50;
+  visibility: hidden;
+}
+.appointmentItem .notEnrolledLockedIcon, .appointmentItem .enrolledFixedIcon, .appointmentItem .mandatoryWithOptionalsIcon, .appointmentItem .notEnrolledDisallowedIcon, .appointmentItemWithOptionalSwitch .notEnrolledLockedIcon, .appointmentItemWithOptionalSwitch .enrolledFixedIcon, .appointmentItemWithOptionalSwitch .mandatoryWithOptionalsIcon, .appointmentItemWithOptionalSwitch .notEnrolledDisallowedIcon {
+  color: #9E9E9E;
+  visibility: hidden;
+}
+.appointmentItem .conflictIcon, .appointmentItem .cancelResolvesConflictIcon, .appointmentItemWithOptionalSwitch .conflictIcon, .appointmentItemWithOptionalSwitch .cancelResolvesConflictIcon {
+  color: #ef6351;
+  visibility: hidden;
+}
+.appointmentItem .choiceIcon, .appointmentItemWithOptionalSwitch .choiceIcon {
+  position: absolute;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+}
+.appointmentItem .choiceIcon i, .appointmentItemWithOptionalSwitch .choiceIcon i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+}
+.appointmentItem .choiceCount, .appointmentItemWithOptionalSwitch .choiceCount {
+  display: none;
+}
+.appointmentItem .onlineTeacherIcon, .appointmentItemWithOptionalSwitch .onlineTeacherIcon {
+  color: #d32f2e;
+  font-size: 16px;
+}
+.appointmentItem .creatorIcon, .appointmentItemWithOptionalSwitch .creatorIcon {
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+}
+.appointmentItem.notEnrolledCanEnroll .appointmentBlock, .appointmentItemWithOptionalSwitch.notEnrolledCanEnroll .appointmentBlock {
+  border: 1px dashed #4CAF50;
+}
+.appointmentItem.notEnrolledCanEnroll .notEnrolledCanEnrollIcon, .appointmentItemWithOptionalSwitch.notEnrolledCanEnroll .notEnrolledCanEnrollIcon {
+  visibility: inherit;
+}
+.appointmentItem.notEnrolledLocked .notEnrolledLockedIcon, .appointmentItemWithOptionalSwitch.notEnrolledLocked .notEnrolledLockedIcon {
+  visibility: inherit;
+}
+.appointmentItem.notEnrolledDisallowed:not(.cancelled) .notEnrolledDisallowedIcon, .appointmentItemWithOptionalSwitch.notEnrolledDisallowed:not(.cancelled) .notEnrolledDisallowedIcon {
+  visibility: inherit;
+}
+.appointmentItem.enrolledCanSwitch .enrolledCanSwitchIcon, .appointmentItem.enrolledCanUnenroll .enrolledCanSwitchIcon, .appointmentItemWithOptionalSwitch.enrolledCanSwitch .enrolledCanSwitchIcon, .appointmentItemWithOptionalSwitch.enrolledCanUnenroll .enrolledCanSwitchIcon {
+  visibility: inherit;
+}
+.appointmentItem.enrolledFixed .enrolledFixedIcon, .appointmentItemWithOptionalSwitch.enrolledFixed .enrolledFixedIcon {
+  visibility: inherit;
+}
+.appointmentItem.mandatoryWithOptionals .mandatoryWithOptionalsIcon, .appointmentItemWithOptionalSwitch.mandatoryWithOptionals .mandatoryWithOptionalsIcon {
+  visibility: inherit;
+}
+.appointmentItem.conflict .conflictIcon, .appointmentItemWithOptionalSwitch.conflict .conflictIcon {
+  visibility: inherit;
+}
+
+.appointmentItem {
+  /* free case: appointmentBar only shown if there is a single plannedAttendance (will be the representative). */
+}
+.appointmentItem .appointmentBlock {
+  flex: 1;
+  border: 1px solid #c5c9e2;
+  padding: 4px;
+  padding-left: 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  border-left: none;
+}
+.appointmentItem .appointmentBar {
+  background-color: #7b7bb3;
+  width: 8px;
+  margin-right: 10px;
+}
+.appointmentItem.overlapsPrevious {
+  margin-top: -16px;
+}
+.appointmentItem.overlapsPrevious .appointmentBlock {
+  margin-left: 8px;
+}
+.appointmentItem.exam .appointmentBlock {
+  border: 1px solid #e8cb22;
+}
+.appointmentItem.exam .appointmentBar {
+  background-color: #e8cb22;
+}
+.appointmentItem.activity .appointmentBlock {
+  border: 1px solid #74b474;
+}
+.appointmentItem.activity .appointmentBar {
+  background-color: #268e26;
+}
+.appointmentItem.interlude .appointmentBlock {
+  border: 1px solid lightgray;
+  background-color: #eeeeee;
+}
+.appointmentItem.interlude .appointmentBar {
+  display: none;
+}
+.appointmentItem.interlude .subjects {
+  text-transform: capitalize;
+}
+.appointmentItem.meeting .appointmentBar {
+  background-color: #22ABE8;
+}
+.appointmentItem.notEnrolledCanEnroll .appointmentBar, .appointmentItem.notEnrolledLocked .appointmentBar, .appointmentItem.notEnrolledDisallowed .appointmentBar {
+  display: none;
+}
+.appointmentItem.free.cancelled .appointmentBar {
+  background-color: #df4242; /* may still not be visible, depends on existence of a representative. */
+}
+.appointmentItem.free.cancelled .appointmentBlock {
+  background-color: #fbe1e1;
+  color: #e87272;
+  border: 1px solid #df4242;
+}
+.appointmentItem.free.cancelled:not(.multiple).enrolledFixed .appointmentBar, .appointmentItem.free.cancelled:not(.multiple).enrolledMandatory .appointmentBar, .appointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .appointmentBar, .appointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .appointmentBar {
+  display: block;
+}
+.appointmentItem.free.cancelled:not(.multiple).enrolledFixed .appointmentBlock, .appointmentItem.free.cancelled:not(.multiple).enrolledMandatory .appointmentBlock, .appointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .appointmentBlock, .appointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .appointmentBlock {
+  border-left: none;
+}
+.appointmentItem.multiple .appointmentBar {
+  display: none;
+}
+.appointmentItem.conflict .appointmentBar {
+  display: none;
+}
+.appointmentItem.conflict .appointmentBlock {
+  border-left: 1px solid #9e9e9e;
+  border-color: #9E9E9E;
+}
+.appointmentItem.conflict .conflictText {
+  display: block;
+}
+@media (min-width: 601px) {
+  .appointmentItem {
+    /* .cancelled should come last here. */
+  }
+  .appointmentItem.selectedItem .appointmentBlock {
+    background-color: #e5e5ff;
+  }
+  .appointmentItem.notEnrolledDisallowed.selectedItem .appointmentBlock {
+    background-color: #e5e5ff;
+  }
+  .appointmentItem.selectedItem.interlude .appointmentBlock {
+    background-color: rgb(212.5, 212.5, 212.5) !important;
+  }
+  .appointmentItem.selectedItem.activity .appointmentBlock {
+    background-color: #d3e8d3 !important;
+  }
+  .appointmentItem.selectedItem.exam .appointmentBlock {
+    background-color: #fbf5d2 !important;
+  }
+  .appointmentItem.selectedItem.meeting .appointmentBlock {
+    background-color: #D2EEFB !important;
+  }
+  .appointmentItem.selectedItem.cancelled .appointmentBlock {
+    color: #df4242;
+    background-color: #efa0a0 !important;
+  }
+}
+.appointmentItem .choiceText, .appointmentItem .noChoiceText, .appointmentItem .conflictText, .appointmentItem .isFreeText {
+  display: none;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+.appointmentItem .info {
+  margin-top: 8px;
+}
+.appointmentItem .subjects {
+  text-transform: uppercase;
+}
+.appointmentItem.mandatoryWithOptionals .subjects, .appointmentItem.enrolledFixed .subjects, .appointmentItem.enrolledCanSwitch .subjects, .appointmentItem.enrolledCanUnenroll .subjects {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+.appointmentItem .teachers, .appointmentItem .locations, .appointmentItem .groups {
+  display: initial;
+  font-size: 12px;
+}
+.appointmentItem .groups {
+  display: none;
+}
+.appointmentItem .teachers {
+  text-transform: uppercase;
+}
+.appointmentItem .loading {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  border: none;
+}
+.appointmentItem .icons {
+  position: absolute;
+  right: 4px;
+  bottom: 0px;
+}
+.appointmentItem .icons i {
+  display: none;
+  font-size: 20px;
+  margin-left: 4px;
+}
+.appointmentItem .icons img {
+  display: none;
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
+.appointmentItem .icons .replacementIcon {
+  display: none;
+}
+.appointmentItem.contentAvailable .icons .contentIcon {
+  color: #03A9F4;
+  display: inline-block;
+}
+.appointmentItem.messagesAvailable .icons .messagesIcon {
+  color: #A1887F;
+  display: inline-block;
+}
+.appointmentItem.scheduleInfoAvailable .icons .scheduleInfoIcon, .appointmentItem.schedulerRemarkAvailable .icons .scheduleInfoIcon {
+  color: #FF9800;
+  display: inline-block;
+}
+.appointmentItem.appointmentOnline .icons .onlineIcon {
+  color: #d32f2e;
+  display: inline-block;
+}
+.appointmentItem.creator .icons .creatorIcon {
+  display: inline-block;
+}
+.appointmentItem .invisible {
+  display: none;
+}
+.appointmentItem.notEnrolledCanEnroll .subjects, .appointmentItem.notEnrolledLocked .subjects {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.appointmentItem.notEnrolledCanEnroll .info, .appointmentItem.notEnrolledLocked .info {
+  display: none;
+}
+.appointmentItem.notEnrolledCanEnroll .icons, .appointmentItem.notEnrolledLocked .icons {
+  display: none;
+}
+.appointmentItem.notEnrolledCanEnroll .appointmentBar, .appointmentItem.notEnrolledLocked .appointmentBar {
+  display: none;
+}
+.appointmentItem.notEnrolledCanEnroll .choiceText {
+  display: block;
+}
+.appointmentItem.notEnrolledLocked:not(.appointmentItem.free) {
+  opacity: 0.5;
+}
+.appointmentItem.notEnrolledLocked:not(.appointmentItem.free) .appointmentBar {
+  display: none;
+}
+.appointmentItem.notEnrolledLocked:not(.appointmentItem.free) .appointmentBlock {
+  background-color: white;
+  border: 1px dashed grey;
+}
+.appointmentItem.notEnrolledLocked:not(.appointmentItem.free) .noChoiceText {
+  display: block;
+}
+.appointmentItem.free:not(.appointmentItem.cancelled) {
+  opacity: 0.5;
+}
+.appointmentItem.free:not(.appointmentItem.cancelled) .appointmentBar {
+  display: none;
+}
+.appointmentItem.free:not(.appointmentItem.cancelled) .appointmentBlock {
+  background-color: white;
+  border: 1px dashed grey;
+}
+.appointmentItem.free .isFreeText {
+  display: block;
+}
+.appointmentItem.multiple .subjects, .appointmentItem.free .subjects {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 8px;
+}
+.appointmentItem.notEnrolledDisallowed .info {
+  display: none;
+}
+.appointmentItem.multiple .info {
+  display: none;
+}
+.appointmentItem .appointmentCount {
+  color: #ffffff;
+  border-radius: 8px;
+  padding-right: 8px;
+  background-color: #909BA7;
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 10px;
+}
+.appointmentItem .appointmentCount div {
+  display: flex;
+  align-items: flex-start;
+}
+.appointmentItem .appointmentCount div span {
+  padding-top: 4px;
+}
+.appointmentItem .appointmentCount .countIcon {
+  font-size: 18px;
+  display: inline-block;
+}
+.appointmentItem .appointmentCount.visible {
+  display: inline-block;
+  align-items: center;
+}
+.appointmentItem.cancelled .appointmentCount {
+  background-color: #D29D9D;
+}
+.appointmentItem.hasFocusedAction .appointmentBlock {
+  border: 1px dashed #4CAF50;
+}
+.appointmentItem.hasFocusedAction .appointmentBar {
+  display: none;
+}
+.appointmentItem.hasFocusedAction .subjects {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+.appointmentItem.hasFocusedAction .teachers, .appointmentItem.hasFocusedAction .locations, .appointmentItem.hasFocusedAction .groups {
+  display: inline-block;
+  font-size: 12px;
+}
+.appointmentItem.hasFocusedAction .groups {
+  display: none;
+}
+.appointmentItem.hasFocusedAction .teachers {
+  text-transform: uppercase;
+}
+.appointmentItem.hasFocusedAction .info {
+  display: inherit;
+}
+.appointmentItem.hasFocusedAction .choiceText, .appointmentItem.hasFocusedAction .noChoiceText, .appointmentItem.hasFocusedAction .conflictText {
+  display: none;
+}
+.appointmentItem.hasFocusedAction.notEnrolledDisallowed:not(.appointmentItem.hasFocusedAction.free), .appointmentItem.hasFocusedAction.notEnrolledLocked:not(.appointmentItem.hasFocusedAction.free) {
+  opacity: 0.5;
+}
+.appointmentItem.hasFocusedAction.notEnrolledDisallowed:not(.appointmentItem.hasFocusedAction.free) .appointmentBlock, .appointmentItem.hasFocusedAction.notEnrolledLocked:not(.appointmentItem.hasFocusedAction.free) .appointmentBlock {
+  border: 1px dashed grey;
+}
+.appointmentItem.hasFocusedAction.notEnrolledDisallowed:not(.appointmentItem.hasFocusedAction.free) .noChoiceText, .appointmentItem.hasFocusedAction.notEnrolledLocked:not(.appointmentItem.hasFocusedAction.free) .noChoiceText {
+  display: block;
+}
+.appointmentItem.hasFocusedAction.notEnrolledDisallowed:not(.appointmentItem.hasFocusedAction.free) .appointmentBlockContent, .appointmentItem.hasFocusedAction.notEnrolledLocked:not(.appointmentItem.hasFocusedAction.free) .appointmentBlockContent {
+  opacity: 1;
+}
+.appointmentItem.hasFocusedAction.notEnrolledDisallowed:not(.appointmentItem.hasFocusedAction.free) .info, .appointmentItem.hasFocusedAction.notEnrolledLocked:not(.appointmentItem.hasFocusedAction.free) .info {
+  display: none;
+}
+.appointmentItem.hasFocusedAction.free .isFreeText {
+  display: block;
+}
+.appointmentItem.hasFocusedAction.free .info {
+  display: none;
+}
+.appointmentItem.hasFocusedAction.conflict .appointmentBlock {
+  border: solid 1px #7b7bb3;
+  border-left-style: solid;
+}
+.appointmentItem.hasFocusedAction.conflict .appointmentBar {
+  display: block;
+}
+.appointmentItem.showOnlyChoiceCount .choiceCount {
+  display: block;
+  flex: 1;
+  text-align: center;
+  margin-right: 0px;
+  color: #99cf9b;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 54px;
+}
+.appointmentItem.showOnlyChoiceCount .appointmentBlock {
+  border: 1px dashed #4CAF50;
+}
+.appointmentItem.showOnlyChoiceCount.notEnrolledLocked, .appointmentItem.showOnlyChoiceCount.notEnrolledDisallowed, .appointmentItem.showOnlyChoiceCount.enrolledFixed {
+  opacity: 0.5;
+}
+.appointmentItem.showOnlyChoiceCount.notEnrolledLocked .choiceCount, .appointmentItem.showOnlyChoiceCount.notEnrolledDisallowed .choiceCount, .appointmentItem.showOnlyChoiceCount.enrolledFixed .choiceCount {
+  color: #cbcbcb;
+}
+.appointmentItem.showOnlyChoiceCount.notEnrolledLocked .appointmentBlock, .appointmentItem.showOnlyChoiceCount.notEnrolledDisallowed .appointmentBlock, .appointmentItem.showOnlyChoiceCount.enrolledFixed .appointmentBlock {
+  border: 1px dashed grey;
+}
+.appointmentItem.showOnlyChoiceCount.notEnrolledLocked .appointmentBlockContent, .appointmentItem.showOnlyChoiceCount.notEnrolledDisallowed .appointmentBlockContent, .appointmentItem.showOnlyChoiceCount.enrolledFixed .appointmentBlockContent {
+  opacity: 1;
+}
+.appointmentItem.showOnlyChoiceCount .appointmentBar, .appointmentItem.showOnlyChoiceCount .choiceText, .appointmentItem.showOnlyChoiceCount .noChoiceText, .appointmentItem.showOnlyChoiceCount .isFreeText, .appointmentItem.showOnlyChoiceCount .conflictText, .appointmentItem.showOnlyChoiceCount .subjects, .appointmentItem.showOnlyChoiceCount .info {
+  display: none;
+}
+
+.appointmentItemWithOptionalSwitch {
+  display: flex;
+  margin: 0px 4px 6px;
+}
+.appointmentItemWithOptionalSwitch .swapIcon {
+  align-self: center;
+  font-size: 36px;
+}
+.appointmentItemWithOptionalSwitch .enrolledAppointmentItem, .appointmentItemWithOptionalSwitch .alternativeAppointmentItem {
+  flex: 1;
+}
+.appointmentItemWithOptionalSwitch .enrolledAppointmentItem .appointmentItem, .appointmentItemWithOptionalSwitch .alternativeAppointmentItem .appointmentItem {
+  margin: 0px;
+}
+.appointmentItemWithOptionalSwitch .enrolledAppointmentItem .timeBlock, .appointmentItemWithOptionalSwitch .alternativeAppointmentItem .timeBlock {
+  display: none;
+}
+
+.studentSchedule .appointmentItem.free .groups, .studentSchedule .appointmentItem.free .teachers, .studentSchedule .appointmentItem.free .locations {
+  display: none;
+}
+
+.employeeSchedule .appointmentItem.enrolledMandatory .groups, .employeeSchedule .appointmentItem.mandatoryWithOptionals .groups, .employeeSchedule .appointmentItem.replaced .groups {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+.employeeSchedule .appointmentItem.multiple .groups, .employeeSchedule .appointmentItem.free .groups {
+  display: inline-block;
+  font-size: 12px;
+}
+.employeeSchedule .appointmentItem.free.cancelled {
+  opacity: 1;
+}
+.employeeSchedule .appointmentItem.free.cancelled .appointmentBlock {
+  background-color: #fbe1e1;
+  color: #e87272;
+  border: 1px solid #df4242;
+}
+.employeeSchedule .appointmentItem .locations {
+  display: inline-block;
+  font-size: 12px;
+}
+.employeeSchedule .appointmentItem .teachers {
+  display: inline-block;
+}
+.employeeSchedule .appointmentItem .subjects {
+  display: inline-block;
+  text-transform: none;
+  font-size: 12px;
+  margin-top: 0px;
+}
+.employeeSchedule .appointmentItem.multiple.info, .employeeSchedule .appointmentItem.free.info {
+  display: none;
+}
+.employeeSchedule .appointmentItem .info * {
+  text-tranform: uppercase;
+}
+.employeeSchedule .appointmentItem.appointmentOptional .icons i.optionalIcon {
+  color: #aaa;
+  display: inline-block;
+}
+.employeeSchedule .appointmentItem .furtherinfo {
+  display: inline-block;
+}
+.employeeSchedule .appointmentItem .hidden {
+  display: none !important;
+}
+.employeeSchedule .appointmentItem.exam .furtherinfo, .employeeSchedule .appointmentItem.activity .furtherinfo {
+  display: none;
+}
+.employeeSchedule .studentCountIcon {
+  padding-left: 5px;
+  height: 18px;
+  width: 18px;
+}
+.employeeSchedule .appointmentItem.activity .info {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.employeeSchedule .appointmentItem.activity .groups, .employeeSchedule .appointmentItem.activity .teachers {
+  display: none;
+}
+.employeeSchedule .appointmentItem.activity .locations {
+  display: block;
+}
+.employeeSchedule .appointmentItem.activity .subjects, .employeeSchedule .appointmentItem.activity .furtherinfo {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+.employeeSchedule .appointmentItem.replacements .icons i:not(.countIcon):not(.replacementIcon) {
+  display: none !important;
+}
+.employeeSchedule .appointmentItem.replacements .icons .replacementIcon {
+  display: inline-block !important;
+  opacity: 1;
+}
+.employeeSchedule .appointmentItem.replacements .replacements {
+  display: inline-block;
+  font-size: 12px;
+}
+.employeeSchedule .appointmentItem.replacements .appointmentBlock {
+  border-color: lightgray;
+  color: #5a5a5a;
+}
+.employeeSchedule .appointmentItem.replacements .appointmentBar {
+  background-color: lightgray;
+  display: block;
+}
+@media (min-width: 601px) {
+  .employeeSchedule .appointmentItem.replacements.selectedItem .appointmentBlock {
+    background-color: lightgray;
+    border-color: rgb(185.5, 185.5, 185.5);
+  }
+  .employeeSchedule .appointmentItem.replacements.selectedItem .appointmentBar {
+    background-color: rgb(185.5, 185.5, 185.5);
+  }
+}
+.employeeSchedule .replacedAppointmentsHeader {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 36px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.compactAppointmentItem {
+  overflow: hidden;
+  font-size: 12px;
+  margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  margin-bottom: 6px;
+  margin-top: 0px;
+  color: #2C3E50;
+  position: relative;
+  /* free with multiple appointments all cancelled: show appointmentCount. */
+  /* free with single plannedAttendance (will be the representative) and one appointment in interval: this will be the representative, we show details. */
+}
+.compactAppointmentItem .timeBlock {
+  width: 64px;
+  text-align: right;
+  padding-right: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
+.compactAppointmentItem .appointmentBlock {
+  flex: 1;
+  border: 1px solid #c5c9e2;
+  padding: 4px;
+  padding-left: 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  border-left: none;
+}
+.compactAppointmentItem .appointmentBar {
+  background-color: #7b7bb3;
+  width: 8px;
+}
+.compactAppointmentItem.overlapsPrevious {
+  margin-top: -16px;
+}
+.compactAppointmentItem.overlapsPrevious .appointmentBlock {
+  margin-left: 8px;
+}
+.compactAppointmentItem .notEnrolledCanEnrollIcon, .compactAppointmentItem .enrolledCanSwitchIcon {
+  color: #4CAF50;
+}
+.compactAppointmentItem .notEnrolledLockedIcon, .compactAppointmentItem .enrolledFixedIcon, .compactAppointmentItem .mandatoryWithOptionalsIcon, .compactAppointmentItem .notEnrolledDisallowedIcon {
+  color: #9E9E9E;
+}
+.compactAppointmentItem .conflictIcon, .compactAppointmentItem .cancelResolvesConflictIcon {
+  color: #ef6351;
+}
+.compactAppointmentItem.exam .appointmentBlock {
+  border: 1px solid #e8cb22;
+}
+.compactAppointmentItem.exam .appointmentBar {
+  background-color: #e8cb22;
+}
+.compactAppointmentItem.activity .appointmentBlock {
+  border: 1px solid #74b474;
+}
+.compactAppointmentItem.activity .appointmentBar {
+  background-color: #268e26;
+}
+.compactAppointmentItem.interlude .appointmentBlock {
+  border: 1px solid lightgray;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+}
+.compactAppointmentItem.interlude .locations {
+  position: relative;
+}
+.compactAppointmentItem.interlude .appointmentBar, .compactAppointmentItem.interlude .subjects {
+  display: none;
+}
+.compactAppointmentItem.meeting .appointmentBar {
+  background-color: #22ABE8;
+}
+.compactAppointmentItem.multiple .appointmentBar {
+  display: none;
+}
+.compactAppointmentItem .subjects {
+  font-size: 14px;
+  margin-top: 0px;
+  line-height: 16px;
+}
+.compactAppointmentItem .appointmentCount {
+  flex: 1;
+  text-align: center;
+  margin-right: 0px;
+  color: #99cf9b;
+  font-size: 24px;
+  font-weight: 500;
+}
+.compactAppointmentItem .notEnrolledCanEnrollIcon, .compactAppointmentItem .enrolledCanSwitchIcon, .compactAppointmentItem .enrolledFixedIcon, .compactAppointmentItem .mandatoryWithOptionalsIcon, .compactAppointmentItem .conflictIcon, .compactAppointmentItem .scheduleInfoIcon, .compactAppointmentItem .messagesIcon, .compactAppointmentItem .contentIcon, .compactAppointmentItem .notEnrolledLockedIcon, .compactAppointmentItem .notEnrolledDisallowedIcon, .compactAppointmentItem .appointmentCount, .compactAppointmentItem .onlineIcon {
+  display: none;
+}
+.compactAppointmentItem.notEnrolledCanEnroll .appointmentBlock {
+  border: 1px dashed #4CAF50;
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.compactAppointmentItem.notEnrolledCanEnroll .notEnrolledCanEnrollIcon {
+  display: inherit;
+}
+.compactAppointmentItem.notEnrolledCanEnroll .subjects, .compactAppointmentItem.notEnrolledCanEnroll .locations, .compactAppointmentItem.notEnrolledCanEnroll .groups {
+  display: none;
+}
+.compactAppointmentItem.notEnrolledCanEnroll .appointmentCount {
+  display: block;
+}
+.compactAppointmentItem.notEnrolledLocked .appointmentBar, .compactAppointmentItem.notEnrolledDisallowed .appointmentBar {
+  display: none;
+}
+.compactAppointmentItem.notEnrolledLocked .appointmentBlock, .compactAppointmentItem.notEnrolledDisallowed .appointmentBlock {
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+  border: 1px dashed grey;
+}
+.compactAppointmentItem.notEnrolledLocked .subjects, .compactAppointmentItem.notEnrolledLocked .locations, .compactAppointmentItem.notEnrolledLocked .groups, .compactAppointmentItem.notEnrolledDisallowed .subjects, .compactAppointmentItem.notEnrolledDisallowed .locations, .compactAppointmentItem.notEnrolledDisallowed .groups {
+  display: none;
+}
+.compactAppointmentItem.notEnrolledLocked .appointmentCount, .compactAppointmentItem.notEnrolledDisallowed .appointmentCount {
+  display: block;
+  color: #cbcbcb;
+}
+.compactAppointmentItem.notEnrolledLocked:not(.cancelled), .compactAppointmentItem.notEnrolledDisallowed:not(.cancelled) {
+  opacity: 0.5;
+}
+.compactAppointmentItem.notEnrolledDisallowed:not(.cancelled) .notEnrolledDisallowedIcon {
+  display: inherit;
+}
+.compactAppointmentItem.notEnrolledLocked .notEnrolledLockedIcon {
+  display: inherit;
+}
+.compactAppointmentItem.free.multiple .appointmentBlock {
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.compactAppointmentItem.free.cancelled .appointmentBlock {
+  background-color: #fbe1e1;
+  border: 1px solid #df4242;
+  color: #e87272;
+}
+.compactAppointmentItem.free.cancelled .appointmentCount {
+  color: #e87272; /* may still not be visible, depends on existence of a representative. */
+}
+.compactAppointmentItem.free.cancelled.multiple .appointmentCount {
+  display: block;
+}
+.compactAppointmentItem.free.cancelled:not(.multiple).enrolledFixed .appointmentBar, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledMandatory .appointmentBar, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .appointmentBar, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .appointmentBar {
+  background-color: #df4242;
+}
+.compactAppointmentItem.free.cancelled:not(.multiple).enrolledFixed .appointmentBlock, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledMandatory .appointmentBlock, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .appointmentBlock, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .appointmentBlock {
+  border-left: none;
+}
+.compactAppointmentItem.free.cancelled:not(.multiple).enrolledFixed .appointmentCount, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledMandatory .appointmentCount, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .appointmentCount, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .appointmentCount {
+  display: none !important;
+}
+.compactAppointmentItem.free.cancelled:not(.multiple).enrolledFixed .subjects, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledFixed .locations, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledMandatory .subjects, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledMandatory .locations, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .subjects, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanSwitch .locations, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .subjects, .compactAppointmentItem.free.cancelled:not(.multiple).enrolledCanUnenroll .locations {
+  display: block;
+}
+.compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanSwitch, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanUnenroll, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledFixed, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledMandatory {
+  opacity: 0.5;
+}
+.compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanSwitch .appointmentBlock, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanUnenroll .appointmentBlock, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledFixed .appointmentBlock, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledMandatory .appointmentBlock {
+  background-color: transparent;
+  border: 1px dashed grey;
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanSwitch .appointmentCount, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledCanUnenroll .appointmentCount, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledFixed .appointmentCount, .compactAppointmentItem.free:not(.compactAppointmentItem.cancelled).enrolledMandatory .appointmentCount {
+  display: block;
+  color: #cbcbcb;
+}
+.compactAppointmentItem.enrolledCanSwitch .enrolledCanSwitchIcon, .compactAppointmentItem.enrolledCanUnenroll .enrolledCanSwitchIcon {
+  display: inherit;
+}
+.compactAppointmentItem.enrolledFixed .enrolledFixedIcon {
+  display: inherit;
+}
+.compactAppointmentItem.mandatoryWithOptionals .mandatoryWithOptionalsIcon {
+  display: inherit;
+}
+.compactAppointmentItem.conflict .appointmentBlock {
+  border: solid 1px #9E9E9E;
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.compactAppointmentItem.conflict .conflictIcon {
+  display: inherit;
+}
+.compactAppointmentItem.conflict .appointmentCount {
+  display: block;
+  color: #cbcbcb;
+}
+.compactAppointmentItem.conflict .subjects, .compactAppointmentItem.conflict .groups, .compactAppointmentItem.conflict .locations {
+  display: none;
+}
+@media (min-width: 601px) {
+  .compactAppointmentItem.selectedItem .appointmentBlock {
+    background-color: #e5e5ff;
+  }
+  .compactAppointmentItem.notEnrolledDisallowed.selectedItem .appointmentBlock {
+    background-color: #e5e5ff;
+  }
+  .compactAppointmentItem.selectedItem.interlude .appointmentBlock {
+    background-color: rgb(212.5, 212.5, 212.5) !important;
+  }
+  .compactAppointmentItem.selectedItem.exam .appointmentBlock {
+    background-color: #fbf5d2 !important;
+  }
+  .compactAppointmentItem.selectedItem.activity .appointmentBlock {
+    background-color: #d3e8d3 !important;
+  }
+  .compactAppointmentItem.selectedItem.meeting .appointmentBlock {
+    background-color: #D2EEFB;
+  }
+  .compactAppointmentItem.selectedItem.cancelled .appointmentBlock {
+    color: #df4242;
+    background-color: #efa0a0 !important;
+  }
+}
+.compactAppointmentItem .timeStart {
+  color: #78909C;
+  font-weight: 500;
+  font-size: 16px;
+}
+.compactAppointmentItem .timeEnd {
+  color: #78909C;
+  font-size: 12px;
+}
+.compactAppointmentItem .teachers, .compactAppointmentItem .locations, .compactAppointmentItem .groups {
+  display: inline-block;
+  font-size: 12px;
+}
+.compactAppointmentItem .teachers {
+  text-transform: uppercase;
+}
+.compactAppointmentItem .loading {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  border: none;
+}
+.compactAppointmentItem .icons {
+  color: rgba(0, 0, 0, 0.0784313725);
+  position: absolute;
+  right: 1px;
+  bottom: 0px;
+  direction: rtl;
+  text-align: right;
+}
+.compactAppointmentItem .icons i {
+  font-size: 20px;
+}
+.compactAppointmentItem.contentAvailable .icons .contentIcon {
+  color: #03A9F4;
+  display: inline-block;
+}
+.compactAppointmentItem.messagesAvailable .icons .messagesIcon {
+  color: #A1887F;
+  display: inline-block;
+}
+.compactAppointmentItem.scheduleInfoAvailable .icons .scheduleInfoIcon, .compactAppointmentItem.schedulerRemarkAvailable .icons .scheduleInfoIcon {
+  color: #FF9800;
+  display: inline-block;
+}
+.compactAppointmentItem.appointmentOnline .icons .onlineIcon {
+  color: #d32f2e;
+  display: inline-block;
+}
+.compactAppointmentItem .invisible {
+  display: none;
+}
+.compactAppointmentItem .choiceIcon {
+  position: absolute;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+}
+.compactAppointmentItem .choiceIcon i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+}
+.compactAppointmentItem.notEnrolledLocked:not(.cancelled) {
+  opacity: 0.5;
+}
+.compactAppointmentItem.notEnrolledLocked:not(.cancelled) .appointmentBlock {
+  background-color: transparent;
+  border: 1px dashed grey;
+}
+.compactAppointmentItem.notEnrolledDisallowed:not(.cancelled) {
+  opacity: 0.5;
+}
+.compactAppointmentItem.notEnrolledDisallowed:not(.cancelled) .appointmentBlock {
+  background-color: transparent;
+  border: 1px dashed grey;
+}
+.compactAppointmentItem.multipleChoices .locations, .compactAppointmentItem.multipleChoices .groups, .compactAppointmentItem.multipleChoices .teachers, .compactAppointmentItem.multipleChoices .subjects {
+  display: none;
+}
+.compactAppointmentItem .subjects {
+  text-transform: uppercase;
+}
+.compactAppointmentItem .appointmentBlock {
+  margin: 0px;
+  padding-left: calc(-2px + 12%);
+}
+.compactAppointmentItem .appointmentBar {
+  width: 3px;
+}
+.compactAppointmentItem .icons {
+  /* display: none; */
+}
+.compactAppointmentItem .choiceIcon {
+  right: 8px;
+  top: 1px;
+}
+.compactAppointmentItem .choiceIcon i {
+  font-size: 14px;
+}
+.compactAppointmentItem .groups {
+  display: none;
+}
+
+.studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledCanEnroll, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledLocked, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledDisallowed {
+  /* a student will see a choiceCount: adjust its aligment slightly. */
+}
+.studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledCanEnroll .appointmentBar, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledLocked .appointmentBar, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledDisallowed .appointmentBar {
+  display: none;
+}
+.studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledCanEnroll .appointmentBlock, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledLocked .appointmentBlock, .studentSchedule .weekSchedule .compactAppointmentItem.notEnrolledDisallowed .appointmentBlock {
+  padding-left: 0px;
+}
+
+.employeeSchedule .weekSchedule .compactAppointmentItem .appointmentBlock .locations {
+  display: block;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem .appointmentBlock .groups {
+  display: block;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem .appointmentBlock .subjects {
+  display: none !important;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem .appointmentBlock .appointmentCount {
+  display: none;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.free.cancelled {
+  opacity: 1;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.free.cancelled .locations {
+  display: none;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.free.cancelled .appointmentBlock {
+  background-color: #fbe1e1;
+  border: 1px solid #df4242;
+  color: #e87272;
+  display: flex;
+  align-items: inherit;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.free.cancelled.multiple .appointmentBlock {
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.free.cancelled.multiple .appointmentCount {
+  display: block;
+  color: #e87272;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.conflict .appointmentBlock {
+  display: flex;
+  align-items: center; /* center appointmentCount vertically */
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.conflict .appointmentCount {
+  display: block;
+  color: #cbcbcb;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.conflict .subjects, .employeeSchedule .weekSchedule .compactAppointmentItem.conflict .groups, .employeeSchedule .weekSchedule .compactAppointmentItem.conflict .locations {
+  display: none;
+}
+.employeeSchedule .weekSchedule .notEnrolledDisallowed {
+  opacity: 1;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.activity .appointmentBlock .groups {
+  display: none;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.activity .appointmentBlock .subjects {
+  display: inline-block;
+  text-transform: lowercase;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.interlude .subjects, .employeeSchedule .weekSchedule .compactAppointmentItem.interlude .groups {
+  display: none;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.interlude .appointmentBlock {
+  border: solid 1px lightgray;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.interlude .showSubjects {
+  display: none !important;
+}
+.employeeSchedule .weekSchedule .notEnrolledCanEnrollIcon, .employeeSchedule .weekSchedule .enrolledCanSwitchIcon, .employeeSchedule .weekSchedule .enrolledFixedIcon, .employeeSchedule .weekSchedule .messagesIcon, .employeeSchedule .weekSchedule .contentIcon, .employeeSchedule .weekSchedule .notEnrolledLockedIcon, .employeeSchedule .weekSchedule .notEnrolledDisallowedIcon .appointmentCount, .employeeSchedule .weekSchedule .cancelResolvesConflictIcon {
+  display: none;
+}
+.employeeSchedule .weekSchedule .contentIcon {
+  display: none !important;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.conflict .conflictIcon {
+  display: inherit;
+}
+.employeeSchedule .weekSchedule .compactAppointmentItem.mandatoryWithOptionals .mandatoryWithOptionalsIcon {
+  display: inherit;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .employeeSchedule .weekSchedule .compactAppointmentItem {
+    /* IE10+ CSS styles go here */
+  }
+  .employeeSchedule .weekSchedule .compactAppointmentItem .icons {
+    display: block;
+  }
+}
+
+.appointmentChoiceItem {
+  display: flex;
+  min-height: 72px;
+  overflow: hidden;
+  margin-bottom: 6px;
+  margin-top: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #2C3E50;
+  position: relative;
+}
+.appointmentChoiceItem .iconBlock {
+  width: 56px;
+  text-align: right;
+  padding-right: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
+.appointmentChoiceItem .appointmentAndStatusContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.appointmentChoiceItem .appointmentContainer {
+  display: flex;
+}
+.appointmentChoiceItem .appointmentBlock {
+  flex: 1;
+  border: 1px solid #c5c9e2;
+  padding: 4px;
+  padding-left: 8px;
+  position: relative;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.appointmentChoiceItem .appointmentBar {
+  background-color: #7b7bb3;
+  width: 8px;
+}
+.appointmentChoiceItem .timeBlock {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+}
+.appointmentChoiceItem .notEnrolledCanEnrollIcon, .appointmentChoiceItem .enrolledCanSwitchIcon, .appointmentChoiceItem .enrolledCanUnenrollIcon, .appointmentChoiceItem .conflictEnabledIcon, .appointmentChoiceItem .conflictEnrolledEnabledIcon {
+  color: #4CAF50;
+  visibility: hidden;
+  background-color: white;
+}
+.appointmentChoiceItem .notEnrolledLockedIcon, .appointmentChoiceItem .notEnrolledDisallowedIcon, .appointmentChoiceItem .enrolledFixedIcon, .appointmentChoiceItem .mandatoryWithOptionalsIcon, .appointmentChoiceItem .conflictEnrolledDisabledIcon, .appointmentChoiceItem .replacementIcon {
+  color: #9E9E9E;
+  visibility: hidden;
+  background-color: white;
+}
+.appointmentChoiceItem .onlineTeacherIcon {
+  color: #d32f2e;
+  font-size: 16px;
+}
+.appointmentChoiceItem .creatorIcon {
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+}
+.appointmentChoiceItem.exam .appointmentBlock {
+  background-color: #fcf6d3;
+  border: 1px solid #e8cb22;
+}
+.appointmentChoiceItem.exam .appointmentBar {
+  background-color: #e8cb22;
+}
+.appointmentChoiceItem.activity .appointmentBlock {
+  background-color: #d3e8d3;
+  border: 1px solid #268e26;
+}
+.appointmentChoiceItem.activity .appointmentBar {
+  background-color: #268e26;
+}
+.appointmentChoiceItem.meeting .appointmentBar {
+  background-color: #22ABE8;
+}
+.appointmentChoiceItem.cancelled .appointmentBlock {
+  background-color: #fbe1e1;
+  border: 1px solid #df4242;
+  color: #e87272;
+}
+.appointmentChoiceItem.cancelled .appointmentBar {
+  background-color: #df4242;
+}
+.appointmentChoiceItem.notEnrolled .appointmentBlock {
+  border: 1px dashed silver;
+}
+.appointmentChoiceItem.notEnrolled .appointmentBar {
+  opacity: 0.6;
+}
+.appointmentChoiceItem.notEnrolledCanEnroll .notEnrolledCanEnrollIcon, .appointmentChoiceItem.enrolledCanSwitch .notEnrolledCanEnrollIcon, .appointmentChoiceItem.notEnrolledCanSwitch .notEnrolledCanEnrollIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.notEnrolledLocked .notEnrolledLockedIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.notEnrolledDisallowed .notEnrolledDisallowedIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.selected:not(.mandatoryWithOptionals) .enrolledCanSwitchIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.selected.mandatoryWithOptionals .enrolledFixedIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.selected.lesson:not(.appointmentChoiceItem.cancelled) .appointmentBlock {
+  background-color: #e5e5ff;
+}
+.appointmentChoiceItem.selected.meeting:not(.appointmentChoiceItem.cancelled) .appointmentBlock {
+  background-color: #D2EEFB;
+}
+.appointmentChoiceItem.enrolledFixed .enrolledFixedIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.enrolledCanUnenroll .enrolledCanUnenrollIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.conflictEnabled .conflictEnabledIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.conflictEnrolledDisabled .conflictEnrolledDisabledIcon {
+  color: #9E9E9E;
+  visibility: inherit;
+}
+.appointmentChoiceItem.conflictEnrolledEnabled .conflictEnrolledEnabledIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem.replaced .replacementIcon {
+  visibility: inherit;
+}
+.appointmentChoiceItem .choiceText {
+  display: none;
+}
+.appointmentChoiceItem .timeBlock {
+  color: #9ca7ad;
+  font-size: 14px;
+  font-weight: 500;
+}
+.appointmentChoiceItem .timeBlock .timeSlot {
+  text-align: right;
+}
+.appointmentChoiceItem .timeBlock .clockTime {
+  display: flex;
+}
+.appointmentChoiceItem .info {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.appointmentChoiceItem .description, .appointmentChoiceItem .changeDescription, .appointmentChoiceItem .schedulerRemark {
+  font-size: 14px;
+}
+.appointmentChoiceItem .remarkField {
+  margin-bottom: 24px;
+}
+.appointmentChoiceItem .loading {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  border: none;
+}
+.appointmentChoiceItem .icons {
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  left: 8px;
+  bottom: 0px;
+}
+.appointmentChoiceItem .icons i {
+  font-size: 20px;
+  margin-left: 4px;
+}
+.appointmentChoiceItem .icons .onlineIcon {
+  display: none;
+}
+.appointmentChoiceItem.appointmentOnline .icons .onlineIcon {
+  color: #d32f2e;
+  display: block;
+}
+.appointmentChoiceItem.contentAvailable .icons .contentIcon {
+  color: #03A9F4;
+}
+.appointmentChoiceItem.messagesAvailable .icons .messagesIcon {
+  color: #A1887F;
+}
+.appointmentChoiceItem.scheduleInfoAvailable .icons .scheduleInfoIcon {
+  color: #FF9800;
+}
+.appointmentChoiceItem .invisible {
+  display: none;
+}
+.appointmentChoiceItem .choiceIcon {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+}
+.appointmentChoiceItem .choiceIcon i {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+}
+.appointmentChoiceItem .noContentMessage {
+  display: none;
+  font-size: 14px;
+  font-style: italic;
+  color: #83849b;
+}
+.appointmentChoiceItem.noContent .noContentMessage {
+  display: inline-block;
+}
+.appointmentChoiceItem .statusText {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  color: #c72f2f;
+  font-size: 14px;
+}
+.appointmentChoiceItem .statusPanel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.appointmentChoiceItem .statusPanel:empty {
+  margin-bottom: 0px;
+}
+
+.examPeriodSelectionItem {
+  min-height: 48px;
+}
+.examPeriodSelectionItem .loading {
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+  border: none;
+}
+.examPeriodSelectionItem .examBlock {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  padding-left: 8px;
+  overflow: hidden;
+  border-top: solid 1px #EEF1F5;
+}
+.examPeriodSelectionItem .examBlock .subject {
+  font-size: 18px;
+  font-weight: 500;
+  width: 40%;
+  overflow-wrap: break-word;
+  align-self: center;
+}
+.examPeriodSelectionItem .examBlock .examPeriod1Icon, .examPeriodSelectionItem .examBlock .examPeriod2Icon, .examPeriodSelectionItem .examBlock .examPeriod3Icon {
+  max-width: 20%;
+  height: 40px;
+}
+.examPeriodSelectionItem .examBlock .examPeriod1Icon i, .examPeriodSelectionItem .examBlock .examPeriod2Icon i, .examPeriodSelectionItem .examBlock .examPeriod3Icon i {
+  position: absolute;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.examPeriodSelectionItem .notEnrolledFixedIcon, .examPeriodSelectionItem .notEnrolledDisallowedIcon, .examPeriodSelectionItem .enrolledFixedIcon {
+  color: #9E9E9E;
+  visibility: hidden;
+  background-color: white;
+  font-size: 32px;
+}
+.examPeriodSelectionItem.notEnrolledFixedPeriod1 .examPeriod1 .notEnrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.notEnrolledFixedPeriod2 .examPeriod2 .notEnrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.notEnrolledFixedPeriod3 .examPeriod3 .notEnrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem .notEnrolledDisallowedIcon, .examPeriodSelectionItem .notEnrolledDisallowedIcon, .examPeriodSelectionItem .enrolledFixedIcon {
+  color: #9E9E9E;
+  visibility: hidden;
+  background-color: white;
+  font-size: 32px;
+}
+.examPeriodSelectionItem.notEnrolledDisallowedPeriod1 .examPeriod1 .notEnrolledDisallowedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.notEnrolledDisallowedPeriod2 .examPeriod2 .notEnrolledDisallowedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.notEnrolledDisallowedPeriod3 .examPeriod3 .notEnrolledDisallowedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem .enrolledFixedIcon, .examPeriodSelectionItem .notEnrolledDisallowedIcon, .examPeriodSelectionItem .enrolledFixedIcon {
+  color: #9E9E9E;
+  visibility: hidden;
+  background-color: white;
+  font-size: 32px;
+}
+.examPeriodSelectionItem.enrolledFixedPeriod1 .examPeriod1 .enrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.enrolledFixedPeriod2 .examPeriod2 .enrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem.enrolledFixedPeriod3 .examPeriod3 .enrolledFixedIcon {
+  visibility: inherit;
+}
+.examPeriodSelectionItem .invisible {
+  display: none;
+}
+
+.appointmentDetailInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #50647a;
+  position: relative;
+  box-sizing: border-box;
+}
+.appointmentDetailInfo .notEnrolledCanEnrollIcon, .appointmentDetailInfo .enrolledCanSwitchIcon {
+  color: #4CAF50;
+  display: none;
+}
+.appointmentDetailInfo .notEnrolledLockedIcon, .appointmentDetailInfo .enrolledFixedIcon, .appointmentDetailInfo .mandatoryWithOptionalsIcon {
+  color: #9E9E9E;
+  display: none;
+}
+.appointmentDetailInfo.notEnrolledCanEnroll .notEnrolledCanEnrollIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo.notEnrolledLocked .notEnrolledLockedIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo.enrolledCanSwitch .enrolledCanSwitchIcon, .appointmentDetailInfo.enrolledCanUnenroll .enrolledCanSwitchIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo.enrolledFixed .enrolledFixedIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo.mandatoryWithOptionals .mandatoryWithOptionalsIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo .infoTitle {
+  height: 24px;
+  display: flex;
+  font-size: 24px;
+  padding-top: 8px;
+}
+.appointmentDetailInfo .infoTitle .choiceIcon {
+  display: inline-block;
+}
+.appointmentDetailInfo .infoTitle .choiceIcon i {
+  line-height: 24px;
+  margin-right: 4px;
+}
+.appointmentDetailInfo .infoTitle .creatorIcon {
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+  display: none;
+}
+.appointmentDetailInfo .infoTitle .title {
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+.appointmentDetailInfo.interlude .infoTitle .title {
+  text-transform: capitalize;
+}
+.appointmentDetailInfo .infoTitle:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.appointmentDetailInfo .subTitle {
+  display: inline-block;
+  font-size: 14px;
+  color: #7a8693;
+}
+.appointmentDetailInfo .timeslot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 24px;
+}
+.appointmentDetailInfo .remarkButton {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  bottom: 16px;
+  right: 16px;
+}
+.appointmentDetailInfo .remarkButton .material-icons, .appointmentDetailInfo .remarkButton .material-icons-no-fill {
+  color: white;
+  display: none;
+  -webkit-box-shadow: 4px 4px 8px -1px rgb(150, 150, 150);
+  -moz-box-shadow: 4px 4px 8px -1px rgb(150, 150, 150);
+  box-shadow: 4px 4px 8px -1px rgb(150, 150, 150);
+}
+.appointmentDetailInfo .remarkButton .editor {
+  background-color: #4CAF50;
+}
+.appointmentDetailInfo .remarkButton .toggleEditor {
+  background-color: orange;
+}
+.appointmentDetailInfo .remarkButton .saveEditor {
+  background-color: green;
+}
+.appointmentDetailInfo .remarkButton .savingState {
+  background-color: grey;
+}
+.appointmentDetailInfo .description {
+  font-style: italic;
+  margin-top: 8px;
+  word-break: break-word;
+  hyphens: auto;
+}
+.appointmentDetailInfo .descriptionEditorHolder {
+  display: flex;
+}
+.appointmentDetailInfo .descriptionEditorHolder .descriptionEditor {
+  flex: 1;
+  resize: none;
+  font-style: italic;
+  margin-right: 8px;
+  height: 48px;
+}
+.appointmentDetailInfo .descriptionEditorHolder.hidden {
+  display: none;
+}
+.appointmentDetailInfo .noAppointmentSelectedText {
+  flex: 1;
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+  font-style: italic;
+}
+.appointmentDetailInfo.noAppointmentSelected {
+  padding: 0px;
+}
+.appointmentDetailInfo.noAppointmentSelected .noAppointmentSelectedText {
+  display: inline-block;
+}
+.appointmentDetailInfo.noAppointmentSelected .appointmentInfo {
+  display: none;
+}
+.appointmentDetailInfo .appointmentInfo {
+  flex: 1;
+  padding: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.appointmentDetailInfo .onlineTeacherIcon {
+  color: #d32f2e;
+  font-size: 16px;
+}
+.appointmentDetailInfo .creatorIcon {
+  line-height: 16px;
+  height: 16px;
+  width: 16px;
+}
+.appointmentDetailInfo .changeDescriptionBlock, .appointmentDetailInfo .schedulerRemarkBlock, .appointmentDetailInfo .onlineBlock, .appointmentDetailInfo .cancelResolvesConflictBlock {
+  background-color: #e1eaf8;
+  padding: 8px;
+  position: relative;
+  display: none;
+}
+.appointmentDetailInfo .changeDescriptionBlock .changeDescriptionIcon, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkIcon, .appointmentDetailInfo .changeDescriptionBlock .onlineIcon, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionIcon, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkIcon, .appointmentDetailInfo .schedulerRemarkBlock .onlineIcon, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .onlineBlock .changeDescriptionIcon, .appointmentDetailInfo .onlineBlock .schedulerRemarkIcon, .appointmentDetailInfo .onlineBlock .onlineIcon, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictIcon {
+  color: #FF9800;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 32px;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineIcon, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .schedulerRemarkBlock .onlineIcon, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .onlineBlock .onlineIcon, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineIcon, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictIcon {
+  color: #d32f2e;
+}
+.appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent, .appointmentDetailInfo .onlineBlock .changeDescriptionContent, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent {
+  margin-left: 56px;
+}
+.appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .changeDescriptionTitle, .appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .schedulerRemarkTitle, .appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .cancelResolvesConflictTitle, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .changeDescriptionTitle, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .schedulerRemarkTitle, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .cancelResolvesConflictTitle, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .changeDescriptionTitle, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .schedulerRemarkTitle, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .cancelResolvesConflictTitle, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .changeDescriptionTitle, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .schedulerRemarkTitle, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .cancelResolvesConflictTitle, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .changeDescriptionTitle, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .schedulerRemarkTitle, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .cancelResolvesConflictTitle, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .changeDescriptionTitle, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .schedulerRemarkTitle, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .cancelResolvesConflictTitle, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .changeDescriptionTitle, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .schedulerRemarkTitle, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .cancelResolvesConflictTitle, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .changeDescriptionTitle, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .schedulerRemarkTitle, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .cancelResolvesConflictTitle, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .changeDescriptionTitle, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .schedulerRemarkTitle, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .cancelResolvesConflictTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .changeDescriptionTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .schedulerRemarkTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .cancelResolvesConflictTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .changeDescriptionTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .schedulerRemarkTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .cancelResolvesConflictTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .changeDescriptionTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .schedulerRemarkTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .cancelResolvesConflictTitle {
+  font-weight: 500;
+  margin-top: 4px;
+}
+.appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .changeDescription, .appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .schedulerRemark, .appointmentDetailInfo .changeDescriptionBlock .changeDescriptionContent .cancelResolvesConflictText, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .changeDescription, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .schedulerRemark, .appointmentDetailInfo .changeDescriptionBlock .schedulerRemarkContent .cancelResolvesConflictText, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .changeDescription, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .schedulerRemark, .appointmentDetailInfo .changeDescriptionBlock .cancelResolvesConflictContent .cancelResolvesConflictText, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .changeDescription, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .schedulerRemark, .appointmentDetailInfo .schedulerRemarkBlock .changeDescriptionContent .cancelResolvesConflictText, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .changeDescription, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .schedulerRemark, .appointmentDetailInfo .schedulerRemarkBlock .schedulerRemarkContent .cancelResolvesConflictText, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .changeDescription, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .schedulerRemark, .appointmentDetailInfo .schedulerRemarkBlock .cancelResolvesConflictContent .cancelResolvesConflictText, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .changeDescription, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .schedulerRemark, .appointmentDetailInfo .onlineBlock .changeDescriptionContent .cancelResolvesConflictText, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .changeDescription, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .schedulerRemark, .appointmentDetailInfo .onlineBlock .schedulerRemarkContent .cancelResolvesConflictText, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .changeDescription, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .schedulerRemark, .appointmentDetailInfo .onlineBlock .cancelResolvesConflictContent .cancelResolvesConflictText, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .changeDescription, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .schedulerRemark, .appointmentDetailInfo .cancelResolvesConflictBlock .changeDescriptionContent .cancelResolvesConflictText, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .changeDescription, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .schedulerRemark, .appointmentDetailInfo .cancelResolvesConflictBlock .schedulerRemarkContent .cancelResolvesConflictText, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .changeDescription, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .schedulerRemark, .appointmentDetailInfo .cancelResolvesConflictBlock .cancelResolvesConflictContent .cancelResolvesConflictText {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #667592;
+  overflow-wrap: anywhere;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent, .appointmentDetailInfo .onlineBlock .onlineContent, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent {
+  display: flex;
+  flex: 1;
+  margin-left: 56px;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineTextual, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineTextual, .appointmentDetailInfo .onlineBlock .onlineContent .onlineTextual, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineTextual {
+  flex: 1;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineTitle, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineTitle, .appointmentDetailInfo .onlineBlock .onlineContent .onlineTitle, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineTitle {
+  font-weight: 500;
+  margin-top: 4px;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineRemark, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineRemark, .appointmentDetailInfo .onlineBlock .onlineContent .onlineRemark, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineRemark {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #667592;
+  overflow-wrap: anywhere;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineLink, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineLink, .appointmentDetailInfo .onlineBlock .onlineContent .onlineLink, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineLink {
+  display: flex;
+  flex: 0;
+  align-self: center;
+  padding: 8px;
+  border-radius: 2px;
+  border: solid 1px #2C3E50;
+  color: #2C3E50;
+  min-width: 120px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  align-items: center;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineLink .onlineLinkText, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineLink .onlineLinkText, .appointmentDetailInfo .onlineBlock .onlineContent .onlineLink .onlineLinkText, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineLink .onlineLinkText {
+  flex: 1;
+}
+.appointmentDetailInfo .changeDescriptionBlock .onlineContent .onlineLink:hover, .appointmentDetailInfo .schedulerRemarkBlock .onlineContent .onlineLink:hover, .appointmentDetailInfo .onlineBlock .onlineContent .onlineLink:hover, .appointmentDetailInfo .cancelResolvesConflictBlock .onlineContent .onlineLink:hover {
+  background-color: #C6D0DF;
+}
+.appointmentDetailInfo.scheduleInfoAvailable .changeDescriptionBlock {
+  display: block;
+  background-color: #ffeacc;
+}
+.appointmentDetailInfo.schedulerRemarkAvailable .schedulerRemarkBlock {
+  display: block;
+  background-color: #ffeacc;
+}
+.appointmentDetailInfo.appointmentOnline .onlineBlock, .appointmentDetailInfo.onlineLocationPresent .onlineBlock {
+  display: flex;
+}
+.appointmentDetailInfo .conflictEnrolledEnabled .cancelResolvesConflictBlock {
+  display: block;
+}
+.appointmentDetailInfo.creator .creatorIcon {
+  display: inline-block;
+}
+
+.employeeAppointment .remarkButton {
+  display: block;
+}
+
+.appointmentDetailInfo.displayRemark .editor {
+  display: inline-block;
+}
+
+.appointmentDetailInfo .toggleEditor {
+  display: none;
+}
+
+.appointmentDetailInfo.editingRemark .saveEditor {
+  display: inline-block;
+}
+
+.appointmentDetailInfo.processingRemark .savingState {
+  display: inline-block;
+}
+
+@media (min-width: 1001px) {
+  .remarkButton .material-icons, .remarkButton .material-icons-no-fill {
+    padding: 20px;
+    font-size: 32px;
+    border-radius: 36px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .remarkButton .material-icons, .remarkButton .material-icons-no-fill {
+    padding: 16px;
+    font-size: 28px;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .remarkButton .material-icons, .remarkButton .material-icons-no-fill {
+    padding: 12px;
+    border-radius: 24px;
+  }
+}
+.appointmentContentEditor {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  flex-direction: column;
+}
+.appointmentContentEditor .editorContainer {
+  flex: 1;
+}
+.appointmentContentEditor .appointmentContentEditorTitle {
+  padding: 17px 0px;
+  font-weight: bold;
+}
+.appointmentContentEditor .appointmentContentEditorField {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  box-sizing: border-box;
+  padding: 10px 8px 8px 8px;
+}
+.appointmentContentEditor .buttons {
+  display: flex;
+  flex-direction: row;
+}
+.appointmentContentEditor .buttons button {
+  color: white;
+  border: none;
+}
+.appointmentContentEditor .buttons .submitButton {
+  background-color: #2c3e50;
+  flex: 1;
+  min-height: 48px;
+  padding: 8px;
+  margin: 8px;
+}
+.appointmentContentEditor .buttons .cancelAppointmentButton {
+  background-color: #c9252d;
+  flex: 1;
+  min-height: 48px;
+  display: none;
+  padding: 8px;
+  margin: 8px;
+}
+.appointmentContentEditor.cancelAvailable .submitButton {
+  display: inline-block;
+}
+.appointmentContentEditor.cancelAvailable .cancelAppointmentButton {
+  display: inline-block;
+}
+
+.participationsDetailInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #50647a;
+  position: relative;
+  box-sizing: border-box;
+}
+.participationsDetailInfo .participations .participationsItem .participationsItemHeader {
+  display: flex;
+  padding: 8px 8px 5px;
+  font-size: 14px;
+  background-color: #f6f8fa;
+  color: #425972;
+}
+.participationsDetailInfo .participations .participationsItem .participationsItemHeader .participationsItemHeaderTitle {
+  flex: 1 1 auto;
+}
+.participationsDetailInfo .participations .participationsItem .participationsItemHeader .participationsItemHeaderOnline {
+  flex: 0 0 auto;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent {
+  padding: 0px 8px;
+  display: flex;
+  border-bottom: solid 1px #EEF1F5;
+  color: #50647a;
+  min-height: 48px;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .attendanceType {
+  max-width: 50px;
+  flex: 0 1 auto;
+  padding: 2px;
+  font-size: 28px;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .studentInfo {
+  padding: 4px;
+  flex: 1 1 auto;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .studentInfo .studentFullName {
+  color: #35495E;
+  font-weight: 500;
+  font-size: 16px;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .studentInfo .studentMainGroupAndParticipation {
+  font-size: 14px;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .attendanceRemark {
+  flex: 0 1 auto;
+  padding: 4px;
+  color: rgb(192.1881188119, 202.4851485149, 213.8118811881);
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .attendanceRemark.remarkPresent {
+  color: #E57373;
+}
+.participationsDetailInfo .participations .participationsItem div .participationsItemStudent .material-icons, .participationsDetailInfo .participations .participationsItem div .participationsItemStudent .material-icons-no-fill {
+  font-size: 28px;
+  padding-top: 4px;
+}
+
+.participationsDetailInfo.removeOnline .attendanceRemark {
+  display: none;
+}
+
+.participationsDetailInfo.removeOnline .participationsItemHeaderOnline {
+  display: none;
+}
+
+.participationsItemStudent.mandatory .attendanceType .material-icons, .participationsItemStudent.mandatory .attendanceType .material-icons-no-fill {
+  color: #81C784;
+}
+
+.participationsItemStudent.enrolled .attendanceType .material-icons, .participationsItemStudent.enrolled .attendanceType .material-icons-no-fill {
+  color: #81C784;
+}
+
+.participationsItemStudent.prescribed .attendanceType .material-icons, .participationsItemStudent.prescribed .attendanceType .material-icons-no-fill {
+  color: #81C784;
+}
+
+.participationsItemStudent.plannedAbsent .attendanceType .material-icons, .participationsItemStudent.plannedAbsent .attendanceType .material-icons-no-fill {
+  color: #E57373;
+}
+
+.participationsItemStudent.none .attendanceType .material-icons, .participationsItemStudent.none .attendanceType .material-icons-no-fill {
+  color: #E1E1E1;
+}
+
+.noParticipationsMessage {
+  padding: 10px;
+}
+
+.enrollmentStatusWidget {
+  padding: 8px;
+  text-align: center;
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.enrollmentStatusWidget .enrollmentText {
+  color: white;
+  transition: opacity 0.3s;
+}
+.enrollmentStatusWidget.ok, .enrollmentStatusWidget.problem {
+  display: block;
+}
+.enrollmentStatusWidget.ok {
+  background-color: #4CAF50;
+}
+.enrollmentStatusWidget.problem {
+  background-color: #ffb74d;
+}
+.enrollmentStatusWidget.loading {
+  /* Keep the same height but fade out the text. This makes for smoother transitions between weeks. */
+}
+.enrollmentStatusWidget.loading .enrollmentText {
+  opacity: 0;
+}
+
+.studentOfParent .enrollmentStatusWidget {
+  display: none !important;
+}
+
+.statusLine {
+  display: flex;
+  margin-top: 4px;
+}
+.statusLine .statusIcon {
+  margin-right: 3px;
+}
+.statusLine .infoIcon {
+  color: #03A9F4;
+  display: none;
+}
+.statusLine.info .infoIcon {
+  display: block;
+}
+.statusLine .goodIcon {
+  color: #4CAF50;
+  display: none;
+}
+.statusLine.good .goodIcon {
+  display: block;
+}
+.statusLine .warningIcon {
+  color: #ffcc00;
+  display: none;
+}
+.statusLine.warning .warningIcon {
+  display: block;
+}
+.statusLine .badIcon {
+  color: #c0392b;
+  display: none;
+}
+.statusLine.bad .badIcon {
+  display: block;
+}
+.statusLine .message {
+  padding-top: 1px;
+}
+
+.tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+  overflow: hidden;
+}
+.tabs .tabBar {
+  height: 40px;
+  background-color: #2C3E50;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.tabs .tabBar .tabLabels {
+  display: flex;
+}
+.tabs .tabBar .tab {
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  color: #a9b0be;
+  font-weight: 500;
+}
+.tabs .tabBar .tab.selected {
+  color: white;
+}
+.tabs .tabBar .selectedSlider {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  height: 3px;
+  transition: transform 0.13s ease-out;
+}
+.tabs .header {
+  flex: 0 0 auto;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.tabs .contentHolder {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  min-width: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+}
+.tabs .contentHolder .content {
+  flex: 1;
+  display: flex;
+  transition: transform 0.13s ease-out;
+  min-width: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+  width: 100%;
+}
+.tabs .tabPage {
+  min-width: 100%;
+  /* needed so Firefox doesn't make img shrink to fit */
+  width: 100%; /* can't take this out either as it breaks Chrome */
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  min-height: 0; /* Needed to fix firefox handling of scrolling flexbox items with overflow: auto|hidden|scroll */
+}
+
+/* Disable transition animations when swiping. */
+.tabs.swiping .content {
+  transition: none;
+}
+.tabs.swiping .selectedSlider {
+  transition: none;
+}
+
+.searchBar {
+  height: 40px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2C3E50;
+  color: white;
+  padding-left: 16px;
+}
+.searchBar .searchBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.searchBar .filterBox {
+  min-width: fit-content;
+  text-align: end;
+  height: 100%;
+}
+.searchBar .searchIcon, .searchBar .filterIcon {
+  display: inline-block;
+  height: 40px;
+  width: 28px;
+  font-size: 28px;
+  line-height: 40px;
+}
+.searchBar .search {
+  display: inline-block;
+  height: 40px;
+  margin: 0px;
+  padding: 4px;
+  line-height: 40px;
+  vertical-align: top;
+  background-color: #2C3E50;
+  color: #ffffff;
+  flex-grow: 1;
+}
+.searchBar .search:focus {
+  outline: 0;
+}
+.searchBar .filterTitle {
+  display: inline-block;
+  height: 32px;
+  padding: 4px;
+  margin: 0px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.subjectSelectionFormResultWidget {
+  display: flex;
+  align-items: center;
+}
+.subjectSelectionFormResultWidget .icon {
+  margin-right: 20px;
+  margin-top: 2px;
+}
+.subjectSelectionFormResultWidget .icon .material-icons, .subjectSelectionFormResultWidget .icon .material-icons-no-fill {
+  font-size: 32px;
+}
+.subjectSelectionFormResultWidget .assignment {
+  color: #4CAF50;
+}
+.subjectSelectionFormResultWidget .assignment_turned_in {
+  display: none;
+}
+.subjectSelectionFormResultWidget .disapproved_icon {
+  width: 32px;
+  display: none;
+}
+.subjectSelectionFormResultWidget.approved .assignment {
+  display: none;
+}
+.subjectSelectionFormResultWidget.approved .assignment_turned_in {
+  display: block;
+}
+.subjectSelectionFormResultWidget.disapproved .assignment {
+  display: none;
+}
+.subjectSelectionFormResultWidget.disapproved .disapproved_icon {
+  display: inline;
+}
+.subjectSelectionFormResultWidget .subjectSelectionFormResultWidgetInfo {
+  flex: 1;
+}
+
+.subjectSelectionSegmentItem {
+  margin-top: 1rem;
+}
+.subjectSelectionSegmentItem .name {
+  font-weight: 500;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.subjectSelectionSegmentItem .subjects {
+  padding-left: 1rem;
+}
+
+.subjectSelectionSegmentItem:nth-child(n+2) {
+  border-top: 2px solid #EAEEEF;
+}
+
+.personListItem {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 0px 8px 16px;
+  border-bottom: solid 1px #EEF1F5;
+  overflow-x: hidden;
+}
+.personListItem .personInformation {
+  display: flex;
+  flex-direction: column;
+}
+.personListItem .title, .personListItem .teacherAdditionalRole {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2C3E50;
+  display: inline-block;
+  margin: 3px 0px;
+}
+.personListItem .teacherAdditionalRole {
+  text-transform: capitalize;
+}
+.personListItem .teacherName {
+  font-weight: 500;
+  color: #2C3E50;
+}
+.personListItem .teacherName, .personListItem .subject, .personListItem .subTitle {
+  font-size: 14px;
+  margin: 3px 0px;
+}
+.personListItem .subject, .personListItem .subTitle {
+  display: inline-block;
+}
+.personListItem .subject {
+  color: #909BA7;
+}
+.personListItem .availabilityAndArrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.personListItem .arrowRight {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.personListItem.teacherItem .title {
+  text-transform: uppercase;
+}
+.personListItem.teacherItem .groupInfo {
+  display: none;
+}
+.personListItem.teacherItem .personAvailability {
+  width: 180px;
+  padding: 10px;
+}
+.personListItem.colleagueItem .teacherName {
+  font-weight: 400;
+}
+.personListItem.mayViewSchedule .arrowRight {
+  display: flex;
+}
+.personListItem.studentItem .teacherAdditionalRole, .personListItem.studentItem .teacherName, .personListItem.studentItem .subject, .personListItem.studentItem .personAvailability {
+  display: none;
+}
+.personListItem.active .arrowRight {
+  opacity: 30%;
+}
+.personListItem.hiddenBySearch, .personListItem.hiddenBySectionFilter, .personListItem.hiddenByFilter {
+  display: none;
+}
+
+.groupListItem {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+  padding: 8px 10px;
+  height: 31px;
+  border-bottom: solid 1px #EEF1F5;
+  font-size: 16px;
+}
+.groupListItem .groupItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.groupListItem .department, .groupListItem .subject, .groupListItem .group {
+  font-weight: 500;
+  display: inline-block;
+}
+.groupListItem .department {
+  width: calc(25% - 32px);
+}
+.groupListItem .subject {
+  width: calc(30% - 32px);
+  text-transform: uppercase;
+}
+.groupListItem .group {
+  width: calc(45% - 32px);
+}
+.groupListItem .arrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.groupListItem .arrowRightIcon {
+  font-size: 32px;
+}
+
+.availabilityOverview {
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  vertical-align: middle;
+}
+.availabilityOverview .monday {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+}
+.availabilityOverview.mondayAvailableWithCommonLesson .monday, .availabilityOverview.mondayColleagueAvailable .monday {
+  background: #81c784;
+}
+.availabilityOverview.mondayAvailableWithOptionalLessonAvailable .monday {
+  border: dashed 2px;
+  border-color: #81c784;
+  background: #e8eaec;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-clip: padding-box;
+}
+.availabilityOverview.mondayAvailableWithoutCommonLesson .monday {
+  background: #e8eaec;
+}
+.availabilityOverview.mondayUnavailable .monday {
+  background: #E57373;
+}
+.availabilityOverview.mondayUnknown .monday {
+  border: 1px solid #E8EAEC;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  color: #E8EAEC;
+}
+.availabilityOverview .tuesday {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+}
+.availabilityOverview.tuesdayAvailableWithCommonLesson .tuesday, .availabilityOverview.tuesdayColleagueAvailable .tuesday {
+  background: #81c784;
+}
+.availabilityOverview.tuesdayAvailableWithOptionalLessonAvailable .tuesday {
+  border: dashed 2px;
+  border-color: #81c784;
+  background: #e8eaec;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-clip: padding-box;
+}
+.availabilityOverview.tuesdayAvailableWithoutCommonLesson .tuesday {
+  background: #e8eaec;
+}
+.availabilityOverview.tuesdayUnavailable .tuesday {
+  background: #E57373;
+}
+.availabilityOverview.tuesdayUnknown .tuesday {
+  border: 1px solid #E8EAEC;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  color: #E8EAEC;
+}
+.availabilityOverview .wednesday {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+}
+.availabilityOverview.wednesdayAvailableWithCommonLesson .wednesday, .availabilityOverview.wednesdayColleagueAvailable .wednesday {
+  background: #81c784;
+}
+.availabilityOverview.wednesdayAvailableWithOptionalLessonAvailable .wednesday {
+  border: dashed 2px;
+  border-color: #81c784;
+  background: #e8eaec;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-clip: padding-box;
+}
+.availabilityOverview.wednesdayAvailableWithoutCommonLesson .wednesday {
+  background: #e8eaec;
+}
+.availabilityOverview.wednesdayUnavailable .wednesday {
+  background: #E57373;
+}
+.availabilityOverview.wednesdayUnknown .wednesday {
+  border: 1px solid #E8EAEC;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  color: #E8EAEC;
+}
+.availabilityOverview .thursday {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+}
+.availabilityOverview.thursdayAvailableWithCommonLesson .thursday, .availabilityOverview.thursdayColleagueAvailable .thursday {
+  background: #81c784;
+}
+.availabilityOverview.thursdayAvailableWithOptionalLessonAvailable .thursday {
+  border: dashed 2px;
+  border-color: #81c784;
+  background: #e8eaec;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-clip: padding-box;
+}
+.availabilityOverview.thursdayAvailableWithoutCommonLesson .thursday {
+  background: #e8eaec;
+}
+.availabilityOverview.thursdayUnavailable .thursday {
+  background: #E57373;
+}
+.availabilityOverview.thursdayUnknown .thursday {
+  border: 1px solid #E8EAEC;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  color: #E8EAEC;
+}
+.availabilityOverview .friday {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+}
+.availabilityOverview.fridayAvailableWithCommonLesson .friday, .availabilityOverview.fridayColleagueAvailable .friday {
+  background: #81c784;
+}
+.availabilityOverview.fridayAvailableWithOptionalLessonAvailable .friday {
+  border: dashed 2px;
+  border-color: #81c784;
+  background: #e8eaec;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  background-clip: padding-box;
+}
+.availabilityOverview.fridayAvailableWithoutCommonLesson .friday {
+  background: #e8eaec;
+}
+.availabilityOverview.fridayUnavailable .friday {
+  background: #E57373;
+}
+.availabilityOverview.fridayUnknown .friday {
+  border: 1px solid #E8EAEC;
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  color: #E8EAEC;
+}
+
+.announcementItem {
+  font-weight: 500;
+  background-color: #f6f8fa;
+  border-bottom: solid 1px #d0d5da;
+  padding-left: 16px;
+  margin: 8px 0px;
+}
+.announcementItem .announcementBar {
+  background-color: #425972;
+  position: absolute;
+  left: -16px;
+  top: 0px;
+  bottom: 0px;
+  width: 4px;
+}
+.announcementItem.read .announcementBar {
+  background-color: #c6cdd4;
+}
+.announcementItem .content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 8px;
+  color: #2C3E50;
+  min-width: 0px;
+}
+.announcementItem .announcementTitle {
+  flex: 4 1;
+  margin: 8px 0px 8px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.announcementItem .announcementDate {
+  margin: 10px 0px 10px;
+  font-size: 12px;
+}
+.announcementItem .announcementText {
+  font-size: 14px;
+  font-family: "Roboto-regular", sans-serif;
+  white-space: pre-wrap;
+}
+.announcementItem .foldoutHead, .announcementItem .foldoutBody {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+.announcementItem .foldOutButton, .announcementItem .foldInButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  padding: 8px;
+}
+.announcementItem .foldInButton {
+  display: none;
+}
+.announcementItem .foldoutBody {
+  display: none;
+}
+.announcementItem.foldout .foldoutBody {
+  border-top: solid 1px #d0d5da;
+  display: flex;
+}
+.announcementItem.foldout .foldOutButton {
+  display: none;
+}
+.announcementItem.foldout .foldInButton {
+  display: flex;
+}
+.announcementItem.foldout .announcementTitle {
+  white-space: normal;
+}
+
+.employeeAbsenceItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #EEF1F5;
+  cursor: pointer;
+}
+.employeeAbsenceItem .information {
+  flex: 1;
+  display: flex;
+}
+.employeeAbsenceItem:last-child {
+  border-bottom: none;
+}
+.employeeAbsenceItem .icon {
+  width: 30px;
+  margin-right: 12px;
+}
+.employeeAbsenceItem .arrowRightIcon {
+  font-size: 30px;
+}
+.employeeAbsenceItem.active .arrowRight {
+  opacity: 30%;
+}
+.employeeAbsenceItem .absenceType {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.employeeAbsenceItem .absenceDate {
+  color: #78909C;
+  font-size: 14px;
+}
+.employeeAbsenceItem.initiallyHidden, .employeeAbsenceItem.hiddenBySearch, .employeeAbsenceItem.hiddenByFilter {
+  display: none;
+}
+
+.employeeAbsenceListItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #EEF1F5;
+  cursor: pointer;
+}
+.employeeAbsenceListItem .information {
+  flex: 1;
+  display: flex;
+}
+.employeeAbsenceListItem .clickMessage {
+  font-size: 14px;
+}
+.employeeAbsenceListItem .title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.employeeAbsenceListItem:last-child {
+  border-bottom: none;
+}
+.employeeAbsenceListItem .icon {
+  width: 30px;
+  margin-right: 16px;
+}
+.employeeAbsenceListItem .arrowRightIcon {
+  font-size: 30px;
+}
+
+.allSchedulesPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.allSchedulesPage .scroll {
+  display: flex;
+  flex: 0 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.allSchedulesPage .scroll .updated {
+  display: none;
+}
+.allSchedulesPage .allSchedulesList {
+  padding: 0px;
+  min-width: 100%;
+}
+.allSchedulesPage .emptyState {
+  display: none;
+  flex: 1;
+  padding-top: 30%;
+  text-align: center;
+}
+.allSchedulesPage .emptyState .esImage {
+  padding: 8px;
+}
+.allSchedulesPage .emptyState .esTitle {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 4px;
+}
+.allSchedulesPage .emptyState .esMessage {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(44, 62, 80, 0.4392156863);
+  padding: 4px;
+}
+.allSchedulesPage.emptyState .emptyState {
+  display: inline-block;
+}
+
+.myColleagueListPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.myColleagueListPage .searchBar {
+  height: 40px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2C3E50;
+  color: white;
+  padding-left: 16px;
+}
+.myColleagueListPage .searchBar .searchBox {
+  width: 75%;
+  height: 100%;
+}
+.myColleagueListPage .searchBar .filterBox {
+  width: 25%;
+  text-align: end;
+  height: 100%;
+}
+.myColleagueListPage .searchBar .searchIcon, .myColleagueListPage .searchBar .filterIcon {
+  display: inline-block;
+  height: 40px;
+  width: 28px;
+  font-size: 28px;
+  line-height: 40px;
+}
+.myColleagueListPage .searchBar .search {
+  display: inline-block;
+  height: 40px;
+  margin: 0px;
+  padding: 4px;
+  line-height: 40px;
+  vertical-align: top;
+  background-color: #2C3E50;
+  color: #ffffff;
+  width: 80%;
+}
+.myColleagueListPage .searchBar .search:focus {
+  outline: 0;
+}
+.myColleagueListPage .searchBar .filterTitle {
+  display: inline-block;
+  height: 32px;
+  padding: 4px;
+  margin: 0px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  vertical-align: top;
+}
+.myColleagueListPage .weekHeaderPanel {
+  display: flex;
+  flex: 0 0 auto;
+}
+.myColleagueListPage .scroll {
+  display: flex;
+  flex: 0 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.myColleagueListPage .scroll .updated {
+  display: none;
+}
+.myColleagueListPage .myColleagueListCurrentWeek, .myColleagueListPage .myColleagueListNextWeek {
+  padding: 0px;
+  min-width: 100%;
+}
+.myColleagueListPage.filterDisabled .filterBox {
+  opacity: 0.5;
+}
+.myColleagueListPage .loadingWidget {
+  top: 50%;
+}
+
+.employeeAbsenceListPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+}
+.employeeAbsenceListPage .scroll {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.projectListHeader {
+  padding: 24px;
+  padding-bottom: 0;
+}
+
+.projectList {
+  padding: 20px;
+}
+
+.employeeAbsencePage {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+  width: 100%;
+}
+.employeeAbsencePage .scroll {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.employeeAbsencePage .listContainer {
+  scrollbar-width: thin;
+  padding: 8px 8px 0 8px;
+}
+.employeeAbsencePage .absenceList {
+  margin: 0 16px 16px 16px;
+}
+.employeeAbsencePage .listTitle {
+  padding: 24px 0 16px 0;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+}
+.employeeAbsencePage .emptyListMessage {
+  display: none;
+  margin-top: 16px;
+  padding-bottom: 32px;
+  color: #78909C;
+  font-size: 14px;
+  font-style: italic;
+}
+.employeeAbsencePage .emptyListMessage.visible {
+  display: flex;
+}
+.employeeAbsencePage .bottomButton {
+  grid-row: 3;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.employeeAbsencePage .showAllButton {
+  margin: 16px;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 14px;
+  width: fit-content;
+  padding: 11px 64px;
+  border-radius: 3px;
+}
+
+.employeeAbsenceDetailPage {
+  background-color: white;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.employeeAbsenceDetailPage .header {
+  margin-bottom: 24px;
+}
+.employeeAbsenceDetailPage .container {
+  display: flex;
+  justify-content: center;
+}
+.employeeAbsenceDetailPage .content {
+  padding: 0 16px;
+  width: 100%;
+  max-width: 450px;
+}
+.employeeAbsenceDetailPage .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.employeeAbsenceDetailPage .subText {
+  color: #78909C;
+  font-weight: normal;
+}
+.employeeAbsenceDetailPage .dayHeader {
+  margin: 16px 0 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+.employeeAbsenceDetailPage .emptyListMessage {
+  display: none;
+  margin-top: 64px;
+  color: #78909C;
+  font-size: 14px;
+  font-style: italic;
+}
+.employeeAbsenceDetailPage .emptyListMessage.visible {
+  display: flex;
+}
+
+.myGroupAndStudentListPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.myGroupAndStudentListPage .scroll {
+  flex: 1;
+  display: list-item;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 68px;
+}
+.myGroupAndStudentListPage .scroll .updated {
+  display: none;
+}
+.myGroupAndStudentListPage .groupListHeader {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f6f8fa;
+}
+.myGroupAndStudentListPage .myGroupList, .myGroupAndStudentListPage .myStudentList {
+  padding: 0px;
+  min-width: 100%;
+}
+
+.myTeacherListPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.myTeacherListPage .weekHeaderPanel {
+  display: flex;
+  flex: 0 0 auto;
+}
+.myTeacherListPage .scroll {
+  display: flex;
+  flex: 0 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.myTeacherListPage .scroll .updated {
+  display: none;
+}
+.myTeacherListPage .myTeacherListCurrentWeek, .myTeacherListPage .myTeacherListNextWeek {
+  padding: 0px;
+  min-width: 100%;
+}
+
+.personScheduleOverview {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: white;
+}
+.personScheduleOverview .scheduleHeader {
+  font-weight: 500;
+  background-color: #f6f8fa;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+.personScheduleOverview .schedule {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.personScheduleOverview .schedule .dayHeader {
+  color: #2C3E50;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 16px 16px 8px 16px;
+  min-height: 17px;
+  max-width: 432px;
+}
+.personScheduleOverview.loading .schedule {
+  filter: grayscale(0.7);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.courseScheduleOverview {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: white;
+}
+.courseScheduleOverview .scheduleHeader {
+  font-weight: 500;
+  background-color: #f6f8fa;
+}
+.courseScheduleOverview .schedule {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.courseScheduleOverview .schedule .dayHeader {
+  color: #2C3E50;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 16px 16px 8px 16px;
+  max-width: 432px;
+}
+.courseScheduleOverview.loading {
+  filter: grayscale(0.7);
+}
+.courseScheduleOverview.hidden {
+  visibility: hidden;
+}
+
+.swipeablePersonSchedulePage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.swipeablePersonSchedulePage .scheduleContent {
+  padding: 0;
+  min-width: 100%;
+  overflow-x: auto;
+  flex: 1;
+  display: flex;
+}
+.swipeablePersonSchedulePage .weekHeader {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2C3E50;
+  padding: 8px;
+  background-color: #ffffff;
+}
+.swipeablePersonSchedulePage .emptyPage {
+  position: relative;
+  flex: 1;
+}
+
+.studentProfile {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+}
+
+.statisticsPage {
+  flex: 1;
+  background-color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+.statisticsPage .chartTitle, .statisticsPage .totalsTitle {
+  font-weight: 500;
+  padding: 16px 32px 16px;
+  font-size: 20px;
+}
+.statisticsPage .totalsTitle {
+  padding-bottom: 8px;
+}
+.statisticsPage .statisticsChart {
+  display: flex;
+  justify-content: center;
+  height: 240px;
+  padding: 0px 32px 16px;
+}
+.statisticsPage .totalBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f8fa;
+  margin: 2px 16px;
+  padding: 4px 42px 4px 16px;
+  border-radius: 4px;
+  min-height: 24px;
+  height: fit-content;
+  font-weight: 500;
+}
+.statisticsPage .subTitleBlock {
+  margin: 2px 16px;
+  padding: 4px 42px 0px 16px;
+}
+.statisticsPage .subTitle {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+}
+.statisticsPage .colorIndicatorSupply, .statisticsPage .colorIndicatorPlanned {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+.statisticsPage .colorIndicatorSupply {
+  background-color: #81C784;
+}
+.statisticsPage .colorIndicatorPlanned {
+  background-color: #5C96C9;
+}
+.statisticsPage .totalTitle, .statisticsPage .totalLessonInfo {
+  display: inline-block;
+  font-size: 16px;
+}
+.statisticsPage.loading {
+  display: none;
+}
+.statisticsPage.hidden {
+  visibility: hidden;
+}
+
+.createMeetingPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: auto;
+}
+.createMeetingPage .content {
+  flex: 1;
+  margin: 8px;
+}
+.createMeetingPage .formItem {
+  flex: 1;
+  padding: 4px;
+}
+.createMeetingPage .formItem .itemHeader {
+  font-weight: 500;
+  padding: 2px;
+}
+.createMeetingPage .formItem .inputField, .createMeetingPage .formItem .gwt-SuggestBox {
+  width: calc(100% - 8px);
+  max-width: 100%;
+  height: 36px;
+  border: none;
+  padding: 0px;
+  background-color: #F1F3F4;
+  padding: 0px;
+  font-size: 16px;
+  border-radius: 2px;
+  line-height: 36px;
+  resize: none;
+}
+.createMeetingPage .formItem .gwt-SuggestBox, .createMeetingPage .formItem .locationInput, .createMeetingPage .formItem .timeWindowInput {
+  width: 100%;
+  padding: 0px 0px 0px 8px;
+}
+.createMeetingPage .formItem .titleInput {
+  padding: 0px 0px 0px 8px;
+}
+.createMeetingPage .formItem .selectedParticipants {
+  max-height: 100px;
+  overflow-y: hidden;
+  margin-top: 4px;
+}
+.createMeetingPage .formItem .showMoreParticipantsButton {
+  display: none;
+  flex: 1;
+  padding: 4px 4px 4px 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+  justify-content: center;
+}
+.createMeetingPage .formItem .locationInput {
+  color: rgba(44, 62, 80, 0.2509803922);
+  font-style: italic;
+}
+.createMeetingPage .formItem .locationInput .locationOption {
+  color: #2C3E50;
+  font-style: normal;
+}
+.createMeetingPage .formItem .specialLocationSelection {
+  display: flex;
+  cursor: pointer;
+  padding: 4px;
+  height: 20px;
+}
+.createMeetingPage .formItem .specialLocationSelection .specialLocationText {
+  font-size: 16px;
+  padding-left: 8px;
+  line-height: 24px;
+}
+.createMeetingPage .formItem .specialLocationSelection .selectedIcon {
+  display: none;
+  color: #2C3E50;
+}
+.createMeetingPage .formItem .specialLocationSelection .notSelectedIcon {
+  display: block;
+  color: #2C3E50;
+}
+.createMeetingPage .meetingOptionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.createMeetingPage .meetingOptionHeader .calculateMeetingOptions {
+  color: #BEC4C9;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+.createMeetingPage .meetingOptionHeader .calculateMeetingOptions .calculateMeetingOptionsIcon.active {
+  display: none;
+}
+.createMeetingPage .meetingOptionHeader .calculateMeetingOptions .calculateMeetingOptionsIcon.inactive {
+  display: block;
+}
+.createMeetingPage .meetingOptionWarning .tooManyParticipants, .createMeetingPage .meetingOptionWarning .participantsFromMultipleProjects {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+.createMeetingPage .meetingOptionWarning .warningTitle {
+  padding-left: 8px;
+}
+.createMeetingPage .meetingOptionWarning .warningIcon {
+  color: #ff9800;
+}
+.createMeetingPage.locationOnline .locationOnlineSelection .selectedIcon {
+  display: block;
+}
+.createMeetingPage.locationOnline .locationOnlineSelection .notSelectedIcon {
+  display: none;
+}
+.createMeetingPage.locationOnline .locationSelection .selectedParticipantsField {
+  opacity: 50%;
+}
+.createMeetingPage.noLocation .noLocationSelection .selectedIcon {
+  display: block;
+}
+.createMeetingPage.noLocation .noLocationSelection .notSelectedIcon {
+  display: none;
+}
+.createMeetingPage.noLocation .locationSelection .selectedParticipantsField {
+  opacity: 50%;
+}
+.createMeetingPage.fetchOptionsAvailable .calculateMeetingOptions {
+  color: #6BAA65;
+}
+.createMeetingPage.fetchOptionsAvailable .calculateMeetingOptions .calculateMeetingOptionsIcon.active {
+  display: block;
+}
+.createMeetingPage.fetchOptionsAvailable .calculateMeetingOptions .calculateMeetingOptionsIcon.inactive {
+  display: none;
+}
+.createMeetingPage.fetchOptionsAvailable .meetingOption, .createMeetingPage.fetchOptionsAvailable .showMoreMeetingOptions {
+  opacity: 50%;
+}
+.createMeetingPage.tooManyParticipants .tooManyParticipants {
+  display: flex;
+}
+.createMeetingPage.tooManyParticipants .meetingOption, .createMeetingPage.tooManyParticipants .showMoreMeetingOptions {
+  opacity: 50%;
+}
+.createMeetingPage.participantsFromMultipleProjectsSelected .participantsFromMultipleProjects {
+  display: flex;
+}
+.createMeetingPage.participantsFromMultipleProjectsSelected .meetingOption, .createMeetingPage.participantsFromMultipleProjectsSelected .showMoreMeetingOptions {
+  opacity: 50%;
+}
+.createMeetingPage.showAdditionalMandatoryParticipants .mandatoryParticipantSelection .showMoreParticipantsButton {
+  display: flex;
+}
+.createMeetingPage.showAdditionalOptionalParticipants .optionalParticipantSelection .showMoreParticipantsButton {
+  display: flex;
+}
+.createMeetingPage.showAdditionalLocations .locationSelection .showMoreParticipantsButton {
+  display: flex;
+}
+.createMeetingPage .titleSelection .titleErrorMessage {
+  padding: 2px 0px 0px 8px;
+  color: #E22727;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+.createMeetingPage .titleSelection .titleErrorMessage:empty {
+  display: none;
+}
+.createMeetingPage .meetingOptionsPreview {
+  display: grid;
+  grid-template: "option1 option2 option3"/1fr 1fr 1fr;
+}
+.createMeetingPage .meetingOptionsPreview .meetingOptionsPlaceholder {
+  grid-area: option2;
+  display: none;
+  color: #BEC4C9;
+  font-size: 14px;
+  width: 300%;
+  justify-self: center;
+  text-align: center;
+  padding: 16px 0px;
+}
+.createMeetingPage .meetingOptionsPreview .showMoreMeetingOptions {
+  grid-area: option3;
+  border: 1px rgba(44, 62, 80, 0.0823529412) dashed;
+  border-radius: 2px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 4px;
+  padding: 4px;
+  background-color: rgba(44, 62, 80, 0.0078431373);
+}
+.createMeetingPage .meetingOptionsPreview .showMoreMeetingOptions .numberOfOtherMeetingOptions {
+  font-size: 20px;
+  font-weight: 700;
+}
+.createMeetingPage .meetingOptionsPreview .showMoreMeetingOptions .showMoreMeetingOptionsText {
+  font-size: 14px;
+}
+.createMeetingPage .meetingOptionsPreview.loading .loadingWidget {
+  display: block;
+  position: relative;
+  grid-area: option2;
+  justify-self: center;
+  margin: 16px 0px;
+  left: unset;
+  top: unset;
+  transform: unset;
+}
+.createMeetingPage .meetingOptionsPreview.loading .meetingOptionsPlaceholder {
+  display: none;
+}
+.createMeetingPage .meetingOptionsPreview.loading .showMoreMeetingOptions {
+  display: none;
+}
+.createMeetingPage .meetingOptionsPreview.loading .meetingOption {
+  display: none;
+}
+.createMeetingPage .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.createMeetingPage .ok, .createMeetingPage .cancel, .createMeetingPage .waitWhilePlanningButton {
+  flex: 1;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 50%;
+  background-color: #8b8b8b;
+}
+.createMeetingPage .waitWhilePlanningButton {
+  display: none;
+  justify-content: center;
+}
+.createMeetingPage .spinner {
+  border: 2px solid white;
+  border-top: 2px solid #AAB1B9;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 2s linear infinite;
+  margin: 3px;
+  margin-right: 8px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.createMeetingPage.noResults .meetingOptionsPlaceholder {
+  display: block;
+}
+.createMeetingPage.plannable .ok {
+  background-color: #4CAF50;
+}
+.createMeetingPage.waitWhilePlanning .ok, .createMeetingPage.waitWhilePlanning .cancel {
+  display: none;
+}
+.createMeetingPage.waitWhilePlanning .waitWhilePlanningButton {
+  display: flex;
+}
+.createMeetingPage.loading .content, .createMeetingPage.loading .buttons {
+  display: none;
+}
+.createMeetingPage.moreMeetingOptionsAvailable .showMoreMeetingOptions {
+  display: flex;
+}
+.createMeetingPage .participantSelectedForMeeting:nth-child(2), .createMeetingPage .participantSelectedForMeeting:nth-child(3) {
+  border-top: solid 1px #EEF1F5;
+}
+.createMeetingPage.timeWindowPlaceholderActive .timeWindowInput {
+  color: rgba(44, 62, 80, 0.2509803922);
+  font-style: italic;
+}
+.createMeetingPage.timeWindowPlaceholderActive .timeWindowInput .timeWindowOption {
+  color: #2C3E50;
+  font-style: normal;
+}
+.createMeetingPage .titleInput::placeholder, .createMeetingPage .gwt-SuggestBox::placeholder {
+  color: rgba(44, 62, 80, 0.2509803922);
+  font-style: italic;
+}
+
+.suggestBoxPopup {
+  background-color: white;
+  padding: 8px 46px 8px 8px;
+  border: 2px #b6b7b7 solid;
+  border-radius: 0px 6px 6px 6px;
+  max-height: 400px;
+  overflow-y: auto !important;
+}
+.suggestBoxPopup .item {
+  width: 100%;
+}
+.suggestBoxPopup .item-selected {
+  width: 100%;
+  background-color: #f1f3f4;
+}
+
+.potentialParticipantPopup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.doubleParticipantSelectionWarning {
+  background-color: #D35056;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4px;
+  line-height: 24px;
+}
+
+.basicAppointmentItem {
+  display: flex;
+  height: fit-content;
+  min-height: 29px;
+  overflow: hidden;
+  margin: 0px 4px 6px;
+  color: #2C3E50;
+  position: relative;
+  max-width: 432px;
+}
+.basicAppointmentItem .timeBlock {
+  width: 64px;
+  text-align: right;
+  padding-right: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
+.basicAppointmentItem .timeStart {
+  color: #909ba7;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+.basicAppointmentItem .timeEnd {
+  color: #909ba7;
+  font-size: 12px;
+  line-height: 12px;
+}
+.basicAppointmentItem .timeStart, .basicAppointmentItem .timeEnd {
+  margin: 0px;
+  padding: 0px;
+}
+.basicAppointmentItem .timeSlot {
+  font-size: 12px;
+  color: #78909C;
+}
+.basicAppointmentItem .appointmentBlock {
+  flex: 1;
+  border: 1px solid #c5c9e2;
+  padding: 4px;
+  padding-left: 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.basicAppointmentItem .appointmentBar {
+  display: none;
+  background-color: #7b7bb3;
+  width: 8px;
+}
+.basicAppointmentItem .info {
+  display: flex;
+  font-size: 12px;
+}
+.basicAppointmentItem .iconSpan {
+  display: flex;
+  align-items: center;
+}
+.basicAppointmentItem .swapIcon {
+  display: none;
+}
+.basicAppointmentItem.appointmentOnline .icons .onlineIcon {
+  color: #d32f2e;
+  display: inline-block;
+}
+.basicAppointmentItem.teacherChanged .swapIcon {
+  display: flex;
+}
+.basicAppointmentItem.teacherChanged .appointmentBlock {
+  background-color: #FFFFFF;
+}
+.basicAppointmentItem.teacherChanged .appointmentBar {
+  display: flex;
+  background-color: #BABABA;
+  width: 8px;
+}
+.basicAppointmentItem.teacherChanged .swapIcon {
+  color: #646464;
+}
+.basicAppointmentItem.cancelled .appointmentBlock {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #DF4242;
+  background-color: #F9D9D9;
+}
+.basicAppointmentItem.cancelled .appointmentBar {
+  display: inline;
+  background-color: #DF4242;
+}
+.basicAppointmentItem.cancelled .info {
+  color: #DF4242;
+}
+
+.courseListItem {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px;
+  padding-left: 16px;
+  border-bottom: solid 1px #EEF1F5;
+}
+.courseListItem .courseSubject {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 4px;
+}
+.courseListItem .extraInfo {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px 0px 0px 4px;
+}
+.courseListItem .enrollmentAndArrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.courseListItem .arrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.courseListItem .arrowRight .arrowRightIcon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+}
+.courseListItem .enrollment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px;
+}
+.courseListItem .enrollmentBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 8px;
+  background-color: #E9EAEE;
+  border-radius: 8px 8px 8px 8px;
+}
+.courseListItem .enrollmentProgressBar, .courseListItem .enrollmentCompletionBar {
+  height: 8px;
+  border-radius: 8px 8px 8px 8px;
+  width: 0%;
+  position: absolute;
+}
+.courseListItem .enrollmentProgressBar {
+  background-color: #5C96C9;
+}
+.courseListItem .enrollmentCompletionBar {
+  background-color: #81C784;
+}
+.courseListItem .minLessons, .courseListItem .maxLessons, .courseListItem .totalLessons {
+  background-color: #E9EAEE;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 12px;
+  position: absolute;
+  left: calc(100% - 23px);
+  z-index: 1;
+}
+.courseListItem .totalEnrollment {
+  font-weight: 500;
+  font-size: 14px;
+}
+.courseListItem .breakInBar {
+  height: 12px;
+  width: 8px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 83%;
+  transform: rotate(-20deg);
+  display: none;
+}
+.courseListItem .trophy {
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  left: calc(100% - 12px);
+  z-index: 1;
+  display: none;
+}
+.courseListItem.breakInBarActive .breakInBar {
+  display: block;
+}
+.courseListItem.trophyActive .trophy {
+  display: block;
+}
+.courseListItem.enrollmentInfoDisabled .enrollment {
+  visibility: hidden;
+}
+.courseListItem.active .arrowRight {
+  opacity: 30%;
+}
+
+.teacherHeader {
+  flex: 1;
+  padding: 0px 16px;
+  border-bottom: solid 1px #d0d5da;
+}
+.teacherHeader .fullName {
+  width: 100%;
+  margin: 16px 0px 4px;
+  font-size: 16px;
+}
+.teacherHeader .code {
+  margin: 0px 0px 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.teacherHeader .subjects {
+  margin: 4px 0px 8px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #909BA7;
+}
+
+.studentHeader {
+  font-weight: 500;
+  background-color: #f6f8fa;
+  border-bottom: solid 1px #d0d5da;
+  padding: 0px 16px;
+}
+.studentHeader .foldoutHead, .studentHeader .foldoutBody {
+  display: flex;
+  flex: 1;
+}
+.studentHeader .foldOutButton, .studentHeader .foldInButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  padding: 8px;
+}
+.studentHeader .foldInButton {
+  display: none;
+}
+.studentHeader .studentName {
+  width: 100%;
+  margin: 16px 0px 4px;
+  font-size: 16px;
+}
+.studentHeader .group {
+  margin: 0px 0px 4px;
+  font-size: 14px;
+}
+.studentHeader .foldoutBody {
+  display: none;
+}
+.studentHeader .content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 8px;
+}
+.studentHeader .extrasHeader {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.studentHeader .extrasName {
+  display: inline-block;
+  font-weight: 400;
+  color: #7A8693;
+  font-size: 14px;
+}
+.studentHeader.foldout .foldoutBody {
+  border-top: solid 1px #d0d5da;
+  display: flex;
+}
+.studentHeader.foldout .foldOutButton {
+  display: none;
+}
+.studentHeader.foldout .foldInButton {
+  display: flex;
+}
+
+.simpleHeader {
+  font-weight: 500;
+  background-color: #f6f8fa;
+  border-bottom: solid 1px #d0d5da;
+  padding: 0px 16px;
+}
+.simpleHeader .content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 8px;
+}
+.simpleHeader .icon {
+  width: 30px;
+  display: none;
+  margin-right: 12px;
+}
+.simpleHeader .icon.visible {
+  display: flex;
+}
+.simpleHeader .information {
+  margin: 8px 0;
+}
+.simpleHeader .title {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.simpleHeader .subText {
+  font-size: 14px;
+}
+
+.weekHeader {
+  flex: 1;
+  max-height: 20px;
+  height: 20px;
+  display: flex;
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f6f8fa;
+}
+.weekHeader .currentWeekHeader, .weekHeader .nextWeekHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+}
+.weekHeader .currentWeekText, .weekHeader .nextWeekText {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+.weekHeader .currentWeekText {
+  padding-left: 40px;
+}
+.weekHeader .nextWeekText {
+  padding-right: 40px;
+}
+.weekHeader .arrowRightHeader, .weekHeader .arrowLeftHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.weekHeader .arrowRightIcon, .weekHeader .arrowLeftIcon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  color: #2C3E50;
+}
+
+.multiSelectPopup {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow: hidden;
+}
+.multiSelectPopup .categoryList {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.multiSelectPopup .selectCategory {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.multiSelectPopup .selectCategory .categoryHeader {
+  display: flex;
+  border-bottom: solid 1px #EEF1F5;
+}
+.multiSelectPopup .selectCategory .categoryHeader .arrowUp, .multiSelectPopup .selectCategory .categoryHeader .arrowDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: none;
+}
+.multiSelectPopup .selectCategory .categoryHeader .arrowUpIcon {
+  transform: rotate(-90deg);
+}
+.multiSelectPopup .selectCategory .categoryHeader .arrowDownIcon {
+  transform: rotate(90deg);
+}
+.multiSelectPopup .selectCategory .categoryTitle {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
+  padding-left: 16px;
+}
+.multiSelectPopup .categoryItems {
+  overflow: auto;
+  flex: 1;
+}
+.multiSelectPopup .apply {
+  flex: 0;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  background-color: rgba(44, 62, 80, 0.3137254902);
+}
+.multiSelectPopup.applyAvailable .apply {
+  background-color: #4CAF50;
+}
+.multiSelectPopup.multipleCategories .categoryList {
+  overflow: auto;
+}
+.multiSelectPopup.multipleCategories .categoryItems {
+  overflow: auto;
+  flex: 1;
+}
+.multiSelectPopup.multipleCategories .selectCategory {
+  overflow: visible;
+  min-height: fit-content;
+}
+.multiSelectPopup.multipleCategories .selectCategory .arrowDown {
+  display: flex;
+}
+.multiSelectPopup.multipleCategories .selectCategory .arrowUp {
+  display: none;
+}
+.multiSelectPopup.multipleCategories .selectCategory .categoryItems {
+  display: none;
+}
+.multiSelectPopup.multipleCategories .selectCategory.active {
+  border-bottom: solid 1px #EEF1F5;
+}
+.multiSelectPopup.multipleCategories .selectCategory.active .categoryHeader {
+  border-bottom: none;
+}
+.multiSelectPopup.multipleCategories .selectCategory.active .arrowDown {
+  display: none;
+}
+.multiSelectPopup.multipleCategories .selectCategory.active .arrowUp {
+  display: flex;
+}
+.multiSelectPopup.multipleCategories .selectCategory.active .categoryItems {
+  display: block;
+}
+
+.selectItem {
+  display: flex;
+  cursor: pointer;
+  padding: 8px;
+  padding-left: 16px;
+  height: 20px;
+}
+.selectItem .itemValue {
+  font-size: 16px;
+  padding-left: 8px;
+  line-height: 24px;
+}
+.selectItem .selectedIcon, .selectItem .notSelectedIcon, .selectItem .indeterminateIcon {
+  display: none;
+  color: #2C3E50;
+}
+.selectItem .notSelectedIcon {
+  display: block;
+  color: #D0D5DA;
+}
+.selectItem.selected .selectedIcon {
+  display: block;
+}
+.selectItem.selected .notSelectedIcon {
+  display: none;
+}
+.selectItem.someSelected .indeterminateIcon {
+  display: block;
+}
+.selectItem.someSelected .notSelectedIcon {
+  display: none;
+}
+
+.meetingOptionsPage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+  font-size: 14px;
+}
+.meetingOptionsPage .daySelectorContainer {
+  display: grid;
+  grid-template: "ma di wo do vr all";
+  grid-gap: 4px;
+  text-align: center;
+  padding: 8px;
+}
+.meetingOptionsPage .daySelectorContainer .daySelector {
+  margin: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #F1F2F4;
+}
+.meetingOptionsPage .content {
+  flex-direction: column;
+}
+.meetingOptionsPage .content .items {
+  display: none;
+  grid-template: "dayheader dayheader ." "item1 item2 item3" "item4 item5 item6"/1fr 1fr 1fr;
+  grid-gap: 4px;
+  padding: 8px;
+}
+.meetingOptionsPage .content .dayHeader {
+  grid-area: dayheader;
+  font-weight: 500;
+  width: 100%;
+  margin: 4px;
+}
+.meetingOptionsPage .buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.meetingOptionsPage .ok {
+  flex: 1;
+  height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #8b8b8b;
+}
+.meetingOptionsPage.plannable .ok {
+  background-color: #4CAF50;
+}
+.meetingOptionsPage.monday .mondaySelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.monday .mondayItems {
+  display: grid;
+}
+.meetingOptionsPage.tuesday .tuesdaySelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.tuesday .tuesdayItems {
+  display: grid;
+}
+.meetingOptionsPage.wednesday .wednesdaySelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.wednesday .wednesdayItems {
+  display: grid;
+}
+.meetingOptionsPage.thursday .thursdaySelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.thursday .thursdayItems {
+  display: grid;
+}
+.meetingOptionsPage.friday .fridaySelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.friday .fridayItems {
+  display: grid;
+}
+.meetingOptionsPage.monday.tuesday.wednesday.thursday.friday .allSelector, .meetingOptionsPage.allDays .allSelector {
+  color: #FFFFFF;
+  background-color: #2C3E50;
+}
+.meetingOptionsPage.monday.tuesday.wednesday.thursday.friday .items, .meetingOptionsPage.allDays .items {
+  display: grid;
+}
+.meetingOptionsPage.resultsHaveAged .meetingOption {
+  opacity: 50%;
+}
+
+.loadingWidget {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+.loadingWidget .animationContainer {
+  width: 64px;
+  height: 64px;
+}
+.loadingWidget .gif {
+  display: none;
+  width: 64px;
+  height: 64px;
+}
+.loadingWidget .animationContainer:empty {
+  display: none;
+}
+.loadingWidget .animationContainer:empty + .gif {
+  display: block;
+}
+
+.emptyStateWidget {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  width: 230px;
+  position: relative;
+  top: 20%;
+  left: calc(50% - 115px);
+}
+.emptyStateWidget .esImage {
+  padding: 8px;
+}
+.emptyStateWidget .esTitle {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 4px;
+}
+.emptyStateWidget .esMessage {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(44, 62, 80, 0.4392156863);
+  padding: 4px;
+}
+
+.startCreateMeeting {
+  display: flex;
+  height: 0px;
+  width: 90%;
+  align-items: center;
+  align-self: center;
+  line-height: 24px;
+}
+.startCreateMeeting .addButton {
+  width: 48px;
+  height: 48px;
+  background-color: #6BAA65;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  right: 8px;
+  position: absolute;
+  bottom: 8px;
+  margin: 4px;
+}
+.startCreateMeeting .addIcon {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.participantSelectedForMeeting {
+  display: flex;
+  flex: 1;
+  padding: 4px 4px 4px 16px;
+  line-height: 24px;
+  align-items: center;
+  color: #2C3E50;
+  font-size: 14px;
+  font-weight: 500;
+}
+.participantSelectedForMeeting .identifyingValue {
+  flex: 1;
+}
+.participantSelectedForMeeting .removeButton, .participantSelectedForMeeting .creatorSign {
+  height: 24px;
+  width: 24px;
+  align-items: center;
+}
+.participantSelectedForMeeting .creatorSign {
+  display: none;
+}
+.participantSelectedForMeeting.doubleParticipantSelection {
+  color: #D35056;
+}
+.participantSelectedForMeeting.alsoSelectedViaGroup {
+  font-style: italic;
+}
+.participantSelectedForMeeting.unchangeable .creatorSign {
+  display: block;
+  opacity: 50%;
+}
+.participantSelectedForMeeting.unchangeable .removeButton {
+  display: none;
+}
+
+.meetingOption {
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  margin: 4px;
+}
+.meetingOption .dayField {
+  display: none;
+  color: white;
+  background-color: #AAB1B9;
+  border: 2px solid #AAB1B9;
+  border-radius: 2px 2px 0px 0px;
+}
+.meetingOption .appointmentContent {
+  border: 1px rgba(44, 62, 80, 0.0823529412) dashed;
+  border-radius: 2px;
+  background: rgba(44, 62, 80, 0.0078431373);
+  padding-top: 4px;
+}
+.meetingOption .appointmentContent .lessonHour {
+  grid-area: lessonHour;
+  font-size: 16px;
+  font-weight: 700;
+}
+.meetingOption .appointmentContent .time {
+  grid-area: time;
+  font-size: 14px;
+}
+.meetingOption .appointmentContent .location {
+  grid-area: location;
+}
+.meetingOption .appointmentContent .selectorButton {
+  grid-area: selectorButton;
+}
+.meetingOption .rating .star {
+  font-size: 16px;
+  height: 32px;
+  line-height: 32px;
+  color: rgba(44, 62, 80, 0.1254901961);
+}
+.meetingOption.oneStar .star1 {
+  color: #F1C725;
+}
+.meetingOption.twoStars .star1, .meetingOption.twoStars .star2 {
+  color: #F1C725;
+}
+.meetingOption.threeStars .star1, .meetingOption.threeStars .star2, .meetingOption.threeStars .star3 {
+  color: #F1C725;
+}
+.meetingOption.selected .dayField {
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+.meetingOption.selected .appointmentContent {
+  border: 1px solid #6BAA65;
+  background: rgba(107, 170, 101, 0.1254901961);
+}
+.meetingOption.preferredLocation .appointmentContent .location {
+  background-color: #dbdee1;
+  margin: 0px 4px;
+  border-radius: 4px;
+}
+.meetingOption.preview .dayField {
+  display: block;
+}
+.meetingOption.preview .appointmentContent {
+  border-radius: 0px 0px 2px 2px;
+}
+.meetingOption.item1 {
+  grid-area: item1;
+}
+.meetingOption.item2 {
+  grid-area: item2;
+}
+.meetingOption.item3 {
+  grid-area: item3;
+}
+.meetingOption.item4 {
+  grid-area: item4;
+}
+.meetingOption.item5 {
+  grid-area: item5;
+}
+.meetingOption.item6 {
+  grid-area: item6;
+}
+
+.selectedParticipantCategory {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.selectedParticipantCategory .categoryHeader {
+  display: flex;
+  background-color: #F6F8FA;
+  padding-right: 4px;
+  font-size: 16px;
+}
+.selectedParticipantCategory .categoryHeader .arrowUp, .selectedParticipantCategory .categoryHeader .arrowDown {
+  align-items: center;
+  display: none;
+}
+.selectedParticipantCategory .categoryHeader .arrowUpIcon {
+  transform: rotate(-90deg);
+}
+.selectedParticipantCategory .categoryHeader .arrowDownIcon {
+  transform: rotate(90deg);
+}
+.selectedParticipantCategory .categoryTitle {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
+  padding-left: 16px;
+}
+.selectedParticipantCategory .categoryItems {
+  overflow: hidden;
+  flex: 1;
+}
+.selectedParticipantCategory .categoryItems .participantSelectedForMeeting {
+  border-bottom: solid 1px #EEF1F5;
+}
+.selectedParticipantCategory.multipleCategories {
+  overflow: unset;
+}
+.selectedParticipantCategory.multipleCategories .arrowDown {
+  display: flex;
+}
+.selectedParticipantCategory.multipleCategories .arrowUp {
+  display: none;
+}
+.selectedParticipantCategory.multipleCategories .categoryItems {
+  display: none;
+}
+.selectedParticipantCategory.multipleCategories.active .categoryItems {
+  display: block;
+}
+.selectedParticipantCategory.multipleCategories.active .categoryHeader {
+  border-bottom: none;
+}
+.selectedParticipantCategory.multipleCategories.active .arrowDown {
+  display: none;
+}
+.selectedParticipantCategory.multipleCategories.active .arrowUp {
+  display: flex;
+}
+.selectedParticipantCategory.lastCategory {
+  flex: 1;
+}
+
+.subjectSelectionPage {
+  flex: 1;
+  display: flex;
+  overflow-y: auto;
+  background-color: #eaeeef;
+}
+.subjectSelectionPage .subjectSelectionPanel {
+  padding: 30px 5% 160px;
+  width: 100%;
+}
+
+.subjectSelectionFormPage {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.subjectSelectionFormPage .view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.subjectSelectionFormPage .view .viewDetail {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.subjectSelectionFormPage .view.notEnrolledDisallowed .changeChoice {
+  display: none;
+}
+.subjectSelectionFormPage .view .changeChoice {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.subjectSelectionFormPage .view .changeChoice div {
+  flex: 0 1 50%;
+  min-height: 24px;
+  background-color: #4CAF50;
+  display: inline-block;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  min-width: 0;
+}
+
+.subjectSelectionWidget {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+  padding-bottom: 16px;
+}
+.subjectSelectionWidget .subjectSelectionInfo {
+  display: flex;
+  flex-direction: column;
+}
+.subjectSelectionWidget .icons {
+  display: flex;
+}
+.subjectSelectionWidget .icon {
+  color: #FFFFFF;
+  padding: 8px 8px 4px 8px;
+  background-color: #E5E5E5;
+}
+.subjectSelectionWidget .hasPublicCommentContainer {
+  display: flex;
+}
+.subjectSelectionWidget .publicCommentUnreadIcon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  padding: 8px 8px 4px 8px;
+}
+.subjectSelectionWidget.deadlineIsSoon .deadlineContainer {
+  color: #FFFFFF;
+  background-color: #FFB74D;
+}
+.subjectSelectionWidget.studentApproves .studentApprovesIcon {
+  background-color: #81C784;
+}
+.subjectSelectionWidget.deanApproves .deanApprovesIcon {
+  background-color: #81C784;
+}
+.subjectSelectionWidget.hasPublicComment .hasPublicCommentContainer, .subjectSelectionWidget.hasPublicComment .publicCommentReadIcon {
+  background-color: #2C3E50;
+}
+.subjectSelectionWidget.hasUnreadPublicComment .publicCommentUnreadIcon {
+  display: block;
+}
+.subjectSelectionWidget.hasUnreadPublicComment .publicCommentReadIcon {
+  display: none;
+}
+.subjectSelectionWidget .info {
+  padding-bottom: 8px;
+  display: flex;
+}
+.subjectSelectionWidget .infoTop {
+  display: flex;
+  background-color: #FFFFFF;
+  height: auto;
+}
+.subjectSelectionWidget .standardText {
+  min-width: 105px;
+  font-weight: 500;
+}
+.subjectSelectionWidget .standardTextTop {
+  min-width: 105px;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.subjectSelectionWidget .deadlineContainer {
+  width: 100%;
+  display: flex;
+  padding-left: 10px;
+}
+.subjectSelectionWidget .deadline {
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.subjectSelectionWidget .line {
+  height: 2px;
+  width: 100%;
+  color: #E0E3E6;
+}
+.subjectSelectionWidget .body {
+  background-color: #FFFFFF;
+  padding: 10px 0 0 10px;
+  display: flex;
+}
+.subjectSelectionWidget .bodyInfoContainer {
+  width: 100%;
+}
+.subjectSelectionWidget .arrowKeyRight {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+}
+
+.subjectSelectionMadeChoices {
+  width: 100%;
+  padding-bottom: 16px;
+}
+.subjectSelectionMadeChoices .icon {
+  font-size: 32px;
+  padding: 8px;
+}
+.subjectSelectionMadeChoices .miniIcon {
+  font-size: 14px;
+  color: #959EA7;
+  padding: 2px;
+}
+.subjectSelectionMadeChoices .publicCommentContainer {
+  display: none;
+  width: 100%;
+  background-color: #E1EAF8;
+  position: fixed;
+}
+.subjectSelectionMadeChoices .publicComment {
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-self: center;
+  margin: 16px 0;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+.subjectSelectionMadeChoices .foldOutButton, .subjectSelectionMadeChoices .foldInButton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 8px;
+}
+.subjectSelectionMadeChoices.publicCommentAvailable .publicCommentContainer {
+  display: flex;
+}
+.subjectSelectionMadeChoices.publicCommentIsFoldedIn .foldOutButton {
+  display: flex;
+}
+.subjectSelectionMadeChoices.publicCommentIsFoldedOut .publicComment {
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+.subjectSelectionMadeChoices.publicCommentIsFoldedOut .foldInButton {
+  display: flex;
+}
+.subjectSelectionMadeChoices .madeChoicesContainer, .subjectSelectionMadeChoices .conditionsContainer {
+  max-width: 70%;
+  margin: 24px auto auto;
+  padding-bottom: 4px;
+}
+.subjectSelectionMadeChoices .lessonInvolvementInformation {
+  margin-top: 32px;
+}
+.subjectSelectionMadeChoices .subjectText, .subjectSelectionMadeChoices .subjectTextItalic {
+  color: #2C3E50;
+  display: inline-block;
+}
+.subjectSelectionMadeChoices .subjectTextItalic {
+  font-style: italic;
+}
+.subjectSelectionMadeChoices .chosenSubject {
+  padding-left: 18px;
+}
+.subjectSelectionMadeChoices .segment {
+  font-weight: bold;
+  padding-bottom: 8px;
+  width: 100%;
+}
+.subjectSelectionMadeChoices .segment:nth-child(n+2) {
+  border-top: 2px solid #EAEEEF;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+.subjectSelectionMadeChoices .subjectContainer {
+  max-width: 70%;
+  margin: auto;
+}
+.subjectSelectionMadeChoices .conditions {
+  margin-top: 32px;
+  display: flex;
+}
+.subjectSelectionMadeChoices .spacing {
+  margin-bottom: 8px;
+}
+.subjectSelectionMadeChoices .errorIcon {
+  margin-right: 8px;
+  color: #2C3E50;
+}
+.subjectSelectionMadeChoices .errorIconRed {
+  margin-right: 8px;
+  color: #E24E4E;
+}
+.subjectSelectionMadeChoices .conditionWrong {
+  color: #E24E4E;
+}
+.subjectSelectionMadeChoices .subjectSelectionWrongConditionsContainer {
+  display: flex;
+  max-height: 100px;
+  width: 70%;
+  overflow: auto;
+  margin: 8px auto;
+}
+.subjectSelectionMadeChoices .bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.subjectSelectionMadeChoices .bottomButtons {
+  justify-content: center;
+  display: flex;
+}
+.subjectSelectionMadeChoices .buttonTrue {
+  background-color: #2C3E50;
+  border-radius: 2px;
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  margin-right: 16px;
+  margin-left: 16px;
+  color: #FFFFFF;
+  width: 35%;
+  z-index: 10;
+}
+.subjectSelectionMadeChoices .buttonFalse {
+  opacity: 30%;
+}
+
+.subjectSelectionChoiceWidget {
+  width: 100%;
+  padding-bottom: 16px;
+}
+.subjectSelectionChoiceWidget .publicCommentIcon {
+  font-size: 32px;
+  padding: 8px;
+}
+.subjectSelectionChoiceWidget .publicCommentContainer {
+  display: none;
+  width: 100%;
+  background-color: #E1EAF8;
+  position: fixed;
+}
+.subjectSelectionChoiceWidget .publicComment {
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-self: center;
+  margin: 16px 0;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+.subjectSelectionChoiceWidget .foldOutButton, .subjectSelectionChoiceWidget .foldInButton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 8px;
+}
+.subjectSelectionChoiceWidget.publicCommentAvailable .publicCommentContainer {
+  display: flex;
+}
+.subjectSelectionChoiceWidget.publicCommentIsFoldedIn .publicCommentContainer .foldOutButton {
+  display: flex;
+}
+.subjectSelectionChoiceWidget.publicCommentIsFoldedOut .publicCommentContainer .publicComment {
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+.subjectSelectionChoiceWidget.publicCommentIsFoldedOut .publicCommentContainer .foldInButton {
+  display: flex;
+}
+.subjectSelectionChoiceWidget .choiceDescriptionContainer, .subjectSelectionChoiceWidget .alreadyChosenSubjectsCumulativeContainer {
+  display: none;
+  max-width: 70%;
+  margin: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+}
+.subjectSelectionChoiceWidget .choiceDescription, .subjectSelectionChoiceWidget .alreadyChosenSubjectsCumulative {
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-wrap: anywhere;
+}
+.subjectSelectionChoiceWidget .choiceDescriptionIcon {
+  margin-right: 8px;
+}
+.subjectSelectionChoiceWidget.choiceDescriptionAvailable .choiceDescriptionContainer {
+  display: flex;
+}
+.subjectSelectionChoiceWidget.choiceDescriptionIsFoldedIn .choiceDescriptionContainer .foldOutButton {
+  display: flex;
+}
+.subjectSelectionChoiceWidget.choiceDescriptionIsFoldedOut .choiceDescriptionContainer .choiceDescription {
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  overflow-y: auto;
+}
+.subjectSelectionChoiceWidget.choiceDescriptionIsFoldedOut .choiceDescriptionContainer .foldInButton {
+  display: flex;
+}
+.subjectSelectionChoiceWidget.cumulativeSubjectsAvailable .alreadyChosenSubjectsCumulativeContainer {
+  display: flex;
+}
+.subjectSelectionChoiceWidget .contentChooseSubjects {
+  padding-bottom: 72px;
+}
+.subjectSelectionChoiceWidget .segmentInfo {
+  margin: 24px auto 16px;
+  font-weight: bold;
+  max-width: 75%;
+}
+.subjectSelectionChoiceWidget .extraInfoForOptions {
+  max-width: 70%;
+  margin: 16px auto 4px auto;
+}
+.subjectSelectionChoiceWidget .subjectNotSelected {
+  margin: 4px 15%;
+  max-width: 70%;
+  width: 70%;
+  border-radius: 4px;
+  background-color: #EAEEEF;
+  color: #2C3E50;
+  padding: 12px;
+  text-align: left;
+  border: 0;
+}
+.subjectSelectionChoiceWidget .subjectSelected {
+  margin: 4px 15%;
+  max-width: 70%;
+  width: 70%;
+  border-radius: 4px;
+  background-color: #81C784;
+  color: #FFFFFF;
+  padding: 12px;
+  text-align: left;
+  border: 0;
+}
+.subjectSelectionChoiceWidget .subjectAlreadySelected {
+  margin: 4px 15%;
+  max-width: 70%;
+  width: 70%;
+  border-radius: 4px;
+  background-color: #EAEEEF;
+  color: #2C3E50;
+  padding: 12px;
+  text-align: left;
+  opacity: 40%;
+  border: 0;
+}
+.subjectSelectionChoiceWidget .subjectText {
+  float: left;
+  width: calc(100% - 20px);
+}
+.subjectSelectionChoiceWidget .icon {
+  float: right;
+  color: #56826A;
+  font-size: 18px;
+}
+.subjectSelectionChoiceWidget .conditionMessagesContainer {
+  display: none;
+  max-width: 70%;
+  margin: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+}
+.subjectSelectionChoiceWidget.conditionMessagesAvailable .conditionMessagesContainer {
+  display: flex;
+}
+.subjectSelectionChoiceWidget .error {
+  margin-right: 8px;
+}
+.subjectSelectionChoiceWidget .conditionWrong {
+  color: #E24E4E;
+}
+.subjectSelectionChoiceWidget .separationBar {
+  width: 70%;
+  border: 1px solid #EAEEEF;
+  display: none;
+}
+.subjectSelectionChoiceWidget.conditionMessagesAvailable.choiceDescriptionAvailable .separationBar {
+  display: block;
+}
+.subjectSelectionChoiceWidget .spacing {
+  margin-bottom: 8px;
+}
+.subjectSelectionChoiceWidget .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.subjectSelectionChoiceWidget .buttonTrue, .subjectSelectionChoiceWidget .buttonFalse {
+  background-color: #2C3E50;
+  border-radius: 2px;
+  width: 120px;
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #FFFFFF;
+}
+.subjectSelectionChoiceWidget .buttonStandard, .subjectSelectionChoiceWidget .buttonStandardNotClickable {
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  width: 120px;
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-style: solid;
+  border-color: #D4D7DB;
+  border-width: 2px;
+}
+.subjectSelectionChoiceWidget .buttonStandardNotClickable {
+  opacity: 30%;
+}
+.subjectSelectionChoiceWidget .buttonFalse {
+  opacity: 30%;
+}
+.subjectSelectionChoiceWidget .specialBold {
+  font-weight: 700;
+}
+
+#app .subjectSelectionChoiceWidget .specialBold {
+  font-weight: 500;
+}
+
+.subjectSelectionApprovalWidget {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.subjectSelectionApprovalWidget .mainContent {
+  padding-bottom: 1rem;
+}
+.subjectSelectionApprovalWidget .scrollContainer {
+  width: 100%;
+  overflow: auto;
+}
+.subjectSelectionApprovalWidget .segments {
+  margin: auto;
+  max-width: 480px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.subjectSelectionApprovalWidget .approveText {
+  font-style: italic;
+  margin-top: 1rem;
+}
+.subjectSelectionApprovalWidget .bottom {
+  background: white;
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+}
+.subjectSelectionApprovalWidget .button {
+  width: 100%;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  outline: 1px solid lightgrey;
+  border-radius: 2px;
+}
+.subjectSelectionApprovalWidget .header {
+  padding: 12px;
+  background-color: #F6F8FA;
+  border-bottom: solid 1px #d0d5da;
+  font-weight: 500;
+}
+.subjectSelectionApprovalWidget .approveButton {
+  margin: 1rem 1rem 1rem 0.5rem;
+  background-color: #2c3e50;
+  color: white;
+}
+.subjectSelectionApprovalWidget.approved .button {
+  display: none;
+}
+.subjectSelectionApprovalWidget.approved .bottom {
+  max-width: none;
+  background: #ACB1B7;
+  display: flex;
+  justify-content: center;
+}
+.subjectSelectionApprovalWidget.approved .validated {
+  display: block;
+}
+.subjectSelectionApprovalWidget .disapproveButton {
+  margin: 1rem 0.5rem 1rem 1rem;
+  color: #2c3e50;
+  background: white;
+}
+.subjectSelectionApprovalWidget .validated {
+  padding: 0.5rem;
+  color: #F1F2F4;
+  text-align: center;
+  white-space: pre-wrap;
+  display: none;
+}
+
+#app .subjectSelectionApprovalWidget .specialBold {
+  font-weight: 500;
+}
+
+.subjectSelectionCommentWidget .commentContainer {
+  padding: 1rem;
+  max-width: 480px;
+}
+.subjectSelectionCommentWidget .commentInformation {
+  color: #2c3e50;
+  white-space: pre-wrap;
+  font-weight: 400;
+}
+
+#app .subjectSelectionCommentWidget .specialBold {
+  font-weight: 400;
+}
+
+.miniPopupContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.miniPopupContent {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+  max-height: 450px;
+  padding: 16px;
+}
+.miniPopupContent .gwt-Button {
+  max-height: 100px;
+  max-width: 100px;
+}
+.miniPopupContent .closeIcon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.miniPopupContent .title {
+  font-weight: 430;
+  font-size: 18px;
+  color: #2C3E50;
+}
+.miniPopupContent .messageContent {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 300;
+  color: #2C3E50;
+  white-space: pre-wrap;
+}
+.miniPopupContent .buttonSpace {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.miniPopupContent .buttonLeft, .miniPopupContent .buttonRight {
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  margin-right: 8px;
+  border-style: solid;
+  border-color: #D4D7DB;
+  border-width: 2px;
+  height: 50%;
+  display: none;
+}
+.miniPopupContent .buttonRight {
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  border-color: #2C3E50;
+}
+.miniPopupContent .buttonRight.display, .miniPopupContent .buttonLeft.display {
+  display: block;
+}
+
+.connectExternalApplication {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.connectExternalApplication .contentBox {
+  overflow-y: auto;
+  padding: 16px;
+  height: 100%;
+}
+.connectExternalApplication .QRCanvasBox {
+  text-align: center;
+}
+.connectExternalApplication .QRTitle {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #4CAF50;
+}
+.connectExternalApplication .textContainer {
+  margin-top: 40px;
+}
+.connectExternalApplication .text {
+  margin: 8px 16px 0;
+}
+.connectExternalApplication .exit {
+  max-height: 24px;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 100%;
+  background-color: #8b8b8b;
+}

@@ -1,0 +1,1167 @@
+:root.zlg,
+.zlg {
+  --zlg-font: "Poppins", "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;
+  --zlg-radius-card: 16px;
+  --zlg-radius-pill: 999px;
+  --zlg-radius-sm: 10px;
+  --zlg-blur-strong: blur(24px) saturate(150%);
+  --zlg-blur-soft: blur(14px) saturate(140%);
+  --zlg-transition-fast: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --zlg-transition-mid: 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root.zlg-theme-dark,
+.zlg-theme-dark {
+  --zlg-bg-main: #0a111a;
+  --zlg-bg-secondary: #0f1824;
+  --zlg-bg-glow: radial-gradient(circle at 18% 0%, rgba(75, 128, 185, 0.44), rgba(30, 49, 74, 0) 48%), radial-gradient(circle at 85% 100%, rgba(85, 118, 166, 0.24), rgba(15, 23, 36, 0) 35%);
+  --zlg-surface: rgba(21, 30, 45, 0.62);
+  --zlg-surface-strong: rgba(30, 42, 61, 0.78);
+  --zlg-frost-line: rgba(188, 223, 255, 0.25);
+  --zlg-frost-inner: rgba(255, 255, 255, 0.14);
+  --zlg-text: #f5f9ff;
+  --zlg-text-muted: #b4c2d9;
+  --zlg-contrast: #ffffff;
+  --zlg-accent: #6ec6ff;
+  --zlg-accent-strong: #8dd5ff;
+  --zlg-danger: #ff8d99;
+  --zlg-warning: #ffd78e;
+  --zlg-success: #74ddad;
+  --zlg-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+  --zlg-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.34);
+  --zlg-svg-filter: brightness(1.28) saturate(0.82) contrast(1.18);
+  --zlg-icon-stroke: rgba(236, 246, 255, 0.96);
+  --zlg-link: #98d9ff;
+}
+
+:root.zlg-theme-light,
+.zlg-theme-light {
+  --zlg-bg-main: #dce8f6;
+  --zlg-bg-secondary: #edf4fb;
+  --zlg-bg-glow: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 42%), radial-gradient(circle at 84% 100%, rgba(196, 216, 240, 0.85), rgba(237, 244, 251, 0) 40%);
+  --zlg-surface: rgba(255, 255, 255, 0.56);
+  --zlg-surface-strong: rgba(255, 255, 255, 0.82);
+  --zlg-frost-line: rgba(255, 255, 255, 0.78);
+  --zlg-frost-inner: rgba(255, 255, 255, 0.56);
+  --zlg-text: #13243a;
+  --zlg-text-muted: #4c6079;
+  --zlg-contrast: #0d2038;
+  --zlg-accent: #1b84d6;
+  --zlg-accent-strong: #0b72c5;
+  --zlg-danger: #c53d53;
+  --zlg-warning: #9f6d00;
+  --zlg-success: #0d8c62;
+  --zlg-shadow: 0 14px 28px rgba(36, 70, 108, 0.2);
+  --zlg-shadow-soft: 0 8px 18px rgba(41, 73, 109, 0.16);
+  --zlg-svg-filter: brightness(0.38) saturate(0.5) contrast(1.34);
+  --zlg-icon-stroke: rgba(16, 36, 60, 0.94);
+  --zlg-link: #0b78ce;
+}
+
+html.zlg,
+body.zlg,
+.zlg #app,
+.zlg .responsive,
+.zlg .menu,
+.zlg .masterDetail,
+.zlg .master,
+.zlg .detail,
+.zlg .view,
+.zlg .viewDetail,
+.zlg .content,
+.zlg .swiper,
+.zlg .swiper .container,
+.zlg .swiper .container .slide {
+  background: var(--zlg-bg-glow), linear-gradient(180deg, var(--zlg-bg-secondary), var(--zlg-bg-main)) !important;
+  color: var(--zlg-text) !important;
+  color-scheme: dark light !important;
+  font-family: var(--zlg-font) !important;
+}
+
+.zlg body,
+.zlg input,
+.zlg textarea,
+.zlg select,
+.zlg button,
+.zlg .menuPage,
+.zlg .settingsPage,
+.zlg .daySchedule,
+.zlg .weekSchedule,
+.zlg .appointmentItem,
+.zlg .appointmentItemWithOptionalSwitch,
+.zlg .popup,
+.zlg .popup .content,
+.zlg .choicePage,
+.zlg .choiceDetail,
+.zlg .meetingOptionsPage {
+  font-family: var(--zlg-font) !important;
+  letter-spacing: 0.01em;
+}
+
+.zlg .material-icons,
+.zlg .material-icons-no-fill {
+  font-family: "Material Icons" !important;
+  letter-spacing: normal !important;
+}
+
+.zlg .menuPage,
+.zlg .settingsPage,
+.zlg .swipeSchedulePage,
+.zlg .choiceDetail,
+.zlg .choicePage,
+.zlg .createMeetingPage,
+.zlg .meetingOptionsPage,
+.zlg .myColleagueListPage,
+.zlg .statisticsPage,
+.zlg .changePasswordPage,
+.zlg .changeTotpPage,
+.zlg .participations,
+.zlg .participationsDetailInfo,
+.zlg .subjectSelectionWidget,
+.zlg .subjectSelectionChoiceWidget,
+.zlg .subjectSelectionApprovalWidget,
+.zlg .subjectSelectionFormResultWidget {
+  background: transparent !important;
+  color: var(--zlg-text) !important;
+}
+
+.zlg .navBar,
+.zlg .swipeSchedulePage .scheduleTitle,
+.zlg .popup .popupTitleBar,
+.zlg .choicePage .titleBar,
+.zlg .daySchedule .dayTitle,
+.zlg .weekSchedule .dayTitle,
+.zlg .daySchedule .updated,
+.zlg .weekSchedule .updated {
+  background: var(--zlg-surface) !important;
+  backdrop-filter: var(--zlg-blur-strong);
+  -webkit-backdrop-filter: var(--zlg-blur-strong);
+  border: 1px solid var(--zlg-frost-line) !important;
+  box-shadow: var(--zlg-shadow);
+  color: var(--zlg-contrast) !important;
+}
+
+.zlg .navBar,
+.zlg .swipeSchedulePage .scheduleTitle,
+.zlg .popup .popupTitleBar,
+.zlg .choicePage .titleBar {
+  border-bottom: 1px solid var(--zlg-frost-line) !important;
+}
+
+.zlg .menuPage .item,
+.zlg .settingsPage .item,
+.zlg button,
+.zlg .meetingOption,
+.zlg .examPeriodSelectionItem,
+.zlg .personListItem,
+.zlg .courseListItem,
+.zlg .announcementItem,
+.zlg .participationsItem,
+.zlg .participationsItemStudent,
+.zlg .subjectSelectionMadeChoices,
+.zlg .subjectSelectionChoiceWidget,
+.zlg .appointmentItem .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBlock,
+.zlg input[type="text"],
+.zlg input[type="password"],
+.zlg textarea,
+.zlg select,
+.zlg .searchBar,
+.zlg .multiSelectPopup,
+.zlg .popup .content,
+.zlg .popup .bottomBar,
+.zlg .dayWeek .day,
+.zlg .dayWeek .week {
+  background: linear-gradient(160deg, var(--zlg-surface-strong), var(--zlg-surface)) !important;
+  border: 1px solid var(--zlg-frost-line) !important;
+  box-shadow: inset 0 1px 0 var(--zlg-frost-inner), var(--zlg-shadow-soft);
+  border-radius: var(--zlg-radius-card) !important;
+  color: var(--zlg-text) !important;
+  backdrop-filter: var(--zlg-blur-soft);
+  -webkit-backdrop-filter: var(--zlg-blur-soft);
+}
+
+.zlg .menuPage .item,
+.zlg .settingsPage .item,
+.zlg button,
+.zlg .appointmentItem,
+.zlg .appointmentItemWithOptionalSwitch,
+.zlg .announcementItem,
+.zlg .personListItem,
+.zlg .courseListItem,
+.zlg .participationsItem,
+.zlg .participationsItemStudent,
+.zlg .dayWeek .day,
+.zlg .dayWeek .week,
+.zlg #zlg-theme-toggle {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--zlg-transition-fast), border-color var(--zlg-transition-fast), box-shadow var(--zlg-transition-fast), filter var(--zlg-transition-fast), background var(--zlg-transition-mid);
+}
+
+.zlg .menuPage .item:hover,
+.zlg .settingsPage .item:hover,
+.zlg button:hover,
+.zlg .appointmentItem:hover,
+.zlg .appointmentItemWithOptionalSwitch:hover,
+.zlg .announcementItem:hover,
+.zlg .personListItem:hover,
+.zlg .courseListItem:hover,
+.zlg .participationsItem:hover,
+.zlg .participationsItemStudent:hover,
+.zlg .dayWeek .day:hover,
+.zlg .dayWeek .week:hover,
+.zlg #zlg-theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--zlg-accent) 44%, var(--zlg-frost-line)) !important;
+  box-shadow: 0 12px 24px rgba(27, 132, 214, 0.2), inset 0 1px 0 var(--zlg-frost-inner);
+  filter: saturate(1.06);
+}
+
+.zlg .zlg-pressed {
+  animation: zlg-press 0.22s cubic-bezier(0.25, 0.85, 0.35, 1);
+}
+
+@keyframes zlg-press {
+  0% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(0.984);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zlg .menuPage .item::after,
+.zlg .settingsPage .item::after,
+.zlg button::after,
+.zlg .appointmentItem .appointmentBlock::after,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBlock::after,
+.zlg #zlg-theme-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.26s ease;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.08) 65%, rgba(255, 255, 255, 0.26));
+}
+
+.zlg .menuPage .item:hover::after,
+.zlg .settingsPage .item:hover::after,
+.zlg button:hover::after,
+.zlg .appointmentItem:hover .appointmentBlock::after,
+.zlg .appointmentItemWithOptionalSwitch:hover .appointmentBlock::after,
+.zlg #zlg-theme-toggle:hover::after {
+  opacity: 1;
+}
+
+.zlg .menuPage .item,
+.zlg .settingsPage .item {
+  border-radius: 14px !important;
+  color: var(--zlg-text) !important;
+}
+
+.zlg .menuPage .item .icon,
+.zlg .settingsPage .item .icon,
+.zlg .navBar .icon,
+.zlg .popup .popupTitleBar a,
+.zlg .navBar a,
+.zlg .material-icons,
+.zlg .material-icons-no-fill {
+  color: var(--zlg-contrast) !important;
+}
+
+.zlg .menuPage .subTitle,
+.zlg .menuPage .footer .lastModified,
+.zlg .updated,
+.zlg .appointmentItem .timeStart,
+.zlg .appointmentItem .timeEnd,
+.zlg .appointmentItem .timeslot,
+.zlg .appointmentItem .teachers,
+.zlg .appointmentItem .locations,
+.zlg .appointmentItem .groups,
+.zlg .weekSchedule .time,
+.zlg .weekSchedule .timeSlot,
+.zlg .weekSchedule .day {
+  color: var(--zlg-text-muted) !important;
+}
+
+.zlg a,
+.zlg .onlineLink {
+  color: var(--zlg-link) !important;
+}
+
+.zlg input[type="text"],
+.zlg input[type="password"],
+.zlg textarea,
+.zlg select,
+.zlg .searchBar,
+.zlg .multiSelectPopup {
+  border-radius: 12px !important;
+}
+
+.zlg input::placeholder,
+.zlg textarea::placeholder {
+  color: color-mix(in srgb, var(--zlg-text-muted) 90%, transparent) !important;
+}
+
+.zlg .swipeSchedulePage .scheduleTitle .dayWeek {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid var(--zlg-frost-line) !important;
+  backdrop-filter: var(--zlg-blur-soft);
+  -webkit-backdrop-filter: var(--zlg-blur-soft);
+  border-radius: var(--zlg-radius-pill) !important;
+}
+
+.zlg .swipeSchedulePage .scheduleTitle .dayWeek .day,
+.zlg .swipeSchedulePage .scheduleTitle .dayWeek .week {
+  border-radius: var(--zlg-radius-pill) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+}
+
+.zlg .swipeSchedulePage.showDay .day,
+.zlg .swipeSchedulePage.showWeek .week {
+  background: var(--zlg-surface-strong) !important;
+  border-color: var(--zlg-frost-line) !important;
+  color: var(--zlg-contrast) !important;
+  box-shadow: inset 0 1px 0 var(--zlg-frost-inner), 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.zlg .appointmentItem,
+.zlg .appointmentItemWithOptionalSwitch {
+  color: var(--zlg-text) !important;
+}
+
+.zlg .appointmentItem .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBar {
+  width: 8px;
+  border-radius: 8px;
+  margin-right: 10px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--zlg-accent-strong) 96%, white), color-mix(in srgb, var(--zlg-accent) 75%, #2f6a9c)) !important;
+}
+
+.zlg .appointmentItem.exam .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.exam .appointmentBar {
+  background: linear-gradient(180deg, #ffe0a8, #dba348) !important;
+}
+
+.zlg .appointmentItem.exam .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.exam .appointmentBlock {
+  border-color: color-mix(in srgb, var(--zlg-warning) 70%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .appointmentItem.activity .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.activity .appointmentBar {
+  background: linear-gradient(180deg, #8de6bc, #2bac79) !important;
+}
+
+.zlg .appointmentItem.activity .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.activity .appointmentBlock {
+  border-color: color-mix(in srgb, var(--zlg-success) 72%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .appointmentItem.meeting .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.meeting .appointmentBar {
+  background: linear-gradient(180deg, #b9e4ff, #62b5ed) !important;
+}
+
+.zlg .appointmentItem.interlude .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.interlude .appointmentBlock {
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 8px, rgba(255, 255, 255, 0.06) 8px, rgba(255, 255, 255, 0.06) 16px), linear-gradient(160deg, var(--zlg-surface-strong), var(--zlg-surface)) !important;
+  border-color: color-mix(in srgb, var(--zlg-text-muted) 40%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .appointmentItem.multiple .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.multiple .appointmentBar,
+.zlg .appointmentItem.notEnrolledCanEnroll .appointmentBar,
+.zlg .appointmentItem.notEnrolledLocked .appointmentBar,
+.zlg .appointmentItem.notEnrolledDisallowed .appointmentBar {
+  display: none !important;
+}
+
+.zlg .appointmentItem.notEnrolledCanEnroll .appointmentBlock,
+.zlg .appointmentItem.notEnrolledLocked:not(.free) .appointmentBlock,
+.zlg .appointmentItem.free:not(.cancelled) .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.notEnrolledCanEnroll .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.notEnrolledLocked:not(.free) .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.free:not(.cancelled) .appointmentBlock {
+  border-style: dashed !important;
+  border-color: color-mix(in srgb, var(--zlg-accent) 65%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .appointmentItem.cancelled .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.cancelled .appointmentBlock,
+.zlg .appointmentItem.free.cancelled .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.free.cancelled .appointmentBlock {
+  border-color: color-mix(in srgb, var(--zlg-danger) 70%, var(--zlg-frost-line)) !important;
+  color: color-mix(in srgb, var(--zlg-danger) 58%, var(--zlg-text)) !important;
+}
+
+.zlg .appointmentItem.cancelled .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.cancelled .appointmentBar {
+  background: linear-gradient(180deg, #ffb0b8, #dc586a) !important;
+}
+
+.zlg .appointmentItem.conflict .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.conflict .appointmentBlock {
+  border-color: color-mix(in srgb, var(--zlg-warning) 58%, var(--zlg-danger) 42%) !important;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--zlg-warning) 50%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--zlg-warning) 20%, transparent) !important;
+}
+
+.zlg .appointmentItem.selectedItem .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.selectedItem .appointmentBlock {
+  border-color: color-mix(in srgb, var(--zlg-accent) 68%, var(--zlg-frost-line)) !important;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--zlg-accent) 55%, transparent), 0 12px 24px rgba(24, 116, 188, 0.24), inset 0 1px 0 var(--zlg-frost-inner) !important;
+}
+
+.zlg .appointmentItem .subjects,
+.zlg .appointmentItem .info,
+.zlg .appointmentItem .choiceText,
+.zlg .appointmentItem .noChoiceText,
+.zlg .appointmentItem .conflictText,
+.zlg .appointmentItem .isFreeText,
+.zlg .appointmentItemWithOptionalSwitch .subjects,
+.zlg .appointmentItemWithOptionalSwitch .info,
+.zlg .appointmentItemWithOptionalSwitch .choiceText,
+.zlg .appointmentItemWithOptionalSwitch .noChoiceText,
+.zlg .appointmentItemWithOptionalSwitch .conflictText,
+.zlg .appointmentItemWithOptionalSwitch .isFreeText {
+  color: var(--zlg-text) !important;
+}
+
+.zlg .appointmentItem .notEnrolledCanEnrollIcon,
+.zlg .appointmentItem .enrolledCanSwitchIcon,
+.zlg .appointmentItemWithOptionalSwitch .notEnrolledCanEnrollIcon,
+.zlg .appointmentItemWithOptionalSwitch .enrolledCanSwitchIcon {
+  color: var(--zlg-success) !important;
+}
+
+.zlg .appointmentItem .notEnrolledLockedIcon,
+.zlg .appointmentItem .enrolledFixedIcon,
+.zlg .appointmentItem .mandatoryWithOptionalsIcon,
+.zlg .appointmentItem .notEnrolledDisallowedIcon,
+.zlg .appointmentItemWithOptionalSwitch .notEnrolledLockedIcon,
+.zlg .appointmentItemWithOptionalSwitch .enrolledFixedIcon,
+.zlg .appointmentItemWithOptionalSwitch .mandatoryWithOptionalsIcon,
+.zlg .appointmentItemWithOptionalSwitch .notEnrolledDisallowedIcon {
+  color: var(--zlg-text-muted) !important;
+}
+
+.zlg .appointmentItem .conflictIcon,
+.zlg .appointmentItem .cancelResolvesConflictIcon,
+.zlg .appointmentItemWithOptionalSwitch .conflictIcon,
+.zlg .appointmentItemWithOptionalSwitch .cancelResolvesConflictIcon {
+  color: color-mix(in srgb, var(--zlg-warning) 70%, var(--zlg-danger) 40%) !important;
+}
+
+.zlg .appointmentItem.contentAvailable .icons .contentIcon {
+  color: var(--zlg-accent-strong) !important;
+}
+
+.zlg .appointmentItem.messagesAvailable .icons .messagesIcon {
+  color: color-mix(in srgb, var(--zlg-warning) 45%, var(--zlg-text)) !important;
+}
+
+.zlg .appointmentItem.scheduleInfoAvailable .icons .scheduleInfoIcon,
+.zlg .appointmentItem.schedulerRemarkAvailable .icons .scheduleInfoIcon {
+  color: var(--zlg-warning) !important;
+}
+
+.zlg .appointmentItem.appointmentOnline .icons .onlineIcon {
+  color: var(--zlg-danger) !important;
+}
+
+.zlg .appointmentItem .appointmentCount,
+.zlg .appointmentItemWithOptionalSwitch .appointmentCount {
+  background: color-mix(in srgb, var(--zlg-accent) 55%, var(--zlg-surface-strong)) !important;
+  color: var(--zlg-contrast) !important;
+}
+
+.zlg .popup,
+.zlg .popup .content,
+.zlg .popup .bottomBar,
+.zlg .popupBacking {
+  background: transparent !important;
+  color: var(--zlg-text) !important;
+}
+
+.zlg .popup .bottomBar {
+  border-top: 1px solid var(--zlg-frost-line) !important;
+}
+
+.zlg .popup.error .popupTitleBar {
+  border-color: color-mix(in srgb, var(--zlg-danger) 50%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .popup.canChange .popupTitleBar {
+  border-color: color-mix(in srgb, var(--zlg-success) 50%, var(--zlg-frost-line)) !important;
+}
+
+.zlg .errorMessage {
+  background: color-mix(in srgb, var(--zlg-danger) 14%, transparent) !important;
+  color: color-mix(in srgb, var(--zlg-danger) 72%, var(--zlg-text)) !important;
+  border: 1px solid color-mix(in srgb, var(--zlg-danger) 65%, var(--zlg-frost-line)) !important;
+  border-radius: var(--zlg-radius-sm);
+}
+
+.zlg .succeededMessage {
+  background: color-mix(in srgb, var(--zlg-success) 14%, transparent) !important;
+  color: color-mix(in srgb, var(--zlg-success) 72%, var(--zlg-text)) !important;
+  border: 1px solid color-mix(in srgb, var(--zlg-success) 65%, var(--zlg-frost-line)) !important;
+  border-radius: var(--zlg-radius-sm);
+}
+
+.zlg .scheduleForbiddenMessage {
+  color: color-mix(in srgb, var(--zlg-danger) 76%, var(--zlg-text)) !important;
+}
+
+.zlg .loading,
+.zlg .lds-ellipsis div {
+  background: var(--zlg-accent) !important;
+  color: transparent !important;
+}
+
+/* SVG recolor with safety guards (keep gradients/masks intact). */
+.zlg svg {
+  color: var(--zlg-icon-stroke) !important;
+}
+
+.zlg svg :is(path, rect, circle, ellipse, polygon, line, polyline):not([fill="none"]):not([fill^="url("]) {
+  fill: currentColor !important;
+}
+
+.zlg svg :is(path, rect, circle, ellipse, polygon, line, polyline)[stroke]:not([stroke="none"]):not([stroke^="url("]) {
+  stroke: currentColor !important;
+}
+
+.zlg img[src$=".svg"],
+.zlg img[src*=".svg?"],
+.zlg img[src*="svg"] {
+  filter: var(--zlg-svg-filter) !important;
+}
+
+.zlg #zlg-theme-toggle {
+  all: unset;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 42px;
+  height: 42px;
+  z-index: 2147483647;
+  border-radius: var(--zlg-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--zlg-contrast);
+  background: linear-gradient(160deg, var(--zlg-surface-strong), var(--zlg-surface));
+  border: 1px solid var(--zlg-frost-line);
+  box-shadow: inset 0 1px 0 var(--zlg-frost-inner), var(--zlg-shadow);
+  backdrop-filter: var(--zlg-blur-soft);
+  -webkit-backdrop-filter: var(--zlg-blur-soft);
+}
+
+.zlg #zlg-theme-toggle:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--zlg-accent) 72%, white);
+  outline-offset: 2px;
+}
+
+.zlg ::selection {
+  background: color-mix(in srgb, var(--zlg-accent) 42%, transparent);
+  color: var(--zlg-contrast);
+}
+
+/* Minimalist override: remove most gradients and blue tinting. */
+:root.zlg-theme-dark,
+.zlg-theme-dark {
+  --zlg-bg-main: #111315;
+  --zlg-bg-secondary: #16191c;
+  --zlg-bg-glow: none;
+  --zlg-surface: rgba(29, 32, 36, 0.72);
+  --zlg-surface-strong: rgba(34, 38, 43, 0.88);
+  --zlg-frost-line: rgba(255, 255, 255, 0.12);
+  --zlg-frost-inner: rgba(255, 255, 255, 0.06);
+  --zlg-text: #f3f4f5;
+  --zlg-text-muted: #b3b6bb;
+  --zlg-contrast: #ffffff;
+  --zlg-accent: #9ea5ad;
+  --zlg-accent-strong: #c0c5cc;
+  --zlg-link: #d9dde2;
+  --zlg-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --zlg-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.24);
+  --zlg-svg-filter: brightness(1.18) saturate(0.12) contrast(1.14);
+}
+
+:root.zlg-theme-light,
+.zlg-theme-light {
+  --zlg-bg-main: #eceef1;
+  --zlg-bg-secondary: #f5f6f8;
+  --zlg-bg-glow: none;
+  --zlg-surface: rgba(255, 255, 255, 0.8);
+  --zlg-surface-strong: rgba(255, 255, 255, 0.92);
+  --zlg-frost-line: rgba(24, 28, 34, 0.12);
+  --zlg-frost-inner: rgba(255, 255, 255, 0.7);
+  --zlg-text: #171a1d;
+  --zlg-text-muted: #5e646b;
+  --zlg-contrast: #0f1216;
+  --zlg-accent: #656d76;
+  --zlg-accent-strong: #4f565e;
+  --zlg-link: #3b4148;
+  --zlg-shadow: 0 8px 20px rgba(34, 40, 48, 0.14);
+  --zlg-shadow-soft: 0 4px 12px rgba(34, 40, 48, 0.1);
+  --zlg-svg-filter: grayscale(1) brightness(0.34) contrast(1.26);
+}
+
+html.zlg,
+body.zlg,
+.zlg #app,
+.zlg .responsive,
+.zlg .menu,
+.zlg .masterDetail,
+.zlg .master,
+.zlg .detail,
+.zlg .view,
+.zlg .viewDetail,
+.zlg .content {
+  background: var(--zlg-bg-main) !important;
+}
+
+.zlg .navBar,
+.zlg .swipeSchedulePage .scheduleTitle,
+.zlg .popup .popupTitleBar,
+.zlg .choicePage .titleBar,
+.zlg .daySchedule .dayTitle,
+.zlg .weekSchedule .dayTitle,
+.zlg .daySchedule .updated,
+.zlg .weekSchedule .updated,
+.zlg .menuPage .item,
+.zlg .settingsPage .item,
+.zlg button,
+.zlg .meetingOption,
+.zlg .examPeriodSelectionItem,
+.zlg .personListItem,
+.zlg .courseListItem,
+.zlg .announcementItem,
+.zlg .participationsItem,
+.zlg .participationsItemStudent,
+.zlg .subjectSelectionMadeChoices,
+.zlg .subjectSelectionChoiceWidget,
+.zlg .appointmentItem .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBlock,
+.zlg input[type="text"],
+.zlg input[type="password"],
+.zlg textarea,
+.zlg select,
+.zlg .searchBar,
+.zlg .multiSelectPopup,
+.zlg .popup .content,
+.zlg .popup .bottomBar,
+.zlg .dayWeek .day,
+.zlg .dayWeek .week,
+.zlg #zlg-theme-toggle {
+  background: var(--zlg-surface-strong) !important;
+}
+
+.zlg .menuPage .item::after,
+.zlg .settingsPage .item::after,
+.zlg button::after,
+.zlg .appointmentItem .appointmentBlock::after,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBlock::after,
+.zlg #zlg-theme-toggle::after {
+  display: none !important;
+}
+
+.zlg .menuPage .item:hover,
+.zlg .settingsPage .item:hover,
+.zlg button:hover,
+.zlg .appointmentItem:hover,
+.zlg .appointmentItemWithOptionalSwitch:hover,
+.zlg .announcementItem:hover,
+.zlg .personListItem:hover,
+.zlg .courseListItem:hover,
+.zlg .participationsItem:hover,
+.zlg .participationsItemStudent:hover,
+.zlg .dayWeek .day:hover,
+.zlg .dayWeek .week:hover,
+.zlg #zlg-theme-toggle:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16), inset 0 1px 0 var(--zlg-frost-inner) !important;
+  filter: none !important;
+}
+
+.zlg a,
+.zlg .onlineLink {
+  color: var(--zlg-text) !important;
+}
+
+.zlg .appointmentItem .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBar,
+.zlg .appointmentItem.exam .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.exam .appointmentBar,
+.zlg .appointmentItem.activity .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.activity .appointmentBar,
+.zlg .appointmentItem.meeting .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.meeting .appointmentBar,
+.zlg .appointmentItem.cancelled .appointmentBar,
+.zlg .appointmentItemWithOptionalSwitch.cancelled .appointmentBar {
+  background: #8c949d !important;
+}
+
+.zlg .appointmentItem.conflict .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.conflict .appointmentBlock,
+.zlg .appointmentItem.selectedItem .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch.selectedItem .appointmentBlock {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14) !important;
+}
+
+.zlg ::selection {
+  background: rgba(120, 126, 133, 0.26) !important;
+  color: var(--zlg-contrast) !important;
+}
+
+.zlg .appointmentItem:hover,
+.zlg .appointmentItemWithOptionalSwitch:hover,
+.zlg .compactAppointmentItem:hover {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Week overview coverage (compact blocks + week header). */
+.zlg .weekHeader,
+.zlg .weekHeader .currentWeekHeader,
+.zlg .weekHeader .nextWeekHeader,
+.zlg .weekHeaderPanel,
+.zlg .myCoursesPage .weekHeaderPanel,
+.zlg .myColleagueListPage .weekHeaderPanel,
+.zlg .myTeacherListPage .weekHeaderPanel,
+.zlg .personScheduleOverview .scheduleHeader,
+.zlg .courseScheduleOverview .scheduleHeader,
+.zlg .swipeablePersonSchedulePage .weekHeader {
+  background: var(--zlg-surface-strong) !important;
+  color: var(--zlg-text) !important;
+  border-color: var(--zlg-frost-line) !important;
+}
+
+.zlg .weekHeader .arrowRightIcon,
+.zlg .weekHeader .arrowLeftIcon,
+.zlg .personScheduleOverview .schedule .dayHeader,
+.zlg .courseScheduleOverview .schedule .dayHeader {
+  color: var(--zlg-text) !important;
+}
+
+.zlg .compactAppointmentItem {
+  color: var(--zlg-text) !important;
+  margin: 0 6px 10px !important;
+  min-height: 68px !important;
+  transition: transform var(--zlg-transition-fast) !important;
+}
+
+.zlg .compactAppointmentItem .timeStart,
+.zlg .compactAppointmentItem .timeEnd,
+.zlg .compactAppointmentItem .teachers,
+.zlg .compactAppointmentItem .locations,
+.zlg .compactAppointmentItem .groups {
+  color: var(--zlg-text-muted) !important;
+}
+
+.zlg .compactAppointmentItem .appointmentBlock {
+  background: var(--zlg-surface-strong) !important;
+  border: 1px solid var(--zlg-frost-line) !important;
+  box-shadow: inset 0 1px 0 var(--zlg-frost-inner), var(--zlg-shadow-soft) !important;
+  border-left: none !important;
+  padding: 10px 12px !important;
+}
+
+.zlg .compactAppointmentItem .appointmentBar {
+  background: #8c949d !important;
+  width: 6px !important;
+}
+
+.zlg .compactAppointmentItem.exam .appointmentBar,
+.zlg .compactAppointmentItem.activity .appointmentBar,
+.zlg .compactAppointmentItem.meeting .appointmentBar,
+.zlg .compactAppointmentItem.cancelled .appointmentBar {
+  background: #8c949d !important;
+}
+
+.zlg .compactAppointmentItem.notEnrolledCanEnroll .appointmentBlock,
+.zlg .compactAppointmentItem.notEnrolledLocked .appointmentBlock,
+.zlg .compactAppointmentItem.notEnrolledDisallowed .appointmentBlock,
+.zlg .compactAppointmentItem.free:not(.cancelled) .appointmentBlock {
+  border-style: dashed !important;
+}
+
+.zlg .compactAppointmentItem.selectedItem .appointmentBlock,
+.zlg .compactAppointmentItem.conflict .appointmentBlock {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14) !important;
+}
+
+.zlg .compactAppointmentItem .contentIcon,
+.zlg .compactAppointmentItem .messagesIcon,
+.zlg .compactAppointmentItem .scheduleInfoIcon,
+.zlg .compactAppointmentItem .onlineIcon {
+  color: var(--zlg-text) !important;
+}
+
+/* Week overview spacing + width. */
+.zlg .weekSchedule {
+  width: 100% !important;
+  max-width: none !important;
+  --zlg-week-slot-h: 78px;
+  --zlg-week-slot-gap: 10px;
+}
+
+.zlg .weekSchedule .scroll {
+  overflow: hidden !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.zlg .daySchedule .scroll {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.zlg .weekSchedule .appointmentlist {
+  width: max-content !important;
+  min-width: min(1500px, 98vw) !important;
+  column-gap: 18px !important;
+  row-gap: 14px !important;
+  padding-bottom: 76px !important;
+}
+
+.zlg .weekSchedule .appointmentlist > * {
+  min-width: 250px !important;
+}
+
+.zlg .weekSchedule .day {
+  min-width: 250px !important;
+}
+
+.zlg .weekSchedule .time,
+.zlg .weekSchedule .timeSlot {
+  min-width: 84px !important;
+}
+
+.zlg .weekSchedule .compactAppointmentItem {
+  height: var(--zlg-week-slot-h) !important;
+  min-height: var(--zlg-week-slot-h) !important;
+  margin-top: 0 !important;
+  margin-bottom: var(--zlg-week-slot-gap) !important;
+}
+
+.zlg .weekSchedule .compactAppointmentItem.overlapsPrevious {
+  margin-top: 0 !important;
+}
+
+.zlg .weekSchedule .compactAppointmentItem .appointmentBlock {
+  height: 100% !important;
+  min-height: 100% !important;
+  padding: 10px 12px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden !important;
+}
+
+.zlg .weekSchedule .compactAppointmentItem .subjects,
+.zlg .weekSchedule .compactAppointmentItem .teachers,
+.zlg .weekSchedule .compactAppointmentItem .locations,
+.zlg .weekSchedule .compactAppointmentItem .groups {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.2 !important;
+}
+
+.zlg .weekSchedule .compactAppointmentItem .appointmentCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Desktop master/detail redesign including right detail pane ("inhoud"). */
+@media (min-width: 1001px) {
+  .zlg-mode-day .responsive .masterDetail,
+  .zlg-mode-week .responsive .masterDetail {
+    display: flex !important;
+    gap: 12px;
+    padding: 12px 14px 14px !important;
+    box-sizing: border-box;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .masterHolder,
+  .zlg-mode-week .responsive .masterDetail .masterHolder {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .detailHolder {
+    flex: 0 0 clamp(320px, 28vw, 410px) !important;
+  }
+
+  .zlg-mode-week .responsive .masterDetail .detailHolder {
+    flex: 0 0 clamp(300px, 24vw, 370px) !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .masterHolder,
+  .zlg-mode-day .responsive .masterDetail .detailHolder,
+  .zlg-mode-week .responsive .masterDetail .masterHolder,
+  .zlg-mode-week .responsive .masterDetail .detailHolder {
+    width: auto !important;
+    min-width: 0 !important;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--zlg-frost-line);
+    box-shadow: var(--zlg-shadow-soft);
+    background: var(--zlg-surface-strong) !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .masterHolder .master,
+  .zlg-mode-day .responsive .masterDetail .detailHolder .detail,
+  .zlg-mode-week .responsive .masterDetail .masterHolder .master,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .detail {
+    background: transparent !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .detailHolder,
+  .zlg-mode-week .responsive .masterDetail .detailHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .detailHolder .blueBar,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .blueBar {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    height: 48px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    background: #2f353c !important;
+    color: var(--zlg-text) !important;
+    border-bottom: 1px solid var(--zlg-frost-line);
+  }
+
+  .zlg-mode-day .responsive .masterDetail .detailHolder .detail,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .detail {
+    flex: 1;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .masterHolder .weekSchedule,
+  .zlg-mode-day .responsive .masterDetail .masterHolder .daySchedule,
+  .zlg-mode-week .responsive .masterDetail .masterHolder .weekSchedule,
+  .zlg-mode-week .responsive .masterDetail .masterHolder .daySchedule {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .masterHolder .daySchedule .appointmentlist {
+    max-width: 430px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .zlg-mode-week .responsive .masterDetail .masterHolder .weekSchedule .appointmentlist {
+    min-width: 100% !important;
+  }
+
+  .zlg-mode-day .responsive .masterDetail .detailHolder .appointmentDetailInfo,
+  .zlg-mode-day .responsive .masterDetail .detailHolder .choiceDetail,
+  .zlg-mode-day .responsive .masterDetail .detailHolder .view,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .appointmentDetailInfo,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .choiceDetail,
+  .zlg-mode-week .responsive .masterDetail .detailHolder .view {
+    background: var(--zlg-surface) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+
+  .zlg .appointmentDetailInfo .appointmentInfo {
+    padding: 14px 14px 18px !important;
+    overflow: hidden !important;
+  }
+
+  .zlg .appointmentDetailInfo.noAppointmentSelected .noAppointmentSelectedText {
+    padding: 44px 16px 0 !important;
+    color: var(--zlg-text-muted) !important;
+    text-align: center;
+  }
+}
+
+/* Spacing pass: reduce cramped feeling. */
+.zlg .menuPage .menuContent,
+.zlg .settingsPage .menuContent {
+  padding: 12px 10px 22px !important;
+  box-sizing: border-box;
+}
+
+.zlg .menuPage .item,
+.zlg .settingsPage .item {
+  min-height: 50px !important;
+  line-height: 50px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+.zlg .menuPage .item .icon,
+.zlg .settingsPage .item .icon {
+  line-height: 50px !important;
+  padding-top: 0 !important;
+}
+
+.zlg .menuPage .item .label,
+.zlg .settingsPage .item .label {
+  margin-left: 20px !important;
+}
+
+.zlg button,
+.zlg input[type="text"],
+.zlg input[type="password"],
+.zlg textarea,
+.zlg select {
+  padding: 12px 14px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.zlg .daySchedule .scroll,
+.zlg .weekSchedule .scroll {
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  padding-top: 8px !important;
+}
+
+.zlg .daySchedule .dayTitle,
+.zlg .weekSchedule .dayTitle {
+  padding: 12px 14px !important;
+  margin-bottom: 14px !important;
+}
+
+.zlg .daySchedule .updated,
+.zlg .weekSchedule .updated {
+  padding: 10px 12px !important;
+}
+
+.zlg .appointmentItem,
+.zlg .appointmentItemWithOptionalSwitch {
+  margin: 0 6px 10px !important;
+  min-height: 74px !important;
+}
+
+.zlg .appointmentItem .timeBlock,
+.zlg .appointmentItemWithOptionalSwitch .timeBlock {
+  width: 72px !important;
+  padding-right: 10px !important;
+}
+
+.zlg .appointmentItem .appointmentBlock,
+.zlg .appointmentItemWithOptionalSwitch .appointmentBlock {
+  padding: 10px 12px 10px 14px !important;
+}
+
+.zlg .appointmentItem .info,
+.zlg .appointmentItemWithOptionalSwitch .info {
+  margin-top: 10px !important;
+}
+
+.zlg .appointmentItem .icons,
+.zlg .appointmentItemWithOptionalSwitch .icons {
+  right: 8px !important;
+  bottom: 4px !important;
+}
+
+.zlg .popup .content {
+  padding: 14px !important;
+}
+
+.zlg .swipeSchedulePage .scheduleTitle {
+  min-height: 48px !important;
+  padding-left: 14px !important;
+}
+
+.zlg .swipeSchedulePage .scheduleTitle .todayText {
+  left: 54px !important;
+}
+
+@media (max-width: 600px) {
+  .zlg .menuPage .item,
+  .zlg .settingsPage .item {
+    min-height: 46px !important;
+    line-height: 46px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .zlg .menuPage .item .icon,
+  .zlg .settingsPage .item .icon {
+    line-height: 46px !important;
+  }
+
+  .zlg .daySchedule .scroll,
+  .zlg .weekSchedule .scroll {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .zlg .weekSchedule .appointmentlist {
+    min-width: 1220px !important;
+    column-gap: 14px !important;
+  }
+
+  .zlg .weekSchedule .appointmentlist > * {
+    min-width: 210px !important;
+  }
+
+  .zlg .weekSchedule .day {
+    min-width: 210px !important;
+  }
+
+  .zlg .appointmentItem,
+  .zlg .appointmentItemWithOptionalSwitch,
+  .zlg .compactAppointmentItem {
+    margin: 0 4px 8px !important;
+  }
+
+  .zlg .appointmentItem .appointmentBlock,
+  .zlg .appointmentItemWithOptionalSwitch .appointmentBlock {
+    padding: 9px 10px 9px 12px !important;
+  }
+
+  .zlg #zlg-theme-toggle {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zlg .menuPage .item,
+  .zlg .settingsPage .item,
+  .zlg button,
+  .zlg .appointmentItem,
+  .zlg .appointmentItemWithOptionalSwitch,
+  .zlg #zlg-theme-toggle {
+    transition: none !important;
+    animation: none !important;
+  }
+}
